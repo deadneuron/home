@@ -2,7 +2,7 @@
   (lambda ()
     `(html
       ((head
-        (title "Wittes Ende")
+        (title "Dead Neurons")
         (meta (@ (charset "utf-8")))
         (meta (@ (name "viewport") (content "width=device-width, initial-scale=1")))
         (link (@ (rel "icon") (href "/static/favicon.ico")))
@@ -26,7 +26,7 @@
               (div (@ (class "overlay")) "")
                 (div (@ (class "wrapper"))
                   (h1 "Learn How To Build Better Neural Networks")
-                  (p "Welcome! My name is Tim Whitaker and I'm a researcher studying neural network optimization and analysis. Wittes Ende is my website where I explore and share cool research in machine learning.")))
+                  (p "Welcome! My name is Tim Whitaker and I'm a researcher studying neural network optimization and analysis. Dead Neurons is my website where I explore and share cool research in machine learning.")))
             
 
               (div (@ (class "featured"))
