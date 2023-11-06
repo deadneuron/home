@@ -1,4 +1,4 @@
-# Wittes Ende
+# Dead Neurons
 
 ![Brains](/src/assets/images/brain-bg.png)
 
