@@ -2,32 +2,20 @@ html {
 
   body {
     .hero {
-      background-image: url(/static/brain-bg.png);
+      background-image: url(/static/mystic-gate-bg.png);
       background-position: top center;
     }
-    .merch {
+
+    .intro {
       background: white;
       padding: 4.8rem 0;
       .wrapper {
-        h1 {
-          font-family: "Open Sans";
-          font-size:5rem;
-          text-transform:uppercase;
-          text-align:center;
-          padding-bottom:5rem;
-          color:black;
-          text-shadow:5px 5px 0px #ddd;
-        }
         .column-wrapper {
           display: flex;
           align-items: baseline;
           justify-content: space-between;
           padding: 1.6rem;
           flex-wrap:wrap;
-
-          @media screen and (max-width:600px) {
-            padding:1.6rem 0;
-          }
 
           .column {
             flex: 0 0 30%;
@@ -42,21 +30,33 @@ html {
                 width: 100%;
                 height: 100%;
               }
+
+              @media screen and (max-width:600px) {
+                height:12rem;
+                width:12rem;
+              }
             }
             @media screen and (max-width:600px) {
               flex:0 0 100%;
+              padding:2rem 0;
             }
+          }
+
+          @media screen and (max-width:600px) {
+            padding:0rem;
           }
         }
       }
+      @media screen and (max-width:600px) {
+        padding:0rem;
+      }
     }
 
+    
     .featured-paper {
       padding:16rem 0;
-      background-color:#0f0f0f;
       background-size: 45vw;
       background-repeat: no-repeat;
-      background-position: center right;
 
       @media screen and (max-width:600px) {
         padding:2rem 0;
@@ -65,35 +65,29 @@ html {
       
       .wrapper {
         display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        grid-gap: 1.6rem;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3.2rem;
         align-items: center;
 
         @media screen and (max-width:600px) {
           grid-template-columns: 1fr;
         }
-        
-        h2 {
-          font-family: "Open Sans";
-          font-size: 1.6rem;
-          text-transform: uppercase;
-          color:#c2c2c2;
-        }
+
         h1 {
           font-family: "Open Sans";
           font-size: 4.8rem;
           text-transform: uppercase;
           line-height: 1.2;
           margin-bottom: 1.6rem;
-          color: white;
+          color: black;
 
           @media screen and (max-width:600px) {
             font-size:3.8rem;
           }
         }
         p {
-          color: white;
-          font-size: 1.6rem;
+          color: black;
+          font-size: 1.8rem;
 
           @media screen and (max-width:600px) {
             font-size:1.6rem;
@@ -102,7 +96,7 @@ html {
         .read-more {
           display: inline-block;
           margin: 1rem 0;
-          color: white;
+          color: black;
           font-family: "Open Sans";
           font-weight: bold;
           text-transform: uppercase;
@@ -111,110 +105,35 @@ html {
         }
       }
 
+      &:nth-child(even) {
+        background-color:white;
+        background-position: center left;
+        .wrapper div {
+          grid-column:2;
+
+          h1, p, a {
+            color:black;
+          }
+        }
+      }
+      &:nth-child(odd) {
+        background-color:#0f0f0f;
+        background-position: center right;
+        .wrapper div {
+          grid-column:1;
+
+          h1, p, a, small {
+            color:white;
+          }
+        }
+      }
       @media screen and (max-width:600px) {
         background-size:0;
       }
     }
-    
+
     .subnetwork-ensembles {
       background-image: url(/static/tree2.svg);
-    }
-
-    .notebooks {
-      display:grid;
-      grid-template-rows: auto auto;
-      grid-template-columns: 2fr 1fr;
-      grid-gap:2rem;
-      padding:2rem 0 5rem 0;
-      
-      .filters {
-        grid-row:1;
-        grid-column:1 / span 2;
-        border-bottom: 1px solid #ddd;
-        h1 {
-          padding:1rem 0;
-        }
-        .categories {
-          padding-bottom:2rem;
-          a {
-            font-family:"Open Sans";
-            font-size:1.2rem;
-            text-transform:uppercase;
-            text-decoration: none;
-            margin-right:2rem;
-            color:#aaa;
-
-            &.active, &:hover {
-              color: red;
-            }
-          }
-          @media screen and (max-width:600px) {
-            display:none;
-          }
-        }
-        .mobile-categories {
-          display:none;
-          padding-bottom:2rem;
-
-          @media screen and (max-width:600px) {
-            display:block;
-          } 
-        }
-        @media screen and (max-width:600px) {
-          grid-column:auto;
-        }
-      }
-      .primary-col {
-        grid-row:2;
-        border-right:1px solid #ddd;
-
-        .post {
-          background: white;
-          padding: 2rem 0;
-          margin-right:2rem;
-          h1 {
-            font-family:"Open Sans";
-            font-size:2.4rem;
-          }
-          p {
-            font-size:1.6rem;
-          }
-          &:not(:first-child) {
-            border-top: 1px solid #ddd;
-          }
-        }
-
-        @media screen and (max-width:600px) {
-          grid-row:auto;
-          border-right:none;
-        }
-      }
-      .secondary-col {
-        grid-row:2;
-        .post {
-          background: white;
-          padding: 2rem;
-          h1 {
-            font-family:"Open Sans";
-            font-size:1.6rem;
-          }
-          p {
-            font-size:1.2rem;
-          }
-          &:not(:first-child) {
-            border-top: 1px solid #ddd;
-          }
-        }
-        
-        @media screen and (max-width:600px) {
-          display:none;
-        }
-      }
-      @media screen and (max-width:600px) {
-        padding-left:1rem;
-        padding-right:1rem;
-        grid-template-columns: 1fr;
-      }
     }
 
     .contact {
@@ -299,13 +218,6 @@ html {
             grid-row: 3;
           }
         }
-      }
-    }
-
-    footer {
-      background:white;
-      .wrapper .column h2, .wrapper .column a {        
-        color:black;
       }
     }
   }

@@ -12,6 +12,7 @@
 
 ;; Import home-template, about-template
 (include "./templates/home.scm")
+(include "./templates/about.scm")
 (include "./templates/cv.scm")
 (include "./templates/models.scm")
 (include "./templates/notebooks.scm")
@@ -117,6 +118,11 @@
     (define html (serialize-sxml (home-template feed) indent: #f method: 'html'))
     (write-html "../build/" html)))
 
+(define build-about
+  (lambda ()
+    (define html (serialize-sxml (about-template) indent: #f method: 'html'))
+    (write-html "../build/about" html)))
+
 (define build-cv
   (lambda ()
     (define html (serialize-sxml (cv-template) indent: #f method: 'html'))
@@ -179,6 +185,7 @@
 (build-static)
 
 ; Builds the static pages
+(build-about)
 (build-cv)
 (build-models)
 (build-research)

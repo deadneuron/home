@@ -47,8 +47,10 @@ html body .merch .wrapper .column-wrapper .column .icon img {
 }
 html body .featured-paper {
   padding: 16rem 0;
+  background-color: #0f0f0f;
   background-size: 45vw;
   background-repeat: no-repeat;
+  background-position: center right;
 }
 @media screen and (max-width: 600px) {
   html body .featured-paper {
@@ -58,8 +60,8 @@ html body .featured-paper {
 }
 html body .featured-paper .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 3.2rem;
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 1.6rem;
   align-items: center;
 }
 @media screen and (max-width: 600px) {
@@ -67,13 +69,19 @@ html body .featured-paper .wrapper {
     grid-template-columns: 1fr;
   }
 }
+html body .featured-paper .wrapper h2 {
+  font-family: "Open Sans";
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: #c2c2c2;
+}
 html body .featured-paper .wrapper h1 {
   font-family: "Open Sans";
   font-size: 4.8rem;
   text-transform: uppercase;
   line-height: 1.2;
   margin-bottom: 1.6rem;
-  color: black;
+  color: white;
 }
 @media screen and (max-width: 600px) {
   html body .featured-paper .wrapper h1 {
@@ -81,8 +89,8 @@ html body .featured-paper .wrapper h1 {
   }
 }
 html body .featured-paper .wrapper p {
-  color: black;
-  font-size: 1.8rem;
+  color: white;
+  font-size: 1.6rem;
 }
 @media screen and (max-width: 600px) {
   html body .featured-paper .wrapper p {
@@ -92,37 +100,20 @@ html body .featured-paper .wrapper p {
 html body .featured-paper .wrapper .read-more {
   display: inline-block;
   margin: 1rem 0;
-  color: black;
+  color: white;
   font-family: "Open Sans";
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 1.2rem;
 }
-html body .featured-paper:nth-child(even) {
-  background-color: white;
-  background-position: center left;
-}
-html body .featured-paper:nth-child(even) .wrapper div {
-  grid-column: 2;
-}
-html body .featured-paper:nth-child(even) .wrapper div h1, html body .featured-paper:nth-child(even) .wrapper div p, html body .featured-paper:nth-child(even) .wrapper div a {
-  color: black;
-}
-html body .featured-paper:nth-child(odd) {
-  background-color: #0f0f0f;
-  background-position: center right;
-}
-html body .featured-paper:nth-child(odd) .wrapper div {
-  grid-column: 1;
-}
-html body .featured-paper:nth-child(odd) .wrapper div h1, html body .featured-paper:nth-child(odd) .wrapper div p, html body .featured-paper:nth-child(odd) .wrapper div a, html body .featured-paper:nth-child(odd) .wrapper div small {
-  color: white;
-}
 @media screen and (max-width: 600px) {
   html body .featured-paper {
     background-size: 0;
   }
+}
+html body .subnetwork-ensembles {
+  background-image: url(/static/tree2.svg);
 }
 html body .notebooks {
   display: grid;
@@ -226,9 +217,6 @@ html body .notebooks .secondary-col .post:not(:first-child) {
     grid-template-columns: 1fr;
   }
 }
-html body .subnetwork-ensembles {
-  background-image: url(/static/tree2.svg);
-}
 html body .contact {
   padding: 8rem 0;
   background: white;
@@ -314,4 +302,10 @@ html body .contact .wrapper .map-container #map {
   html body .contact .wrapper .map-container {
     grid-row: 3;
   }
+}
+html body footer {
+  background: white;
+}
+html body footer .wrapper .column h2, html body footer .wrapper .column a {
+  color: black;
 }
