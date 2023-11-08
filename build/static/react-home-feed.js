@@ -2,6 +2,7 @@
 
 const e = React.createElement
 
+
 class LikeButton extends React.Component {
   constructor(props) {
     super(props)
@@ -10,6 +11,7 @@ class LikeButton extends React.Component {
 
   render() {
     if (this.state.liked) {
+      // getNotebooksFromApiAsync();
       return "You liked this."
     }
 
