@@ -34,12 +34,12 @@
       <main>
         <div
           class="hero"
-          style="background-image: url(/static/space-bg.png)"
+          style="background-image: url({{ context.data.hero }})"
         >
           <div class="overlay"></div>
           <div class="wrapper">
-            <h1>Data Augmentation</h1>
-            <p>A strategy used in machine learning to increase the diversity and amount of training data without actually collecting new data. It involves creating modified versions of existing data using techniques like rotation, scaling, flipping, cropping, and brightness or color adjustments.</p>
+            <h1>{{ context.data.title }}</h1>
+            <p>{{ context.data.description }}</p>
           </div>
         </div>
         <div class="article">
@@ -47,7 +47,7 @@
             <div class="content">
               <iframe
                 id="myIframe"
-                src="/notebooks/data-augmentation/content.html"
+                src="{{ context.data.slug }}/content.html"
               ></iframe>
               <script>
                 iFrameResize({ log: true }, "#myIframe")

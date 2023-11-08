@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Activation Functions | Dead Neurons</title>
+    <title>Notebooks | Dead Neurons</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/static/favicon.ico" />
     <link rel="stylesheet" href="/static/style.css" />
-    <link rel="stylesheet" href="/static/notebook.css" />
-    <link rel="stylesheet" href="/static/prism.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css"
-    />
+    <link rel="stylesheet" href="/static/notebooks.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&amp;display=block"
     />
-    <script src="/static/iframeresizer.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
   </head>
   <body>
     <div class="home">
@@ -32,28 +31,35 @@
         </div>
       </header>
       <main>
-        <div
-          class="hero"
-          style="background-image: url(/static/space-bg.png)"
-        >
+        <div class="hero">
           <div class="overlay"></div>
           <div class="wrapper">
-            <h1>Data Augmentation</h1>
-            <p>A strategy used in machine learning to increase the diversity and amount of training data without actually collecting new data. It involves creating modified versions of existing data using techniques like rotation, scaling, flipping, cropping, and brightness or color adjustments.</p>
+            <h1>Notebooks</h1>
+            <p>
+              There have been many algorithmic and mathematical techniques
+              introduced in order to better optimize neural networks. This is a
+              compliation of articles and tutorials designed to dig into some of
+              these finer details.
+            </p>
           </div>
         </div>
-        <div class="article">
+        <div class="feed">
           <div class="wrapper">
-            <div class="content">
-              <iframe
-                id="myIframe"
-                src="/notebooks/data-augmentation/content.html"
-              ></iframe>
-              <script>
-                iFrameResize({ log: true }, "#myIframe")
-              </script>
+            <div class="filters">
+              <nav class="categories">
+                <a href="#" class="active">All</a><a href="#">Architecture</a
+                ><a href="#">Compression</a><a href="#">Evolution</a
+                ><a href="#">Optimization</a><a href="#">Regularization</a>
+              </nav>
             </div>
-          </div>
+            {% for post in context %}
+              <div class="post">
+                <small>{{ post.data.date }}</small>
+                <h1>{{ post.data.title }}</h1>
+                <p>{{ post.data.description }}</p>
+                <a href="{{ post.data.slug }}">Read More</a>
+              </div>
+            {% endfor %}
         </div>
       </main>
       <div class="reference">

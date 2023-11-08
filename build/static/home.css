@@ -120,7 +120,7 @@ html body .notebooks {
   grid-template-rows: auto auto;
   grid-template-columns: 2fr 1fr;
   grid-gap: 2rem;
-  padding: 2rem 0 5rem 0;
+  padding: 2rem 1rem 5rem 1rem;
 }
 html body .notebooks .filters {
   grid-row: 1;

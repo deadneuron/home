@@ -1,1 +1,90 @@
-<!DOCTYPE html><html><head><title>Weight Pruning | Dead Neurons</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="icon" href="/static/favicon.ico" /><link rel="stylesheet" href="/static/style.css" /><link rel="stylesheet" href="/static/notebook.css" /><link rel="stylesheet" href="/static/prism.css" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" /><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&amp;display=block" /><script src="/static/iframeresizer.min.js"></script></head><body><div class="home"><header><div class="wrapper"><a href="/" class="logo"><img src="/static/logo.svg" /></a><nav><a href="/about">About</a><a href="/research">Publications</a><a href="/models">Models</a><a href="/notebooks">Notebooks</a></nav></div></header><main><div class="hero" style="background-image: url(/static/space-bg.png)"><div class="overlay"></div><div class="wrapper"><h1>Weight Pruning</h1><p>Pruning is used to reduce the complexity and size of a model by removing weights or neurons. Pruning methods typically select weights to prune according to importance heuristics like magnitude or gradient saliency. However, even random pruning has been shown to produce accurate models at significant levels of sparsity. While pruning can cause some loss in model accuracy, this can be mitigated by fine-tuning the pruned model on the original dataset.</p></div></div><div class="article"><div class="wrapper"><div class="content"><iframe id="myIframe" src="/notebooks/weight-pruning/content.html"></iframe><script>iFrameResize({log: true}, '#myIframe')</script></div></div></div></main><div class="reference"><p>Hero images generated with neural networks via <a href="https://midjourney.com">midjourney</a>.</p></div><footer><div class="wrapper"><div class="column"><h2>Site</h2><a href="/about">About</a><a href="/models">Models</a><a href="/notebooks">Notebooks</a><a href="/research">Research</a></div><div class="column"><h2>Links</h2><a href="https://arxiv-sanity-lite.com">Arxiv Sanity</a><a href="https://paperswithcode.com">Papers With Code</a><a href="https://midjourney.com">Midjourney</a><a href="https://openai.com">OpenAI</a></div><div class="column"><h2>Self</h2><a href="/cv">CV</a><a href="https://github.com/tjwhitaker">Github</a><a href="https://lichess.org/@/tjwhitaker">Lichess</a><a href="https://orcid.org/0000-0003-3792-3901">Orcid</a></div></div></footer></div></body></html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Activation Functions | Dead Neurons</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/static/favicon.ico" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/notebook.css" />
+    <link rel="stylesheet" href="/static/prism.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&amp;display=block"
+    />
+    <script src="/static/iframeresizer.min.js"></script>
+  </head>
+  <body>
+    <div class="home">
+      <header>
+        <div class="wrapper">
+          <a href="/" class="logo"><img src="/static/logo.svg" /></a>
+          <nav>
+            <a href="/about">About</a><a href="/publications">Publications</a
+            ><a href="/models">Models</a><a href="/notebooks">Notebooks</a>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div
+          class="hero"
+          style="background-image: url(/static/space-bg.png)"
+        >
+          <div class="overlay"></div>
+          <div class="wrapper">
+            <h1>Weight Pruning</h1>
+            <p>Pruning is used to reduce the complexity and size of a model by removing weights or neurons. Pruning methods typically select weights to prune according to importance heuristics like magnitude or gradient saliency. However, even random pruning has been shown to produce accurate models at significant levels of sparsity. While pruning can cause some loss in model accuracy, this can be mitigated by fine-tuning the pruned model on the original dataset.</p>
+          </div>
+        </div>
+        <div class="article">
+          <div class="wrapper">
+            <div class="content">
+              <iframe
+                id="myIframe"
+                src="/notebooks/weight-pruning/content.html"
+              ></iframe>
+              <script>
+                iFrameResize({ log: true }, "#myIframe")
+              </script>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class="reference">
+        <p>
+          Hero images generated with neural networks via
+          <a href="https://midjourney.com">midjourney</a>.
+        </p>
+      </div>
+      <footer>
+        <div class="wrapper">
+          <div class="column">
+            <h2>Site</h2>
+            <a href="/about">About</a><a href="/models">Models</a
+            ><a href="/notebooks">Notebooks</a><a href="/research">Research</a>
+          </div>
+          <div class="column">
+            <h2>Links</h2>
+            <a href="https://arxiv-sanity-lite.com">Arxiv Sanity</a
+            ><a href="https://paperswithcode.com">Papers With Code</a
+            ><a href="https://midjourney.com">Midjourney</a
+            ><a href="https://openai.com">OpenAI</a>
+          </div>
+          <div class="column">
+            <h2>Self</h2>
+            <a href="/cv">CV</a
+            ><a href="https://github.com/tjwhitaker">Github</a
+            ><a href="https://lichess.org/@/tjwhitaker">Lichess</a
+            ><a href="https://orcid.org/0000-0003-3792-3901">Orcid</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

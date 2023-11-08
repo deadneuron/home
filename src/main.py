@@ -3,6 +3,7 @@ import re
 import json
 from jinja2 import Template
 
+
 class Notebook:
     def __init__(self, src_location):
         # Filename including .ipynb
@@ -29,9 +30,10 @@ class Notebook:
             'description': description.group(1),
             'date': date.group(1),
             'hero': hero.group(1),
+            'slug': os.path.join("/notebooks", self.filename.replace('.ipynb', ''))
         }
 
-    def build_html(self):
+    def compile(self):
         os.system(
             f"jupyter nbconvert --TagRemovePreprocessor.remove_cell_tags='{{\"metadata\"}}' --no-prompt --to html --output 'content' --output-dir '{self.build_location}' {self.src_location}")
 
@@ -45,6 +47,7 @@ class Notebook:
 
             f.write(self.data['content'])
 
+
 def build_json(notebooks):
     data = [n.data for n in notebooks]
 
@@ -52,10 +55,13 @@ def build_json(notebooks):
         f.write(json.dumps(data))
 
 
-def render_template(notebooks):
-    with open('templates-html/home.html') as f:
+def render_template(src_location, build_location, context=None):
+    with open(src_location) as f:
         template = Template(f.read())
-        print(template)
+        rendered_template = template.render(context=context)
+
+    with open(build_location, 'w+') as f:
+        f.write(rendered_template)
 
 
 # Loop through notebooks and build them
@@ -64,14 +70,37 @@ notebooks = []
 for filename in os.listdir('notebooks'):
     if filename.endswith('.ipynb'):
         n = Notebook(os.path.join('notebooks', filename))
-        # n.build_html()
         notebooks.append(n)
 
-# Build json api endpoint
+# Compile notebooks
+# for n in notebooks:
+#     n.compile()
+
+# Build json api endpoint (For react in the future?)
 build_json(notebooks)
 
-render_template(notebooks)
+# Compile static assets
+os.system("gulp")
 
+# Render templates
+render_template("templates/home.html",
+                "../build/index.html",
+                context=notebooks)
 
-# x = Notebook("notebooks/data-augmentation.ipynb")
-# x.build_html()
+render_template("templates/about.html",
+                "../build/about/index.html")
+
+render_template("templates/models.html",
+                "../build/models/index.html")
+
+render_template("templates/publications.html",
+                "../build/publications/index.html")
+
+render_template("templates/notebooks.html",
+                "../build/notebooks/index.html",
+                context=notebooks)
+
+for notebook in notebooks:
+    render_template("templates/notebook.html",
+                    f"{notebook.build_location}/index.html",
+                    context=notebook)
