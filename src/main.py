@@ -1,7 +1,7 @@
 import os
 import re
 import json
-
+from jinja2 import Template
 
 class Notebook:
     def __init__(self, src_location):
@@ -45,12 +45,17 @@ class Notebook:
 
             f.write(self.data['content'])
 
-
 def build_json(notebooks):
     data = [n.data for n in notebooks]
 
     with open('../build/notebooks/feed.json', 'w+') as f:
         f.write(json.dumps(data))
+
+
+def render_template(notebooks):
+    with open('templates-html/home.html') as f:
+        template = Template(f.read())
+        print(template)
 
 
 # Loop through notebooks and build them
@@ -59,11 +64,14 @@ notebooks = []
 for filename in os.listdir('notebooks'):
     if filename.endswith('.ipynb'):
         n = Notebook(os.path.join('notebooks', filename))
-        n.build_html()
+        # n.build_html()
         notebooks.append(n)
 
 # Build json api endpoint
 build_json(notebooks)
+
+render_template(notebooks)
+
 
 # x = Notebook("notebooks/data-augmentation.ipynb")
 # x.build_html()
