@@ -1,10 +1,12 @@
 (import (chicken io)
         (chicken file)
         (chicken file posix)
-        (chicken irregex)
-        (chicken string)
         (chicken format)
-        (chicken sort))
+        (chicken irregex)
+        (chicken port)
+        (chicken sort)
+        (chicken string))
+(import json)
 (import shell)
 (import sxml-serializer)
 (import (srfi-1)
@@ -44,7 +46,7 @@
       (date ,(irregex-match-substring match 'date))
       (hero ,(irregex-match-substring match 'hero))
       (slug ,(string-chomp filename ".org"))
-      (content ,(capture ,(conc "pandoc " directory filename " -f org -t html"))))))
+      (content ,(with-output-to-string (capture ,(conc "pandoc " directory filename " -f org -t html")))))))
 
 ; Parses notebook file. First cell should contain metadata. Using org style fields. Writes the notebook content to the build directory. Returns an object representing the notebook. The "\\n\"," regex handles raeding from the raw ipynb file, where the markdown text includes the newline character as well as a quote and comma.
 (define parse-notebook-file
@@ -66,7 +68,7 @@
       (date ,(irregex-match-substring match 'date))
       (hero ,(irregex-match-substring match 'hero))
       (slug ,(string-chomp filename ".ipynb"))
-      (content ,(capture ,(conc "jupyter nbconvert --TagRemovePreprocessor.remove_cell_tags='{\"metadata\"}' --no-prompt --to html --output 'content' --output-dir '../build/notebooks/" (string-chomp filename ".ipynb") "' " directory filename))))))
+      (content ,(with-output-to-string (capture ,(conc "jupyter nbconvert --TagRemovePreprocessor.remove_cell_tags='{\"metadata\"}' --no-prompt --to html --output 'content' --output-dir '../build/notebooks/" (string-chomp filename ".ipynb") "' " directory filename)))))))
 
 (define inject-iframe-resizer
   (lambda (directory filename) 
@@ -112,6 +114,12 @@
         (string->date (cadr (assoc 'date a)) "~Y-~m-~d")
         (string->date (cadr (assoc 'date b)) "~Y-~m-~d"))))))
 
+
+(define build-notebooks-api
+  (lambda (feed)
+    (json-write feed)
+  )
+)
 
 (define build-home
   (lambda (feed)
@@ -195,6 +203,7 @@
 
 ; Builds notebooks index page
 (build-notebooks notebook-feed)
+(build-notebooks-api notebook-feed)
 
 ;Builds each of the individual notebook templates
 (build-notebook-templates notebook-feed "../build/notebooks/")

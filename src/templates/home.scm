@@ -32,6 +32,8 @@
                   (h1 "Learn How To" (br) "Build Better" (br) "Neural Networks")
                   (p "Welcome to Dead Neurons! This is my personal website, a repository for neural network research, and an outlet for digging deeper into artificial intelligence.")))
 
+            (div (@ (id "react-test")) "")
+
             (div (@ (class "notebooks wrapper"))
               (div (@ (class "filters"))
                 (nav (@ (class "categories"))
@@ -171,6 +173,10 @@
                 (a (@ (href "https://github.com/tjwhitaker")) "Github")
                 (a (@ (href "https://lichess.org/@/tjwhitaker")) "Lichess")
                 (a (@ (href "https://orcid.org/0000-0003-3792-3901")) "Orcid"))))
+
+            (script (@ (src "https://unpkg.com/react@16/umd/react.development.js")) "")
+            (script (@ (src "https://unpkg.com/react-dom@16/umd/react-dom.development.js")) "")
+            (script (@ (src "/static/react-test.js")) "")
 
             (script "	mapboxgl.accessToken = 'pk.eyJ1IjoidG13aHRrciIsImEiOiJja2x2NzdpaW0wNXRnMndwOGszNTc3aWd5In0.LvJ2znCQ_1v9a86fxUhQ2A';
             var map = new mapboxgl.Map({
