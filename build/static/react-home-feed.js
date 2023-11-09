@@ -45,13 +45,27 @@ class NotebookFeed extends React.Component {
     super(props)
 
     this.state = {
-      posts: [],
+      allPosts: [],
+      filteredPosts: [],
       category: "All",
     }
 
     fetchNotebooks().then((notebooks) => {
-      this.setState({ posts: notebooks })
+      this.setState({ allPosts: notebooks })
+      this.setState({ filteredPosts: notebooks })
     })
+  }
+
+  filterPosts(category) {
+    if (category == "All") {
+      this.setState({ filteredPosts: this.state.allPosts })
+    } else {
+      this.setState({
+        filteredPosts: this.state.allPosts.filter((post) => {
+          return post.categories.toLowerCase().includes(category.toLowerCase())
+        }),
+      })
+    }
   }
 
   render() {
@@ -81,6 +95,7 @@ class NotebookFeed extends React.Component {
                 className: filter == this.state.category ? "active" : "",
                 onClick: () => {
                   this.setState({ category: filter })
+                  this.filterPosts(filter)
                 },
               },
               filter
@@ -96,7 +111,7 @@ class NotebookFeed extends React.Component {
       e(
         "div",
         { className: "primary-col" },
-        this.state.posts.slice(0, 2).map((post) => {
+        this.state.filteredPosts.slice(0, 2).map((post) => {
           return e(
             "div",
             { className: "post", key: post.slug },
@@ -110,7 +125,7 @@ class NotebookFeed extends React.Component {
       e(
         "div",
         { className: "secondary-col" },
-        this.state.posts.slice(2, 6).map((post) => {
+        this.state.filteredPosts.slice(2, 6).map((post) => {
           return e(
             "div",
             { className: "post", key: post.slug },
