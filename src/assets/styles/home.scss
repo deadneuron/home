@@ -120,7 +120,7 @@ html {
       background-image: url(/static/tree2.svg);
     }
 
-    .notebooks {
+    .feed {
       display:grid;
       grid-template-rows: auto auto;
       grid-template-columns: 2fr 1fr;
@@ -136,7 +136,7 @@ html {
         }
         .categories {
           padding-bottom:2rem;
-          a {
+          span {
             font-family:"Open Sans";
             font-size:1.2rem;
             text-transform:uppercase;
@@ -146,6 +146,7 @@ html {
 
             &.active, &:hover {
               color: red;
+              cursor:pointer;
             }
           }
           @media screen and (max-width:600px) {
@@ -172,11 +173,15 @@ html {
           background: white;
           padding: 2rem 0;
           margin-right:2rem;
-          h1 {
+
+          .categories {
+            display: none;
+          }
+          .title {
             font-family:"Open Sans";
             font-size:2.4rem;
           }
-          p {
+          .description {
             font-size:1.6rem;
           }
           &:not(:first-child) {
@@ -194,12 +199,17 @@ html {
         .post {
           background: white;
           padding: 2rem;
-          h1 {
+
+          .categories {
+            display:none;
+          }
+          .title {
             font-family:"Open Sans";
             font-size:1.6rem;
           }
-          p {
+          .description {
             font-size:1.2rem;
+            display:none;
           }
           &:not(:first-child) {
             border-top: 1px solid #ddd;

@@ -13,11 +13,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&amp;display=block"
     />
-    <link
-      rel="stylesheet"
-      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
-    />
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
   </head>
   <body>
     <div class="home">
@@ -48,37 +43,38 @@
             </p>
           </div>
         </div>
-        <div id="react-test"></div>
-        <div class="notebooks wrapper">
-          <div class="filters">
-            <nav class="categories">
-              <a href="#." class="active">All</a
-              ><a href="#architecture">Architecture</a
-              ><a href="#compression">Compression</a
-              ><a href="#evolution">Evolution</a
-              ><a href="#optimization">Optimization</a>
-              <a href="#regularization">Regularization</a>
-            </nav>
-            <nav class="mobile-categories"><h1>Recent Posts</h1></nav>
-          </div>
-          <div class="primary-col">
-            {% for post in context[:2] %}
-            <div class="post {{categories}}">
-              <small>{{ post.data.date }}</small>
-              <h1>{{ post.data.title }}</h1>
-              <p>{{ post.data.description }}</p>
-              <a href="{{ post.data.slug }}">Read More</a>
+        <div id="react-feed">
+          <div class="feed wrapper">
+            <div class="filters">
+              <nav class="categories">
+                <span class="active">All</span><span>Architecture</span
+                ><span>Compression</span><span>Optimization</span
+                ><span>Regularization</span>
+              </nav>
+              <nav class="mobile-categories"><h1>Recent Posts</h1></nav>
             </div>
-            {% endfor %}
-          </div>
-          <div class="secondary-col">
-            {% for post in context[2:6] %}
-            <div class="post">
-              <small>{{ post.data.date }}</small>
-              <h1>{{ post.data.title }}</h1>
-              <a href="{{ post.data.slug }}">Read More</a>
+            <div class="primary-col">
+              {% for post in context[:2] %}
+              <div class="post">
+                <small class="date">{{ post.data.date }}</small>
+                <small class="categories">{{ post.data.categories }}</small>
+                <h1 class="title">{{ post.data.title }}</h1>
+                <p class="description">{{ post.data.description }}</p>
+                <a href="{{ post.data.slug }}">Read More</a>
+              </div>
+              {% endfor %}
             </div>
-            {% endfor %}
+            <div class="secondary-col">
+              {% for post in context[2:6] %}
+              <div class="post">
+                <small class="date">{{ post.data.date }}</small>
+                <small class="categories">{{ post.data.categories }}</small>
+                <h1 class="title">{{ post.data.title }}</h1>
+                <p class="description">{{ post.data.description }}</p>
+                <a href="{{ post.data.slug }}">Read More</a>
+              </div>
+              {% endfor %}
+            </div>
           </div>
         </div>
         <div class="featured-paper subnetwork-ensembles">
@@ -130,16 +126,6 @@
       <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
       <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
       <script src="/static/react-home-feed.js"></script>
-      <script>
-        mapboxgl.accessToken =
-          "pk.eyJ1IjoidG13aHRrciIsImEiOiJja2x2NzdpaW0wNXRnMndwOGszNTc3aWd5In0.LvJ2znCQ_1v9a86fxUhQ2A"
-        var map = new mapboxgl.Map({
-          container: "map", // container id
-          style: "mapbox://styles/mapbox/streets-v12", // style URL
-          center: [-105.08338969999998, 40.57471313740658],
-          zoom: 11, // starting zoom
-        })
-      </script>
     </div>
   </body>
 </html>

@@ -115,25 +115,25 @@ html body .featured-paper .wrapper .read-more {
 html body .subnetwork-ensembles {
   background-image: url(/static/tree2.svg);
 }
-html body .notebooks {
+html body .feed {
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: 2fr 1fr;
   grid-gap: 2rem;
   padding: 2rem 1rem 5rem 1rem;
 }
-html body .notebooks .filters {
+html body .feed .filters {
   grid-row: 1;
   grid-column: 1/span 2;
   border-bottom: 1px solid #ddd;
 }
-html body .notebooks .filters h1 {
+html body .feed .filters h1 {
   padding: 1rem 0;
 }
-html body .notebooks .filters .categories {
+html body .feed .filters .categories {
   padding-bottom: 2rem;
 }
-html body .notebooks .filters .categories a {
+html body .feed .filters .categories span {
   font-family: "Open Sans";
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -141,77 +141,85 @@ html body .notebooks .filters .categories a {
   margin-right: 2rem;
   color: #aaa;
 }
-html body .notebooks .filters .categories a.active, html body .notebooks .filters .categories a:hover {
+html body .feed .filters .categories span.active, html body .feed .filters .categories span:hover {
   color: red;
+  cursor: pointer;
 }
 @media screen and (max-width: 600px) {
-  html body .notebooks .filters .categories {
+  html body .feed .filters .categories {
     display: none;
   }
 }
-html body .notebooks .filters .mobile-categories {
+html body .feed .filters .mobile-categories {
   display: none;
   padding-bottom: 2rem;
 }
 @media screen and (max-width: 600px) {
-  html body .notebooks .filters .mobile-categories {
+  html body .feed .filters .mobile-categories {
     display: block;
   }
 }
 @media screen and (max-width: 600px) {
-  html body .notebooks .filters {
+  html body .feed .filters {
     grid-column: auto;
   }
 }
-html body .notebooks .primary-col {
+html body .feed .primary-col {
   grid-row: 2;
   border-right: 1px solid #ddd;
 }
-html body .notebooks .primary-col .post {
+html body .feed .primary-col .post {
   background: white;
   padding: 2rem 0;
   margin-right: 2rem;
 }
-html body .notebooks .primary-col .post h1 {
+html body .feed .primary-col .post .categories {
+  display: none;
+}
+html body .feed .primary-col .post .title {
   font-family: "Open Sans";
   font-size: 2.4rem;
 }
-html body .notebooks .primary-col .post p {
+html body .feed .primary-col .post .description {
   font-size: 1.6rem;
 }
-html body .notebooks .primary-col .post:not(:first-child) {
+html body .feed .primary-col .post:not(:first-child) {
   border-top: 1px solid #ddd;
 }
 @media screen and (max-width: 600px) {
-  html body .notebooks .primary-col {
+  html body .feed .primary-col {
     grid-row: auto;
     border-right: none;
   }
 }
-html body .notebooks .secondary-col {
+html body .feed .secondary-col {
   grid-row: 2;
 }
-html body .notebooks .secondary-col .post {
+html body .feed .secondary-col .post {
   background: white;
   padding: 2rem;
 }
-html body .notebooks .secondary-col .post h1 {
+html body .feed .secondary-col .post .categories {
+  display: none;
+}
+html body .feed .secondary-col .post .title {
   font-family: "Open Sans";
   font-size: 1.6rem;
 }
-html body .notebooks .secondary-col .post p {
+html body .feed .secondary-col .post .description {
   font-size: 1.2rem;
+  display: none;
 }
-html body .notebooks .secondary-col .post:not(:first-child) {
+html body .feed .secondary-col .post:not(:first-child) {
   border-top: 1px solid #ddd;
 }
 @media screen and (max-width: 600px) {
-  html body .notebooks .secondary-col {
+  html body .feed .secondary-col {
     display: none;
   }
 }
 @media screen and (max-width: 600px) {
-  html body .notebooks {
+  html body .feed {
     padding-left: 1rem;
     padding-right: 1rem;
     grid-template-columns: 1fr;

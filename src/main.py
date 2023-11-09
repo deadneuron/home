@@ -30,8 +30,15 @@ class Notebook:
             'description': description.group(1),
             'date': date.group(1),
             'hero': hero.group(1),
-            'slug': os.path.join("/notebooks", self.filename.replace('.ipynb', ''))
+            'slug': os.path.join("/notebooks", self.filename.replace('.ipynb', '')),
+            'content': self.get_content()
         }
+
+    def get_content(self):
+        with open(os.path.join(self.build_location, "content.html"), 'r+') as f:
+            content = f.read()
+
+        return content
 
     def compile(self):
         os.system(
