@@ -8,38 +8,6 @@ async function fetchNotebooks() {
 
 const e = React.createElement
 
-class PostList extends React.Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      posts: [],
-      category: "All",
-    }
-
-    fetchNotebooks().then((notebooks) => {
-      this.setState({ posts: notebooks })
-    })
-  }
-
-  renderList() {
-    return this.state.posts.map((post) => {
-      return e(
-        "div",
-        { className: "post", key: post.slug },
-        e("small", {}, post.date),
-        e("h1", {}, post.title),
-        e("p", {}, post.description),
-        e("a", { href: post.slug }, "Read More")
-      )
-    })
-  }
-
-  render() {
-    return e("div", {}, this.renderList())
-  }
-}
-
 class NotebookFeed extends React.Component {
   constructor(props) {
     super(props)

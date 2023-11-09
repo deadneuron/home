@@ -27,6 +27,20 @@ html body .catalog .wrapper .filters .categories a.active, html body .catalog .w
     display: none;
   }
 }
+html body .catalog .wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+html body .catalog .wrapper table td, html body .catalog .wrapper table th {
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+html body .catalog .wrapper table tr {
+  background: white;
+}
+html body .catalog .wrapper table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 html body .catalog .wrapper .item {
   background: white;
   padding: 5rem 0;

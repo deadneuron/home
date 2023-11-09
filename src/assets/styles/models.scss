@@ -4,7 +4,6 @@ html {
       background-image: url(/static/space-bg.png);
       background-position: top center;
     }
-
     .catalog {
       background:white;
       .wrapper {
@@ -29,6 +28,25 @@ html {
             display:none;
           }
         }
+
+
+        table {
+          width:100%;
+          border-collapse:collapse;
+          
+          td, th {
+            border: 1px solid #ddd;
+            padding: 1rem;
+          }
+          tr {
+            background:white;
+
+            &:nth-child(even) {
+              background-color: #f2f2f2;
+            }
+          }
+        }
+
         .item {
           background: white;
           padding: 5rem 0;
