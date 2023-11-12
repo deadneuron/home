@@ -48,6 +48,10 @@ html body .catalog .wrapper .item {
 html body .catalog .wrapper .item:not(:last-child) {
   border-bottom: 1px solid #f7f7f7;
 }
+html body .catalog .wrapper .item h1 {
+  font-family: "Open Sans";
+  font-size: 2.4rem;
+}
 @media screen and (max-width: 600px) {
   html body .catalog .wrapper .item h1 {
     font-size: 2.4rem;

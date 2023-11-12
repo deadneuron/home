@@ -3,6 +3,14 @@ import re
 import json
 from jinja2 import Template
 
+class Model:
+    def __init__(self):
+        self.name = ""
+        self.date = 0
+        self.authors = ""
+        self.description = ""
+        self.paper_url = ""
+        self.content = ""
 
 class Notebook:
     def __init__(self, src_location):
@@ -82,6 +90,14 @@ for filename in os.listdir('notebooks'):
 # Compile notebooks
 # for n in notebooks:
 #     n.compile()
+
+# Loop through models and build them
+models = []
+
+for filename in os.listdir('models'):
+    if filename.endswith('.html'):
+        m = Model(os.path.join('models', filename))
+        models.append(m)
 
 # Build json api endpoint (For react in the future?)
 build_json(notebooks)
