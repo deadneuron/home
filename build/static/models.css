@@ -44,35 +44,41 @@ html body .catalog .wrapper table tr:nth-child(even) {
 html body .catalog .wrapper .item {
   background: white;
   padding: 5rem 0;
-}
-html body .catalog .wrapper .item:not(:last-child) {
-  border-bottom: 1px solid #f7f7f7;
-}
-html body .catalog .wrapper .item h1 {
-  font-family: "Open Sans";
-  font-size: 2.4rem;
-}
-@media screen and (max-width: 600px) {
-  html body .catalog .wrapper .item h1 {
-    font-size: 2.4rem;
-  }
-}
-html body .catalog .wrapper .item.flex {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-html body .catalog .wrapper .item.flex .content, html body .catalog .wrapper .item.flex .image {
-  flex: 0 0 50%;
+html body .catalog .wrapper .item:not(:last-child) {
+  border-bottom: 1px solid #f7f7f7;
 }
-html body .catalog .wrapper .item.flex .content img, html body .catalog .wrapper .item.flex .image img {
+html body .catalog .wrapper .item .content {
+  flex: 1 1 50%;
+}
+html body .catalog .wrapper .item .content h1 {
+  font-family: "Open Sans";
+  font-size: 2.4rem;
+}
+@media screen and (max-width: 600px) {
+  html body .catalog .wrapper .item .content h1 {
+    font-size: 2.4rem;
+  }
+}
+html body .catalog .wrapper .item .content .links a {
+  margin-right: 1rem;
+}
+html body .catalog .wrapper .item .image {
+  flex: 0 0 50%;
+  padding-left: 1rem;
+}
+html body .catalog .wrapper .item .image img {
   width: 100%;
 }
 @media screen and (max-width: 600px) {
-  html body .catalog .wrapper .item.flex .content, html body .catalog .wrapper .item.flex .image {
+  html body .catalog .wrapper .item .image {
     flex: 0 0 100%;
+    padding-left: 0rem;
   }
-  html body .catalog .wrapper .item.flex .content img, html body .catalog .wrapper .item.flex .image img {
+  html body .catalog .wrapper .item .image img {
     margin-top: 3rem;
   }
 }

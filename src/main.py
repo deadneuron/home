@@ -3,14 +3,59 @@ import re
 import json
 from jinja2 import Template
 
+
 class Model:
-    def __init__(self):
-        self.name = ""
-        self.date = 0
-        self.authors = ""
-        self.description = ""
-        self.paper_url = ""
-        self.content = ""
+    def __init__(self, src_location):
+        # Filename including .ipynb
+        self.filename = src_location.rsplit('/', 1)[-1]
+        self.src_location = src_location
+        self.build_location = "../build/models/" + \
+            self.filename.replace(".ipynb", "")
+        self.data = self.build_metadata()
+
+    def build_metadata(self):
+        with open(self.src_location) as f:
+            text = f.read()
+            name = re.search(r'NAME: (.*)\\n', text)
+            year = re.search(r'YEAR: (.*)\\n', text)
+            authors = re.search(r'AUTHORS: (.*)\\n', text)
+            categories = re.search(r'CATEGORIES: (.*)\\n', text)
+            description = re.search(r'DESCRIPTION: (.*)\\n', text)
+            paper = re.search(r'PAPER: (.*)\\n', text)
+            image = re.search(r'IMAGE: (.*)\"', text)
+
+        return {
+            'name': name.group(1),
+            'year': year.group(1),
+            'authors': authors.group(1),
+            'categories': categories.group(1),
+            'description': description.group(1),
+            'paper': paper.group(1),
+            'image': image.group(1),
+            'slug': os.path.join("/notebooks", self.filename.replace('.ipynb', '')),
+            # 'content': self.get_content()
+        }
+
+    def get_content(self):
+        with open(os.path.join(self.build_location, "content.html"), 'r+') as f:
+            content = f.read()
+
+        return content
+
+    def compile(self):
+        os.system(
+            f"jupyter nbconvert --TagRemovePreprocessor.remove_cell_tags='{{\"metadata\"}}' --no-prompt --to html --output 'content' --output-dir '{self.build_location}' {self.src_location}")
+
+        with open(os.path.join(self.build_location, "content.html"), 'r+') as f:
+            content = f.read()
+
+            # Inject iframe resizer at the end of </head>
+            f.seek(0)
+            self.data['content'] = content.replace(
+                '</head>', '<script src="/static/iframeresizer.contentWindow.min.js"></script></head>')
+
+            f.write(self.data['content'])
+
 
 class Notebook:
     def __init__(self, src_location):
@@ -38,7 +83,7 @@ class Notebook:
             'description': description.group(1),
             'date': date.group(1),
             'hero': hero.group(1),
-            'slug': os.path.join("/notebooks", self.filename.replace('.ipynb', '')),
+            'slug': os.path.join("/models", self.filename.replace('.ipynb', '')),
             'content': self.get_content()
         }
 
@@ -63,10 +108,10 @@ class Notebook:
             f.write(self.data['content'])
 
 
-def build_json(notebooks):
-    data = [n.data for n in notebooks]
+def build_json(items, build_location):
+    data = [x.data for x in items]
 
-    with open('../build/notebooks/feed.json', 'w+') as f:
+    with open(build_location, 'w+') as f:
         f.write(json.dumps(data))
 
 
@@ -95,12 +140,13 @@ for filename in os.listdir('notebooks'):
 models = []
 
 for filename in os.listdir('models'):
-    if filename.endswith('.html'):
+    if filename.endswith('.ipynb'):
         m = Model(os.path.join('models', filename))
         models.append(m)
 
 # Build json api endpoint (For react in the future?)
-build_json(notebooks)
+build_json(notebooks, "../build/notebooks/feed.json")
+build_json(models, "../build/models/feed.json")
 
 # Compile static assets
 os.system("gulp")
@@ -114,7 +160,8 @@ render_template("templates/about.html",
                 "../build/about/index.html")
 
 render_template("templates/models.html",
-                "../build/models/index.html")
+                "../build/models/index.html",
+                context=models)
 
 render_template("templates/publications.html",
                 "../build/publications/index.html")
