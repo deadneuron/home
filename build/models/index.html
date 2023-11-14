@@ -50,43 +50,114 @@
                 ><a href="#">Recurrent</a><a href="#">Reservoir</a>
               </nav>
             </div>
+            
             <div class="item">
               <div class="content">
-                <h1>MLP Mixer (2021)</h1>
-                <p>
-                  <small
-                    >Ilya Tolstikhin, Neil Houlsby, Alexander Kolesnikov, Lucas
-                    Beyer, Xiaohua Zhai, Thomas Unterthiner, Jessica Yung,
-                    Andreas Steiner, Daniel Keysers, Jakob Uszkoreit, Mario
-                    Lucic, Alexey Dosovitskiy</small
-                  >
-                </p>
-                <p>
-                  A new take on vision architectures that eschew convolution and
-                  attention for only fully connected layers. MLP mixer applies
-                  spatial embeddings to the input image and then applies
-                  permutation-invariant operations through channel and token
-                  mixing layers.
-                </p>
+                <h1>DenseNet (2016)</h1>
+                <p><small>Gao Huang, Zhuang Liu, Laurens van der Maaten, Kilian Weinberger</small></p>
+                <p>DenseNet builds on top of the ideas introduced in residual networks by implementing skip connections between a given layer and every other successive layer following it. Each layer receives a concatenation of all the feature maps of all the layers preceding it. This allows for learning at different levels of abstraction throughout the network.</p>
                 <div class="links">
-                  <a href="/static/mlp-mixer.pdf">Paper</a>
+                  <a href="/models/densenet">Read More</a
+                  ><a href="/static/densenet.pdf">Paper</a>
                 </div>
               </div>
+              
+              <div class="image">
+                <img src="/static/densenet.png" />
+              </div>
+              
             </div>
             
             <div class="item">
               <div class="content">
-                <h1>Alexnet (2012)</h1>
+                <h1>SqueezeNet (2016)</h1>
+                <p><small>Forrest Iandola, Song Han, Matthew Moskewicz, Khalid Ashraf, William Dally, Kurt Keutzer</small></p>
+                <p>SqueezeNet is notable for achieving comparable accuracy to larger neural network architectures while using significantly fewer parameters. SqueezeNet utilizes fire modules that consist of a 1x1 convolutional squeeze layer followed by a 3x3 convolutional expand layer.</p>
+                <div class="links">
+                  <a href="/models/squeezenet">Read More</a
+                  ><a href="/static/squeezenet.pdf">Paper</a>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="item">
+              <div class="content">
+                <h1>U-Net (2015)</h1>
+                <p><small>Olaf Ronneberger, Philipp Fischer, Thomas Brox</small></p>
+                <p>U-Net is widely used in various segmentation and image-to-image translation tasks. The architecture consists of a contracting path that uses convolutional and pooling layers to capture context and a symmetric expanding path that uses deconvolutional and upsampling layers to achieve localization. The architecture's unique U-shape allows it to preserve fine-grained details during upsampling and is particularly well-suited for segmenting structures with varying shapes and sizes.</p>
+                <div class="links">
+                  <a href="/models/unet">Read More</a
+                  ><a href="/static/unet.pdf">Paper</a>
+                </div>
+              </div>
+              
+              <div class="image">
+                <img src="/static/unet.png" />
+              </div>
+              
+            </div>
+            
+            <div class="item">
+              <div class="content">
+                <h1>ResNet (2015)</h1>
+                <p><small>Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun</small></p>
+                <p>Residual Networks popularized skip connections in deep networks to alleviate vanishing gradient problems. The shortcut connections between blocks allows the gradients to flow directly from later layers to earlier layers, enabling depths of over a hundred layers.</p>
+                <div class="links">
+                  <a href="/models/resnet">Read More</a
+                  ><a href="/static/resnet.pdf">Paper</a>
+                </div>
+              </div>
+              
+              <div class="image">
+                <img src="/static/resnet.png" />
+              </div>
+              
+            </div>
+            
+            <div class="item">
+              <div class="content">
+                <h1>Inception (2014)</h1>
+                <p><small>Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich</small></p>
+                <p>Inception is a deep convolutional network developed by Google researchers. It introduced the concept of inception modules, which are composed of multiple parallel convolutional layers of different kernel sizes to capture different feature scales.</p>
+                <div class="links">
+                  <a href="/models/inception">Read More</a
+                  ><a href="/static/inception.pdf">Paper</a>
+                </div>
+              </div>
+              
+              <div class="image">
+                <img src="/static/inception.png" />
+              </div>
+              
+            </div>
+            
+            <div class="item">
+              <div class="content">
+                <h1>AlexNet (2012)</h1>
                 <p><small>Alex Krishevsky, Ilya Sutskever, Geoffrey Hinton</small></p>
                 <p>The model that kickstarted the deep learning revolution. Consisting of eight layers, including five convolutional layers and three fully connected layers. AlexNet was one of the first deep convolutional neural networks to achieve state-of-the-art results on ImageNet. The original implementation split the network over two independent gpus to alleviate challenges with memory at the time.</p>
                 <div class="links">
-                  <a href="/notebooks/alexnet">Read More</a
+                  <a href="/models/alexnet">Read More</a
                   ><a href="/static/alexnet.pdf">Paper</a>
                 </div>
               </div>
               
               <div class="image">
                 <img src="/static/alexnet.png" />
+              </div>
+              
+            </div>
+            
+            <div class="item">
+              <div class="content">
+                <h1>Perceptron (1958)</h1>
+                <p><small>Frank Rosenblatt</small></p>
+                <p>Neural network research begins with the first implementation of an artificial neuron called the perceptron. The theory for the perceptron was introduced in 1943 by McCulloch and Pitts as a binary threshold classifier. The first implementation was actually intended to be a machine rather than a program. Photocells were interconnected with potentiometers that were updated during learning with electric motors.</p>
+                <div class="links">
+                  <a href="/models/perceptron">Read More</a
+                  ><a href="/static/perceptron.pdf">Paper</a>
+                </div>
               </div>
               
             </div>

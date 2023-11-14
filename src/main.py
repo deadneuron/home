@@ -31,8 +31,8 @@ class Model:
             'categories': categories.group(1),
             'description': description.group(1),
             'paper': paper.group(1),
-            'image': image.group(1),
-            'slug': os.path.join("/notebooks", self.filename.replace('.ipynb', '')),
+            'image': image.group(1) if image else None,
+            'slug': os.path.join("/models", self.filename.replace('.ipynb', '')),
             # 'content': self.get_content()
         }
 
@@ -83,7 +83,7 @@ class Notebook:
             'description': description.group(1),
             'date': date.group(1),
             'hero': hero.group(1),
-            'slug': os.path.join("/models", self.filename.replace('.ipynb', '')),
+            'slug': os.path.join("/notebooks", self.filename.replace('.ipynb', '')),
             'content': self.get_content()
         }
 
@@ -143,6 +143,9 @@ for filename in os.listdir('models'):
     if filename.endswith('.ipynb'):
         m = Model(os.path.join('models', filename))
         models.append(m)
+
+# Sort models by date
+models.sort(key=lambda x: x.data['year'], reverse=True)
 
 # Build json api endpoint (For react in the future?)
 build_json(notebooks, "../build/notebooks/feed.json")
