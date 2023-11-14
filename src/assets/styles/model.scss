@@ -1,0 +1,27 @@
+
+html {
+
+  body {
+    .hero {
+      background-image: url(/static/mystic-gate-bg.png);
+
+      h1 {
+        max-width:850px;
+      }
+    }
+
+    .article {
+      .wrapper {
+        .content {
+          iframe {
+            width: 100%;
+            border:none;
+            .jp-InputPrompt, .jp-OutputPrompt {
+              display:none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

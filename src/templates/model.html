@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ context.data.title }} | Dead Neurons</title>
+    <title>{{ context.data.name }} | Dead Neurons</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/static/favicon.ico" />
     <link rel="stylesheet" href="/static/style.css" />
-    <link rel="stylesheet" href="/static/notebook.css" />
+    <link rel="stylesheet" href="/static/model.css" />
     <link rel="stylesheet" href="/static/prism.css" />
     <link
       rel="stylesheet"
@@ -32,13 +32,10 @@
         </div>
       </header>
       <main>
-        <div
-          class="hero"
-          style="background-image: url({{ context.data.hero }})"
-        >
+        <div class="hero" style="background-image: url(/static/space-bg.png)">
           <div class="overlay"></div>
           <div class="wrapper">
-            <h1>{{ context.data.title }}</h1>
+            <h1>{{ context.data.name }}</h1>
             <p>{{ context.data.description }}</p>
           </div>
         </div>

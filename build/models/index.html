@@ -41,13 +41,13 @@
             </p>
           </div>
         </div>
-        <div class="catalog">
-          <div class="wrapper">
+        <div id="react-feed">
+          <div class="catalog wrapper">
             <div class="filters">
               <nav class="categories">
-                <a href="#" class="active">All</a><a href="#">Attention</a
-                ><a href="#">Convolutional</a><a href="#">Energy</a
-                ><a href="#">Recurrent</a><a href="#">Reservoir</a>
+                <span class="active">All</span><span>Attention</span
+                ><span>Convolutional</span><span>Energy</span
+                ><span>Fully Connected</span><span>Recurrent</span>
               </nav>
             </div>
             
@@ -165,12 +165,6 @@
           </div>
         </div>
       </main>
-      <div class="reference">
-        <p>
-          Hero images generated with neural networks via
-          <a href="https://midjourney.com">midjourney</a>.
-        </p>
-      </div>
       <script src="/static/prism.js"></script>
       <script src="/static/prism-python.min.js"></script>
       <script src="/static/prism-julia.min.js"></script>
@@ -197,6 +191,9 @@
           </div>
         </div>
       </footer>
+      <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+      <script src="/static/models-feed.js"></script>
     </div>
   </body>
 </html>

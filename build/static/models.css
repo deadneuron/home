@@ -4,14 +4,15 @@ html body .hero {
 }
 html body .catalog {
   background: white;
+  padding: 2rem 1rem 5rem 1rem;
 }
-html body .catalog .wrapper .filters {
+html body .catalog .filters {
   border-bottom: 1px solid #ddd;
 }
-html body .catalog .wrapper .filters .categories {
-  padding: 1rem 0 2rem 0;
+html body .catalog .filters .categories {
+  padding-bottom: 2rem;
 }
-html body .catalog .wrapper .filters .categories a {
+html body .catalog .filters .categories span {
   font-family: "Open Sans";
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -19,66 +20,76 @@ html body .catalog .wrapper .filters .categories a {
   margin-right: 2rem;
   color: #aaa;
 }
-html body .catalog .wrapper .filters .categories a.active, html body .catalog .wrapper .filters .categories a:hover {
+html body .catalog .filters .categories span.active, html body .catalog .filters .categories span:hover {
   color: red;
+  cursor: pointer;
 }
 @media screen and (max-width: 600px) {
-  html body .catalog .wrapper .filters {
+  html body .catalog .filters .categories {
     display: none;
   }
 }
-html body .catalog .wrapper table {
+html body .catalog .filters .mobile-categories {
+  display: none;
+  padding-bottom: 2rem;
+}
+@media screen and (max-width: 600px) {
+  html body .catalog .filters .mobile-categories {
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  html body .catalog .filters {
+    display: none;
+  }
+}
+html body .catalog table {
   width: 100%;
   border-collapse: collapse;
 }
-html body .catalog .wrapper table td, html body .catalog .wrapper table th {
+html body .catalog table td, html body .catalog table th {
   border: 1px solid #ddd;
   padding: 1rem;
 }
-html body .catalog .wrapper table tr {
+html body .catalog table tr {
   background: white;
 }
-html body .catalog .wrapper table tr:nth-child(even) {
+html body .catalog table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-html body .catalog .wrapper .item {
+html body .catalog .item {
   background: white;
   padding: 5rem 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
-html body .catalog .wrapper .item:not(:last-child) {
+html body .catalog .item:not(:last-child) {
   border-bottom: 1px solid #f7f7f7;
 }
-html body .catalog .wrapper .item .content {
+html body .catalog .item .content {
   flex: 1 1 50%;
 }
-html body .catalog .wrapper .item .content h1 {
+html body .catalog .item .content h1 {
   font-family: "Open Sans";
   font-size: 2.4rem;
 }
-@media screen and (max-width: 600px) {
-  html body .catalog .wrapper .item .content h1 {
-    font-size: 2.4rem;
-  }
-}
-html body .catalog .wrapper .item .content .links a {
+html body .catalog .item .content .links a {
   margin-right: 1rem;
 }
-html body .catalog .wrapper .item .image {
+html body .catalog .item .image {
   flex: 0 0 50%;
   padding-left: 1rem;
 }
-html body .catalog .wrapper .item .image img {
+html body .catalog .item .image img {
   width: 100%;
 }
 @media screen and (max-width: 600px) {
-  html body .catalog .wrapper .item .image {
+  html body .catalog .item .image {
     flex: 0 0 100%;
     padding-left: 0rem;
   }
-  html body .catalog .wrapper .item .image img {
+  html body .catalog .item .image img {
     margin-top: 3rem;
   }
 }

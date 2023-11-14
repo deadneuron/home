@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ context.data.title }} | Dead Neurons</title>
+    <title>ResNet | Dead Neurons</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/static/favicon.ico" />
     <link rel="stylesheet" href="/static/style.css" />
-    <link rel="stylesheet" href="/static/notebook.css" />
+    <link rel="stylesheet" href="/static/model.css" />
     <link rel="stylesheet" href="/static/prism.css" />
     <link
       rel="stylesheet"
@@ -32,14 +32,11 @@
         </div>
       </header>
       <main>
-        <div
-          class="hero"
-          style="background-image: url({{ context.data.hero }})"
-        >
+        <div class="hero" style="background-image: url(/static/space-bg.png)">
           <div class="overlay"></div>
           <div class="wrapper">
-            <h1>{{ context.data.title }}</h1>
-            <p>{{ context.data.description }}</p>
+            <h1>ResNet</h1>
+            <p>Residual Networks popularized skip connections in deep networks to alleviate vanishing gradient problems. The shortcut connections between blocks allows the gradients to flow directly from later layers to earlier layers, enabling depths of over a hundred layers.</p>
           </div>
         </div>
         <div class="article">
@@ -47,7 +44,7 @@
             <div class="content">
               <iframe
                 id="myIframe"
-                src="{{ context.data.slug }}/content.html"
+                src="/models/resnet/content.html"
               ></iframe>
               <script>
                 iFrameResize({ log: true }, "#myIframe")

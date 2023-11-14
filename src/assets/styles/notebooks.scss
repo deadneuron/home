@@ -28,11 +28,10 @@ html {
       .post {
         background: white;
         padding: 5rem 0;
-
+        
         h1 {
-          @media screen and (max-width:600px) {
-            font-size:2.4rem;
-          }
+          font-family: "Open Sans";
+          font-size: 2.4rem;
         }
 
         .read-more {

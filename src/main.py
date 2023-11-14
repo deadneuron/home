@@ -33,10 +33,13 @@ class Model:
             'paper': paper.group(1),
             'image': image.group(1) if image else None,
             'slug': os.path.join("/models", self.filename.replace('.ipynb', '')),
-            # 'content': self.get_content()
+            'content': self.get_content()
         }
 
     def get_content(self):
+        if not os.path.exists(os.path.join(self.build_location, "content.html")):
+            self.compile()
+
         with open(os.path.join(self.build_location, "content.html"), 'r+') as f:
             content = f.read()
 
@@ -51,10 +54,10 @@ class Model:
 
             # Inject iframe resizer at the end of </head>
             f.seek(0)
-            self.data['content'] = content.replace(
+            injected_content = content.replace(
                 '</head>', '<script src="/static/iframeresizer.contentWindow.min.js"></script></head>')
 
-            f.write(self.data['content'])
+            f.write(injected_content)
 
 
 class Notebook:
@@ -88,6 +91,9 @@ class Notebook:
         }
 
     def get_content(self):
+        if not os.path.exists(os.path.join(self.build_location, "content.html")):
+            self.compile()
+
         with open(os.path.join(self.build_location, "content.html"), 'r+') as f:
             content = f.read()
 
@@ -102,10 +108,10 @@ class Notebook:
 
             # Inject iframe resizer at the end of </head>
             f.seek(0)
-            self.data['content'] = content.replace(
+            injected_content = content.replace(
                 '</head>', '<script src="/static/iframeresizer.contentWindow.min.js"></script></head>')
 
-            f.write(self.data['content'])
+            f.write(injected_content)
 
 
 def build_json(items, build_location):
@@ -177,3 +183,8 @@ for notebook in notebooks:
     render_template("templates/notebook.html",
                     f"{notebook.build_location}/index.html",
                     context=notebook)
+
+for model in models:
+    render_template("templates/model.html",
+                    f"{model.build_location}/index.html",
+                    context=model)

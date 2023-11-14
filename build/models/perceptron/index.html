@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ context.data.title }} | Dead Neurons</title>
+    <title>Perceptron | Dead Neurons</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/static/favicon.ico" />
     <link rel="stylesheet" href="/static/style.css" />
-    <link rel="stylesheet" href="/static/notebook.css" />
+    <link rel="stylesheet" href="/static/model.css" />
     <link rel="stylesheet" href="/static/prism.css" />
     <link
       rel="stylesheet"
@@ -32,14 +32,11 @@
         </div>
       </header>
       <main>
-        <div
-          class="hero"
-          style="background-image: url({{ context.data.hero }})"
-        >
+        <div class="hero" style="background-image: url(/static/space-bg.png)">
           <div class="overlay"></div>
           <div class="wrapper">
-            <h1>{{ context.data.title }}</h1>
-            <p>{{ context.data.description }}</p>
+            <h1>Perceptron</h1>
+            <p>Neural network research begins with the first implementation of an artificial neuron called the perceptron. The theory for the perceptron was introduced in 1943 by McCulloch and Pitts as a binary threshold classifier. The first implementation was actually intended to be a machine rather than a program. Photocells were interconnected with potentiometers that were updated during learning with electric motors.</p>
           </div>
         </div>
         <div class="article">
@@ -47,7 +44,7 @@
             <div class="content">
               <iframe
                 id="myIframe"
-                src="{{ context.data.slug }}/content.html"
+                src="/models/perceptron/content.html"
               ></iframe>
               <script>
                 iFrameResize({ log: true }, "#myIframe")

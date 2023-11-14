@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{ context.data.title }} | Dead Neurons</title>
+    <title>Inception | Dead Neurons</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/static/favicon.ico" />
     <link rel="stylesheet" href="/static/style.css" />
-    <link rel="stylesheet" href="/static/notebook.css" />
+    <link rel="stylesheet" href="/static/model.css" />
     <link rel="stylesheet" href="/static/prism.css" />
     <link
       rel="stylesheet"
@@ -32,14 +32,11 @@
         </div>
       </header>
       <main>
-        <div
-          class="hero"
-          style="background-image: url({{ context.data.hero }})"
-        >
+        <div class="hero" style="background-image: url(/static/space-bg.png)">
           <div class="overlay"></div>
           <div class="wrapper">
-            <h1>{{ context.data.title }}</h1>
-            <p>{{ context.data.description }}</p>
+            <h1>Inception</h1>
+            <p>Inception is a deep convolutional network developed by Google researchers. It introduced the concept of inception modules, which are composed of multiple parallel convolutional layers of different kernel sizes to capture different feature scales.</p>
           </div>
         </div>
         <div class="article">
@@ -47,7 +44,7 @@
             <div class="content">
               <iframe
                 id="myIframe"
-                src="{{ context.data.slug }}/content.html"
+                src="/models/inception/content.html"
               ></iframe>
               <script>
                 iFrameResize({ log: true }, "#myIframe")
