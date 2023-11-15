@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SqueezeNet | Dead Neurons</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/static/favicon.ico" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/model.css" />
+    <link rel="stylesheet" href="/static/prism.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&amp;display=block"
+    />
+    <script src="/static/iframeresizer.min.js"></script>
+  </head>
+  <body>
+    <div class="home">
+      <header>
+        <div class="wrapper">
+          <a href="/" class="logo"><img src="/static/logo.svg" /></a>
+          <nav>
+            <a href="/about">About</a><a href="/publications">Publications</a
+            ><a href="/models">Models</a><a href="/notebooks">Notebooks</a>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div class="hero" style="background-image: url(/static/space-bg.png)">
+          <div class="overlay"></div>
+          <div class="wrapper">
+            <h1>SqueezeNet</h1>
+            <p>SqueezeNet is notable for achieving comparable accuracy to larger neural network architectures while using significantly fewer parameters. SqueezeNet utilizes fire modules that consist of a 1x1 convolutional squeeze layer followed by a 3x3 convolutional expand layer.</p>
+          </div>
+        </div>
+        <div class="article">
+          <div class="wrapper">
+            <div class="content">
+              <iframe
+                id="myIframe"
+                src="/models/shufflenet/content.html"
+              ></iframe>
+              <script>
+                iFrameResize({ log: true }, "#myIframe")
+              </script>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="wrapper">
+          <div class="column">
+            <h2>Site</h2>
+            <a href="/about">About</a><a href="/models">Models</a
+            ><a href="/notebooks">Notebooks</a><a href="/research">Research</a>
+          </div>
+          <div class="column">
+            <h2>Links</h2>
+            <a href="https://arxiv-sanity-lite.com">Arxiv Sanity</a
+            ><a href="https://paperswithcode.com">Papers With Code</a
+            ><a href="https://midjourney.com">Midjourney</a
+            ><a href="https://openai.com">OpenAI</a>
+          </div>
+          <div class="column">
+            <h2>Self</h2>
+            <a href="/cv">CV</a
+            ><a href="https://github.com/tjwhitaker">Github</a
+            ><a href="https://lichess.org/@/tjwhitaker">Lichess</a
+            ><a href="https://orcid.org/0000-0003-3792-3901">Orcid</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
