@@ -1,5 +1,6 @@
 html body .hero {
   background-image: url(/static/mystic-gate-bg.png);
+  height: 40vh;
 }
 html body .hero h1 {
   max-width: 850px;

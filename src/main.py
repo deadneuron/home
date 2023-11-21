@@ -109,7 +109,7 @@ class Notebook:
             # Inject iframe resizer at the end of </head>
             f.seek(0)
             injected_content = content.replace(
-                '</head>', '<script src="/static/iframeresizer.contentWindow.min.js"></script></head>')
+                '</head>', '<link rel="stylesheet" href="/static/notebook-iframe.css" /><script src="/static/iframeresizer.contentWindow.min.js"></script></head>')
 
             f.write(injected_content)
 
@@ -140,7 +140,7 @@ for filename in os.listdir('notebooks'):
 
 # Compile notebooks
 # for n in notebooks:
-#     n.compile()
+    # n.compile()
 
 # Loop through models and build them
 models = []
