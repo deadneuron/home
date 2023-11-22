@@ -40,6 +40,9 @@ html body h1, html body h2, html body h3, html body h4, html body h5, html body 
 html body h1 {
   font-size: 2.4rem !important;
 }
+html body h2 {
+  font-size: 1.8rem !important;
+}
 html body p {
   font-family: "Latin Modern", Garamond !important;
   font-size: 1.6rem !important;
