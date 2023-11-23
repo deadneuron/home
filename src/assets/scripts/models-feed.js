@@ -1,6 +1,6 @@
 "use strict"
 
-async function fetchNotebooks() {
+async function fetchModels() {
   const response = await fetch("/models/feed.json")
   const models = await response.json()
   return models
@@ -18,9 +18,9 @@ class ModelFeed extends React.Component {
       category: "All",
     }
 
-    fetchNotebooks().then((notebooks) => {
-      this.setState({ allPosts: notebooks })
-      this.setState({ filteredPosts: notebooks })
+    fetchModels().then((models) => {
+      this.setState({ allPosts: models })
+      this.setState({ filteredPosts: models })
     })
   }
 

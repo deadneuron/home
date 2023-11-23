@@ -4,11 +4,12 @@ html {
       background-image: url(/static/cave-bg.png);
     }
     .feed {
+      padding:2rem 1rem 5rem 1rem;
       .filters {
         border-bottom: 1px solid #ddd;
         .categories {
-          padding:1rem 0 2rem 0;
-          a {
+          padding-bottom:2rem;
+          span {
             font-family:"Open Sans";
             font-size:1.2rem;
             text-transform:uppercase;
@@ -18,11 +19,20 @@ html {
 
             &.active, &:hover {
               color: red;
+              cursor:pointer;
             }
           }
           @media screen and (max-width:600px) {
             display:none;
           }
+        }
+        .mobile-categories {
+          display:none;
+          padding-bottom:2rem;
+
+          @media screen and (max-width:600px) {
+            display:block;
+          } 
         }
       }
       .post {

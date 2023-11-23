@@ -1,13 +1,16 @@
 html body .hero {
   background-image: url(/static/cave-bg.png);
 }
+html body .feed {
+  padding: 2rem 1rem 5rem 1rem;
+}
 html body .feed .filters {
   border-bottom: 1px solid #ddd;
 }
 html body .feed .filters .categories {
-  padding: 1rem 0 2rem 0;
+  padding-bottom: 2rem;
 }
-html body .feed .filters .categories a {
+html body .feed .filters .categories span {
   font-family: "Open Sans";
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -15,12 +18,22 @@ html body .feed .filters .categories a {
   margin-right: 2rem;
   color: #aaa;
 }
-html body .feed .filters .categories a.active, html body .feed .filters .categories a:hover {
+html body .feed .filters .categories span.active, html body .feed .filters .categories span:hover {
   color: red;
+  cursor: pointer;
 }
 @media screen and (max-width: 600px) {
   html body .feed .filters .categories {
     display: none;
+  }
+}
+html body .feed .filters .mobile-categories {
+  display: none;
+  padding-bottom: 2rem;
+}
+@media screen and (max-width: 600px) {
+  html body .feed .filters .mobile-categories {
+    display: block;
   }
 }
 html body .feed .post {

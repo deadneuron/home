@@ -40,29 +40,15 @@
             </p>
           </div>
         </div>
-        <div class="feed">
-          <div class="wrapper">
+        <div id="react-feed">
+          <div class="feed wrapper">
             <div class="filters">
               <nav class="categories">
-                <a href="#" class="active">All</a><a href="#">Architecture</a
-                ><a href="#">Compression</a><a href="#">Evolution</a
-                ><a href="#">Optimization</a><a href="#">Regularization</a>
+                <spanclass="active">All</span><span>Architecture</span
+                ><span>Compression</span><span>Evolution</span
+                ><span>Optimization</span><span>Regularization</span>
               </nav>
             </div>
-            
-              <div class="post">
-                <small>2020-01-01</small>
-                <h1>Activation Functions</h1>
-                <p>Activation functions play a crucial role in determining the output of neurons in neural networks. They introduce non-linearity into the network, enabling it to model complex relationships between inputs and outputs.</p>
-                <a href="/notebooks/activation-functions">Read More</a>
-              </div>
-            
-              <div class="post">
-                <small>2020-01-02</small>
-                <h1>Data Augmentation</h1>
-                <p>A strategy used in machine learning to increase the diversity and amount of training data without actually collecting new data. It involves creating modified versions of existing data using techniques like rotation, scaling, flipping, cropping, and brightness or color adjustments.</p>
-                <a href="/notebooks/data-augmentation">Read More</a>
-              </div>
             
               <div class="post">
                 <small>2020-01-02</small>
@@ -73,9 +59,16 @@
             
               <div class="post">
                 <small>2020-01-02</small>
-                <h1>Weight Pruning</h1>
-                <p>Pruning is used to reduce the complexity and size of a model by removing weights or neurons. Pruning methods typically select weights to prune according to importance heuristics like magnitude or gradient saliency. However, even random pruning has been shown to produce accurate models at significant levels of sparsity. While pruning can cause some loss in model accuracy, this can be mitigated by fine-tuning the pruned model on the original dataset.</p>
-                <a href="/notebooks/weight-pruning">Read More</a>
+                <h1>Data Augmentation</h1>
+                <p>A strategy used in machine learning to increase the diversity and amount of training data without actually collecting new data. It involves creating modified versions of existing data using techniques like rotation, scaling, flipping, cropping, and brightness or color adjustments.</p>
+                <a href="/notebooks/data-augmentation">Read More</a>
+              </div>
+            
+              <div class="post">
+                <small>2020-01-01</small>
+                <h1>Activation Functions</h1>
+                <p>Activation functions play a crucial role in determining the output of neurons in neural networks. They introduce non-linearity into the network, enabling it to model complex relationships between inputs and outputs.</p>
+                <a href="/notebooks/activation-functions">Read More</a>
               </div>
             
               <div class="post">
@@ -90,6 +83,13 @@
                 <h1>Convolutions</h1>
                 <p>Convolutions are mathematical operations that process input data using filters or kernels. The operation involves sliding the filter over the input data and performing an element-wise multiplication between the filter weights and the input window. These filters often learn to detect edges, shapes, or textures in image data in a translation invariant way.</p>
                 <a href="/notebooks/convolutions">Read More</a>
+              </div>
+            
+              <div class="post">
+                <small>2020-01-02</small>
+                <h1>Weight Pruning</h1>
+                <p>Pruning is used to reduce the complexity and size of a model by removing weights or neurons. Pruning methods typically select weights to prune according to importance heuristics like magnitude or gradient saliency. However, even random pruning has been shown to produce accurate models at significant levels of sparsity. While pruning can cause some loss in model accuracy, this can be mitigated by fine-tuning the pruned model on the original dataset.</p>
+                <a href="/notebooks/weight-pruning">Read More</a>
               </div>
             
         </div>
@@ -117,6 +117,9 @@
           </div>
         </div>
       </footer>
+      <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+      <script src="/static/notebooks-feed.js"></script>
     </div>
   </body>
 </html>
