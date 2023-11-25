@@ -84,7 +84,7 @@ class ModelFeed extends React.Component {
           e(
             "div",
             { className: "content" },
-            e("h1", { className: "name" }, post.name + `(${post.year})`),
+            e("h1", { className: "name" }, post.name + ` (${post.year})`),
             e("p", { className: "authors" }, e("small", {}, post.authors)),
             e("p", { className: "description" }, post.description),
             e(
