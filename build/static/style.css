@@ -169,16 +169,6 @@ html body .hero .wrapper p {
   max-width: 600px;
   margin-bottom: 2rem;
 }
-@media screen and (max-width: 600px) {
-  html body .hero .wrapper p {
-    display: none;
-  }
-}
-@media screen and (max-width: 600px) {
-  html body .hero {
-    height: 35vh;
-  }
-}
 html body .reference {
   background: #eeeeee;
   padding: 1rem;
