@@ -98,7 +98,7 @@ html body header .wrapper .logo img {
 }
 @media screen and (max-width: 600px) {
   html body header .wrapper .logo img {
-    max-width: 8rem;
+    max-width: 12rem;
   }
 }
 html body header .wrapper nav {
