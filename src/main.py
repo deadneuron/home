@@ -140,7 +140,7 @@ for filename in os.listdir('notebooks'):
 
 # Compile notebooks
 # for n in notebooks:
-    # n.compile()
+#     n.compile()
 
 # Loop through models and build them
 models = []
@@ -152,7 +152,7 @@ for filename in os.listdir('models'):
 
 # Compile models
 # for m in models:
-    # m.compile()
+#     m.compile()
 
 # Sort models by date
 models.sort(key=lambda x: x.data['year'], reverse=True)
