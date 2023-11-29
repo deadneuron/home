@@ -90,7 +90,7 @@ class ModelFeed extends React.Component {
             e(
               "div",
               { className: "links" },
-              e("a", { href: post.slug }, "Read More"),
+              // e("a", { href: post.slug }, "Read More"),
               e("a", { href: post.paper }, "Paper")
             )
           ),
