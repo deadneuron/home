@@ -48,87 +48,70 @@ html body .intro .wrapper .column-wrapper .column .icon img {
     padding: 0rem;
   }
 }
-html body .featured-paper {
-  padding: 16rem 0;
-  background-size: 45vw;
-  background-repeat: no-repeat;
-}
-@media screen and (max-width: 600px) {
-  html body .featured-paper {
-    padding: 2rem 0;
-    background-size: 250vw;
-  }
-}
-html body .featured-paper .wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 3.2rem;
-  align-items: center;
-}
-@media screen and (max-width: 600px) {
-  html body .featured-paper .wrapper {
-    grid-template-columns: 1fr;
-  }
-}
-html body .featured-paper .wrapper h1 {
-  font-family: "Open Sans";
-  font-size: 4.8rem;
-  text-transform: uppercase;
-  line-height: 1.2;
-  margin-bottom: 1.6rem;
-  color: black;
-}
-@media screen and (max-width: 600px) {
-  html body .featured-paper .wrapper h1 {
-    font-size: 3.8rem;
-  }
-}
-html body .featured-paper .wrapper p {
-  color: black;
-  font-size: 1.6rem;
-}
-@media screen and (max-width: 600px) {
-  html body .featured-paper .wrapper p {
-    font-size: 1.6rem;
-  }
-}
-html body .featured-paper .wrapper .read-more {
-  display: inline-block;
-  margin: 1rem 0;
-  color: black;
-  font-family: "Open Sans";
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 1.2rem;
-}
-html body .featured-paper:nth-child(even) {
+html body .personal {
+  background-image: url(/static/personal-hero-super-res.png);
+  background-position: top center;
+  background-size: cover;
   background-color: white;
-  background-position: center left;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 70vh;
+  filter: grayscale(1);
 }
-html body .featured-paper:nth-child(even) .wrapper div {
-  grid-column: 2;
+html body .professional {
+  padding: 2rem 0 5rem 0;
+  background: #eee;
 }
-html body .featured-paper:nth-child(even) .wrapper div h1, html body .featured-paper:nth-child(even) .wrapper div p, html body .featured-paper:nth-child(even) .wrapper div a {
-  color: black;
+html body .professional .wrapper .education .main-header, html body .professional .wrapper .experience .main-header, html body .professional .wrapper .publications .main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border-bottom: 1px solid #666;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
 }
-html body .featured-paper:nth-child(odd) {
-  background-color: #0f0f0f;
-  background-position: center right;
-}
-html body .featured-paper:nth-child(odd) .wrapper div {
-  grid-column: 1;
-}
-html body .featured-paper:nth-child(odd) .wrapper div h1, html body .featured-paper:nth-child(odd) .wrapper div p, html body .featured-paper:nth-child(odd) .wrapper div a, html body .featured-paper:nth-child(odd) .wrapper div small {
-  color: white;
+html body .professional .wrapper .education .main-header h1, html body .professional .wrapper .experience .main-header h1, html body .professional .wrapper .publications .main-header h1 {
+  flex: 0;
+  font-family: "Open Sans";
+  text-transform: uppercase;
 }
 @media screen and (max-width: 600px) {
-  html body .featured-paper {
-    background-size: 0;
+  html body .professional .wrapper .education .main-header h1, html body .professional .wrapper .experience .main-header h1, html body .professional .wrapper .publications .main-header h1 {
+    font-size: 2.4rem;
   }
 }
-html body .subnetwork-ensembles {
-  background-image: url(/static/tree2.svg);
+html body .professional .wrapper .education .main-header div, html body .professional .wrapper .experience .main-header div, html body .professional .wrapper .publications .main-header div {
+  flex: 0 auto;
+}
+html body .professional .wrapper .education .main-header div img, html body .professional .wrapper .experience .main-header div img, html body .professional .wrapper .publications .main-header div img {
+  width: 100px;
+  margin-left: 1rem;
+}
+@media screen and (max-width: 600px) {
+  html body .professional .wrapper .education .main-header div img, html body .professional .wrapper .experience .main-header div img, html body .professional .wrapper .publications .main-header div img {
+    display: none;
+  }
+}
+html body .professional .wrapper .education .item, html body .professional .wrapper .experience .item, html body .professional .wrapper .publications .item {
+  margin-bottom: 2rem;
+}
+html body .professional .wrapper .education .item .header, html body .professional .wrapper .experience .item .header, html body .professional .wrapper .publications .item .header {
+  display: flex;
+  justify-content: space-between;
+}
+html body .professional .wrapper .education .item p, html body .professional .wrapper .experience .item p, html body .professional .wrapper .publications .item p {
+  margin-bottom: 0;
+}
+html body .professional .wrapper .education .item ul, html body .professional .wrapper .experience .item ul, html body .professional .wrapper .publications .item ul {
+  padding-left: 5rem;
+}
+html body .professional .wrapper .education {
+  margin-bottom: 5rem;
+}
+@media screen and (max-width: 600px) {
+  html body .professional {
+    padding: 2rem 0;
+  }
 }
 html body .contact {
   padding: 8rem 0;

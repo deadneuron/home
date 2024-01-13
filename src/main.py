@@ -176,8 +176,8 @@ render_template("templates/models.html",
                 "../build/models/index.html",
                 context=models)
 
-render_template("templates/publications.html",
-                "../build/publications/index.html")
+render_template("templates/research.html",
+                "../build/research/index.html")
 
 render_template("templates/notebooks.html",
                 "../build/notebooks/index.html",
