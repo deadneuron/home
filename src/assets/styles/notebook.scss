@@ -2,18 +2,28 @@
 html {
 
   body {
-    .hero {
-      background-image: url(/static/mystic-gate-bg.png);
-      height:40vh;
-
-      h1 {
-        max-width:850px;
+    header {
+      .wrapper {
+        padding-bottom:0;
+        .container {
+          padding-bottom:1rem;
+          border-bottom: 1px solid #ddd;
+        }
       }
     }
 
     .article {
       .wrapper {
+          display:grid;
+          grid-template-rows: auto auto;
+          grid-template-columns: 2fr 1fr;
+          grid-gap: 2rem;
+          padding: 2rem 1rem 5rem 1rem;
+
         .content {
+          border-right: 1px solid #ddd;
+          padding-right:2rem;
+
           iframe {
             width: 100%;
             border:none;
@@ -21,6 +31,50 @@ html {
               display:none;
             }
           }
+        }
+        .sidebar {
+          h2 {
+            color: #999;
+            font-weight:bold;
+            font-family: Open Sans;
+            font-size:1.2rem;
+            padding-bottom:1rem;
+            margin-bottom:1rem;
+            border-bottom:1px solid #ddd;
+            text-transform:uppercase;
+          }
+          .meta {
+            margin-bottom:2rem;
+            p {
+              margin: 0;
+            }
+          }
+          .related-posts {
+            .post {
+              background: white;
+              padding:0 0 2rem 0;
+
+              .categories {
+                display:none;
+              }
+              .title {
+                font-family:"Open Sans";
+                font-size:1.6rem;
+              }
+              .description {
+                font-size:1.2rem;
+                display:none;
+              }
+              &:not(:first-child) {
+                padding: 2rem 0;
+                border-top: 1px solid #ddd;
+              }
+            }
+          }
+        
+          @media screen and (max-width:600px) {
+            display:none;
+          } 
         }
       }
     }

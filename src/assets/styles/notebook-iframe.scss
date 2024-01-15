@@ -52,6 +52,9 @@ html {
 		
 		h1 {
 			font-size:2.4rem !important;
+      &:first-child {
+        margin-top:0!important;
+      }
 		}
 
     h2 {
@@ -67,5 +70,9 @@ html {
 			padding-left:0 !important;
 			padding-right:0 !important;
 		}
+    .jp-MarkdownOutput {
+      padding-left:0 !important;
+      padding-right:0 !important;
+    }
 	}
 }

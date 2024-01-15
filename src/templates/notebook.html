@@ -24,26 +24,18 @@
     <div class="home">
       <header>
         <div class="wrapper">
-          <a href="/" class="logo"><img src="/static/logo.svg" /></a>
-          <nav>
-            <a href="/about">About</a>
-            <a href="/models">Models</a>
-            <a href="/notebooks">Notebooks</a>
-            <a href="/research">Research</a>
-          </nav>
+          <div class="container">
+            <a href="/" class="logo"><img src="/static/logo.svg" /></a>
+            <nav>
+              <a href="/about">About</a>
+              <a href="/models">Models</a>
+              <a href="/notebooks">Notebooks</a>
+              <a href="/research">Research</a>
+            </nav>
+          </div>
         </div>
       </header>
       <main>
-        <div
-          class="hero"
-          style="background-image: url({{ context.data.hero }})"
-        >
-          <div class="overlay"></div>
-          <div class="wrapper">
-            <h1>{{ context.data.title }}</h1>
-            <!-- <p>{{ context.data.description }}</p> -->
-          </div>
-        </div>
         <div class="article">
           <div class="wrapper">
             <div class="content">
@@ -54,6 +46,29 @@
               <script>
                 iFrameResize({ log: true }, "#myIframe")
               </script>
+            </div>
+            <div class="sidebar">
+              <h2>Meta</h2>
+              <div class="meta">
+                <p><b>Date</b>: {{ context.data.date }}</p>
+                <p><b>Source</b>: <a href="{{ context.data.source }}">{{ context.data.source }}</a></p>
+                <p><b>Authors</b>: {{ context.data.authors }}</p>
+              </div>
+              <h2>Related</h2>
+              <div class="related-posts">
+                {% if context.data["related"] %}
+                  {% for post in context.data["related"] %}
+                    <div class="post">
+                      <small class="date">{{ post.date }}</small>
+                      <h1 class="title">{{ post.title }}</h1>
+                      <p class="description">{{ post.description }}</p>
+                      <a href="{{ post.slug }}">Read More</a>
+                    </div>
+                  {% endfor %}
+                {% else %}
+                  <p>Nothing to see here.</p>
+                {% endif %}
+              </div>
             </div>
           </div>
         </div>

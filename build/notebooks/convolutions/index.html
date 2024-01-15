@@ -24,26 +24,18 @@
     <div class="home">
       <header>
         <div class="wrapper">
-          <a href="/" class="logo"><img src="/static/logo.svg" /></a>
-          <nav>
-            <a href="/about">About</a>
-            <a href="/models">Models</a>
-            <a href="/notebooks">Notebooks</a>
-            <a href="/research">Research</a>
-          </nav>
+          <div class="container">
+            <a href="/" class="logo"><img src="/static/logo.svg" /></a>
+            <nav>
+              <a href="/about">About</a>
+              <a href="/models">Models</a>
+              <a href="/notebooks">Notebooks</a>
+              <a href="/research">Research</a>
+            </nav>
+          </div>
         </div>
       </header>
       <main>
-        <div
-          class="hero"
-          style="background-image: url(/static/space-bg.png)"
-        >
-          <div class="overlay"></div>
-          <div class="wrapper">
-            <h1>Convolutions</h1>
-            <!-- <p>Convolutions are mathematical operations that process input data using filters or kernels. The operation involves sliding the filter over the input data and performing an element-wise multiplication between the filter weights and the input window. These filters often learn to detect edges, shapes, or textures in image data in a translation invariant way.</p> -->
-          </div>
-        </div>
         <div class="article">
           <div class="wrapper">
             <div class="content">
@@ -54,6 +46,27 @@
               <script>
                 iFrameResize({ log: true }, "#myIframe")
               </script>
+            </div>
+            <div class="sidebar">
+              <h2>Meta</h2>
+              <div class="meta">
+                <p><b>Date</b>: 2020-01-02</p>
+                <p><b>Source</b>: <a href=""></a></p>
+                <p><b>Authors</b>: </p>
+              </div>
+              <h2>Related</h2>
+              <div class="related-posts">
+                
+                  
+                    <div class="post">
+                      <small class="date">2023-12-13</small>
+                      <h1 class="title">Activation Functions</h1>
+                      <p class="description">Activation functions play a crucial role in determining the output of neurons in neural networks. They introduce non-linearity into the network, enabling it to model complex relationships between inputs and outputs.</p>
+                      <a href="/notebooks/activation-functions">Read More</a>
+                    </div>
+                  
+                
+              </div>
             </div>
           </div>
         </div>

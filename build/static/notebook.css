@@ -1,9 +1,20 @@
-html body .hero {
-  background-image: url(/static/mystic-gate-bg.png);
-  height: 40vh;
+html body header .wrapper {
+  padding-bottom: 0;
 }
-html body .hero h1 {
-  max-width: 850px;
+html body header .wrapper .container {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+html body .article .wrapper {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2rem;
+  padding: 2rem 1rem 5rem 1rem;
+}
+html body .article .wrapper .content {
+  border-right: 1px solid #ddd;
+  padding-right: 2rem;
 }
 html body .article .wrapper .content iframe {
   width: 100%;
@@ -11,4 +22,44 @@ html body .article .wrapper .content iframe {
 }
 html body .article .wrapper .content iframe .jp-InputPrompt, html body .article .wrapper .content iframe .jp-OutputPrompt {
   display: none;
+}
+html body .article .wrapper .sidebar h2 {
+  color: #999;
+  font-weight: bold;
+  font-family: Open Sans;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  text-transform: uppercase;
+}
+html body .article .wrapper .sidebar .meta {
+  margin-bottom: 2rem;
+}
+html body .article .wrapper .sidebar .meta p {
+  margin: 0;
+}
+html body .article .wrapper .sidebar .related-posts .post {
+  background: white;
+  padding: 0 0 2rem 0;
+}
+html body .article .wrapper .sidebar .related-posts .post .categories {
+  display: none;
+}
+html body .article .wrapper .sidebar .related-posts .post .title {
+  font-family: "Open Sans";
+  font-size: 1.6rem;
+}
+html body .article .wrapper .sidebar .related-posts .post .description {
+  font-size: 1.2rem;
+  display: none;
+}
+html body .article .wrapper .sidebar .related-posts .post:not(:first-child) {
+  padding: 2rem 0;
+  border-top: 1px solid #ddd;
+}
+@media screen and (max-width: 600px) {
+  html body .article .wrapper .sidebar {
+    display: none;
+  }
 }

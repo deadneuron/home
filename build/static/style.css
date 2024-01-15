@@ -74,37 +74,39 @@ html {
 html body {
   font-size: 1.6rem;
 }
+html body main {
+  min-height: 80vh;
+}
 html body header {
   width: 100%;
   background: white;
   margin: 0;
   padding: 0;
 }
-html body header .wrapper {
+html body header .container {
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
 }
-html body header .wrapper .logo {
+html body header .container .logo {
   color: black;
   font-size: 0;
   padding: 1rem 0;
 }
-html body header .wrapper .logo img {
+html body header .container .logo img {
   height: auto;
   max-width: 15rem;
 }
 @media screen and (max-width: 600px) {
-  html body header .wrapper .logo img {
+  html body header .container .logo img {
     max-width: 12rem;
   }
 }
-html body header .wrapper nav {
+html body header .container nav {
   font-size: 0;
 }
-html body header .wrapper nav a {
+html body header .container nav a {
   color: black;
   text-decoration: none;
   font-weight: 500;
@@ -114,12 +116,12 @@ html body header .wrapper nav a {
   font-size: 1.2rem;
 }
 @media screen and (max-width: 600px) {
-  html body header .wrapper nav a {
+  html body header .container nav a {
     margin-left: 1.5rem;
     font-size: 0.9rem;
   }
 }
-html body header .wrapper nav a.active, html body header .wrapper nav a:hover {
+html body header .container nav a.active, html body header .container nav a:hover {
   color: red;
 }
 html body .hero {
