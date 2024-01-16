@@ -1,3 +1,4 @@
+import datetime
 import os
 import re
 import json
@@ -163,6 +164,9 @@ for filename in os.listdir('notebooks'):
 for n in notebooks:
     n.compile()
     n.data["related"] = get_related_notebooks(n, notebooks)
+
+# Sort notebooks by date
+notebooks.sort(key=lambda x: x.data['date'], reverse=True)
 
 # Loop through models and build them
 models = []
