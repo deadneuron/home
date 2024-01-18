@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>lottery-ticket-hypothesis</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>world-models</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7476,20 +7476,37 @@ a.anchor-link {
 <!-- End of mermaid configuration --><link rel="stylesheet" href="/static/notebook-iframe.css" /><script src="/static/iframeresizer.contentWindow.min.js"></script></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6179f44c-bbfb-4654-9e57-c064d5d079ab">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=038a0096-ac99-43d2-be5a-f89a647a9d47">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Lottery-Ticket-Hypothesis">Lottery Ticket Hypothesis<a class="anchor-link" href="#Lottery-Ticket-Hypothesis">¶</a></h1><p>It's known that large numbers of parameters can be removed from fully trained networks with little discernible loss in predictive power after a few epochs of continued training. However, for a long time it has been difficult to successfully train these sparse subnetworks from scratch to an equivalent accuracy. We know that the smaller subnetwork can approximate the full size model, however the learning dynamics appear to benefit significantly from overparameterization.</p>
-<p>The Lottery Ticket Hypothesis introduced a methodology for finding sparse subnetworks that train as well as the dense model they reside in.</p>
-<ol>
-<li>Randomly initialize a neural network $f(x; \theta_0)$ (where $\theta_0 ∼ \mathcal{D}_{\theta}$).</li>
-<li>Train the network for $j$ iterations, arriving at parameters $\theta_j$.</li>
-<li>Prune $p\%$ of the parameters in $\theta_j$, creating a mask $m$.</li>
-<li>Reset the remaining parameters to their values in $\theta_0$, creating the winning ticket $f(x; m \circ \theta_0$).</li>
-</ol>
-<p>Effective winning tickets are found with Iterative Magnitude Pruning, where this algorithm is repeated several times such that a small percentage of the weights with the smallest magnitude are pruned for each iteration until reaching the desired target sparsity.</p>
+<h1 id="World-Models">World Models<a class="anchor-link" href="#World-Models">¶</a></h1><p>Can agents learn inside their own dreams?</p>
+<p>Vision -&gt; Memory -&gt; Controller</p>
+<p>Vision = Variational Autoencoder</p>
+<ul>
+<li>Compresses each frame it receives at time step $t$ into a low dimensional latent vector $z_t$​​. This compressed representation can be used to reconstruct the original image.</li>
+</ul>
+<p>Memory = Mixture Density Recurrent Neural Network</p>
+<ul>
+<li><p>Predictive model of the future $z$ vectors that the variational autoencoder is expected to produce.
+The RNN portion is trained to output a probability density function $p(z)$ instead of a deterministic prediction of $z$.</p>
+</li>
+<li><p>The probability density function $p(z)$ is approcimated as a mixture of Gaussians, and the RNN is trained to output the probability distribution of the next latent vector $z_{t+1}$​​ given the current and past information made available to it.</p>
+</li>
+<li><p>The RNN will model $P(z_{t+1}∣a_t,z_t,h_t)$​, where $a_t$​​ is the action taken at time $t$ and $h_t$​​​ is the hidden state of the RNN at time $t$. During sampling, we can adjust a temperature parameter $\tau$ to control model uncertainty.</p>
+</li>
+</ul>
+<p>Controller = Linear Mapping</p>
+<ul>
+<li>The controller is deliberately made as simple and small as possible, and trained separately from the vision and memory networks so that most of the agent’s complexity resides in the world model.</li>
+</ul>
+<p>$$
+a_t=W_c[z_t h_t] + b_c
+$$</p>
+<ul>
+<li>In this linear model, $W_c$​​ and $b_c$​​ are the weight matrix and bias vector that maps the concatenated input vector $[z_t h_t]$ to the output action vector $a_t$​​​.</li>
+</ul>
 </div>
 </div>
 </div>

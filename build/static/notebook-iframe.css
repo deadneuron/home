@@ -51,6 +51,10 @@ html body p {
   font-size: 1.6rem !important;
   margin-bottom: 1.6rem !important;
 }
+html body li {
+  font-family: "Latin Modern", Garamond !important;
+  font-size: 1.6rem !important;
+}
 html body .jp-Cell {
   padding-left: 0 !important;
   padding-right: 0 !important;
