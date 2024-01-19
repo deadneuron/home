@@ -28,7 +28,8 @@
             </nav>
           </div>
         </div>
-      </header>      <main>
+      </header>
+      <main>
         <div class="hero">
           <div class="overlay"></div>
           <div class="wrapper">
@@ -37,9 +38,10 @@
               Descent Into Madness
             </h1>
             <p>
-              Welcome! My name is Tim Whitaker and this is my personal website where I'm sharing insights, tips, and tricks for making the
-              most of your machine learning models. Read on to explore articles
-              and research on neural network optimization.
+              Welcome! My name is Tim Whitaker and this is my personal website
+              where I'm sharing insights, tips, and tricks for making the most
+              of your machine learning models. Read on to explore articles and
+              research on neural network optimization.
             </p>
           </div>
         </div>
@@ -65,7 +67,7 @@
               {% endfor %}
             </div>
             <div class="secondary-col">
-              {% for post in context[2:6] %}
+              {% for post in context[2:5] %}
               <div class="post">
                 <small class="date">{{ post.data.date }}</small>
                 <small class="categories">{{ post.data.categories }}</small>
