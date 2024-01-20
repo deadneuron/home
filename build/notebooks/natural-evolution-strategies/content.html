@@ -14254,11 +14254,32 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Natural-Evolution-Strategies">Natural Evolution Strategies<a class="anchor-link" href="#Natural-Evolution-Strategies">&#182;</a></h1><p>A family of numerical optimization algorithms for black-box problems which iteratively update a search distribution by using an estimated gradient on its distribution parameters.</p>
-<p>A parameterized search distribution is used to produce a batch of search points.
-The fitness function is evaluated at each search point.
-A search gradient is estimated using the parameters of the search points with respect to the expected fitness.
-A gradient ascent step is taken along the natural gradient, which is a second order method that renormalizes the update with respect to uncertainty (prevents oscillations, premature convergence, and undesirable local effects).</p>
-
+<ul>
+<li>A parameterized search distribution is used to produce a batch of search points.</li>
+<li>The fitness function is evaluated at each search point.</li>
+<li>A search gradient is estimated using the parameters of the search points with respect to the expected fitness.</li>
+<li>A gradient ascent step is taken along the natural gradient, which is a second order method that renormalizes the update with respect to uncertainty (prevents oscillations, premature convergence, and undesirable local effects).</li>
+</ul>
+<p>The core idea is to use search gradients to update parameters where the search gradient is the sampled gradient of expected fitness. Let $\theta$ be the parameters of the search distribution $\pi(x|\theta)$ and $f(x)$ the fitness function evaluated at $x$. The objective is to maximize the expected fitness under the distribution.</p>
+$$
+J(\theta) = \mathbb{E}_{\theta}[f(x)] = \int f(x) \ \pi(x | \theta) \ dx
+$$<p>The gradient can be written as:</p>
+$$
+\nabla_{\theta} J(\theta) = \mathbb{E}_{\theta}[f(z) \ \nabla_{\theta} \ log \ \pi(z|\theta)]
+$$<p>The Monte Carlo estimate from samples $z_1, ..., z_{\lambda}$ as:</p>
+$$
+\nabla_{\theta} J(\theta) \approx \frac{1}{\lambda} \sum_{k=1}^{\lambda} f(z_k) \ \nabla_{\theta} \ log \ \pi(z_k | \theta)
+$$<p>The parameters are then updated with a standard ascent scheme:</p>
+$$
+\theta \leftarrow \theta + \eta \nabla_{\theta} J(\theta)
+$$<p>The natural gradient accounts for uncertainty in the second order updates by removing the dependence on parameterization by instead relying on the KL divergence between probability distributions where the Fisher information matrix defines the local curvature in distribution space.</p>
+\begin{align}
+F &amp;= \int \pi(z|\theta) \ \nabla_{\theta} \ log \ \pi(z|\theta) \ \nabla_{\theta} \ log \ \pi(z|\theta)^{\top} dz \\
+&amp;\approx \frac{1}{\lambda} \sum_{k=1}^{\lambda} \nabla_{\theta} \ log \ \pi(z_k|\theta) \ \nabla_{\theta} \ log \ \pi(z_k|\theta)^{\top}
+\end{align}<p>The ascent scheme then becomes:</p>
+$$
+\theta \leftarrow \theta + \eta F^{-1} \nabla_{\theta} J(\theta)
+$$
 </div>
 </div>
 </body>
