@@ -57,7 +57,7 @@
               <h2>Related</h2>
               <div class="related-posts">
                 {% if context.data["related"] %}
-                  {% for post in context.data["related"] %}
+                  {% for post in context.data["related"][:5] %}
                     <div class="post">
                       <small class="date">{{ post.date }}</small>
                       <h1 class="title">{{ post.title }}</h1>
