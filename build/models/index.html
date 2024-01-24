@@ -53,19 +53,6 @@
             
             <div class="item">
               <div class="content">
-                <h1>CoAtNet (2021)</h1>
-                <p><small>Zihang Dai, Hanxiao Liu, Quoc V. Le, Mingxing Tan</small></p>
-                <p>CoAtNets feature the unification of depthwise convolutions and self attention via relative attention in this hybrid network structure. Convolution layers and attention layers are vertically stacked in a principled way that proves to be effective for improving generalization, capacity, and efficiency.</p>
-                <div class="links">
-                  <!-- <a href="/models/coatnet">Read More</a> -->
-                  <a href="/static/coatnet.pdf">Paper</a>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
                 <h1>MLP Mixer (2021)</h1>
                 <p><small>Ilya Tolstikhin, Neil Houlsby, Alexander Kolesnikov, Lucas Beyer, Xiaohua Zhai, Thomas Unterthiner, Jessica Yung, Andreas Steiner, Daniel Keysers, Jakob Uszkoreit, Mario Lucic, Alexey Dosovitskiy</small></p>
                 <p>A new take on vision architectures that eschew convolution and attention for only fully connected layers. MLP mixer applies spatial embeddings to the input image and then applies permutation-invariant operations through channel and token mixing layers.</p>
@@ -83,12 +70,25 @@
             
             <div class="item">
               <div class="content">
-                <h1>Capsule Network (2017)</h1>
-                <p><small>Sara Sabour, Nicholas Frosst, Geoffrey E Hinton</small></p>
-                <p>Capsule networks were introduced to solve some of the limitations that convolutional networks have in understanding hierarchies between objects in images. These capsules use small groups of neurons that specialize in identifying various parts of an object and their spatial relationships.</p>
+                <h1>CoAtNet (2021)</h1>
+                <p><small>Zihang Dai, Hanxiao Liu, Quoc V. Le, Mingxing Tan</small></p>
+                <p>CoAtNets feature the unification of depthwise convolutions and self attention via relative attention in this hybrid network structure. Convolution layers and attention layers are vertically stacked in a principled way that proves to be effective for improving generalization, capacity, and efficiency.</p>
                 <div class="links">
-                  <!-- <a href="/models/capsule">Read More</a> -->
-                  <a href="/static/capsule.pdf">Paper</a>
+                  <!-- <a href="/models/coatnet">Read More</a> -->
+                  <a href="/static/coatnet.pdf">Paper</a>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="item">
+              <div class="content">
+                <h1>Transformer (2017)</h1>
+                <p><small>Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Lion Jones, Aidan Gomez, Lukasz Kaiser, Illia Polosukhin</small></p>
+                <p>These models replace the traditional recurrent and convolutional networks with a self attention mechanism that allows the model to attend to different parts of the input sequence to generate contextual representations. The transformer consists of an encoder and decoder architecture that perform input/output mapping.</p>
+                <div class="links">
+                  <!-- <a href="/models/transformer">Read More</a> -->
+                  <a href="/static/transformer.pdf">Paper</a>
                 </div>
               </div>
               
@@ -109,12 +109,25 @@
             
             <div class="item">
               <div class="content">
-                <h1>Transformer (2017)</h1>
-                <p><small>Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Lion Jones, Aidan Gomez, Lukasz Kaiser, Illia Polosukhin</small></p>
-                <p>These models replace the traditional recurrent and convolutional networks with a self attention mechanism that allows the model to attend to different parts of the input sequence to generate contextual representations. The transformer consists of an encoder and decoder architecture that perform input/output mapping.</p>
+                <h1>Capsule Network (2017)</h1>
+                <p><small>Sara Sabour, Nicholas Frosst, Geoffrey E Hinton</small></p>
+                <p>Capsule networks were introduced to solve some of the limitations that convolutional networks have in understanding hierarchies between objects in images. These capsules use small groups of neurons that specialize in identifying various parts of an object and their spatial relationships.</p>
                 <div class="links">
-                  <!-- <a href="/models/transformer">Read More</a> -->
-                  <a href="/static/transformer.pdf">Paper</a>
+                  <!-- <a href="/models/capsule">Read More</a> -->
+                  <a href="/static/capsule.pdf">Paper</a>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="item">
+              <div class="content">
+                <h1>SqueezeNet (2016)</h1>
+                <p><small>Forrest Iandola, Song Han, Matthew Moskewicz, Khalid Ashraf, William Dally, Kurt Keutzer</small></p>
+                <p>SqueezeNet is notable for achieving comparable accuracy to larger neural network architectures while using significantly fewer parameters. SqueezeNet utilizes fire modules that consist of a 1x1 convolutional squeeze layer followed by a 3x3 convolutional expand layer.</p>
+                <div class="links">
+                  <!-- <a href="/models/shufflenet">Read More</a> -->
+                  <a href="/static/squeezenet.pdf">Paper</a>
                 </div>
               </div>
               
@@ -139,36 +152,6 @@
             
             <div class="item">
               <div class="content">
-                <h1>SqueezeNet (2016)</h1>
-                <p><small>Forrest Iandola, Song Han, Matthew Moskewicz, Khalid Ashraf, William Dally, Kurt Keutzer</small></p>
-                <p>SqueezeNet is notable for achieving comparable accuracy to larger neural network architectures while using significantly fewer parameters. SqueezeNet utilizes fire modules that consist of a 1x1 convolutional squeeze layer followed by a 3x3 convolutional expand layer.</p>
-                <div class="links">
-                  <!-- <a href="/models/shufflenet">Read More</a> -->
-                  <a href="/static/squeezenet.pdf">Paper</a>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <h1>U-Net (2015)</h1>
-                <p><small>Olaf Ronneberger, Philipp Fischer, Thomas Brox</small></p>
-                <p>U-Net is widely used in various segmentation and image-to-image translation tasks. The architecture consists of a contracting path that uses convolutional and pooling layers to capture context and a symmetric expanding path that uses deconvolutional and upsampling layers to achieve localization. The architecture's unique U-shape allows it to preserve fine-grained details during upsampling and is particularly well-suited for segmenting structures with varying shapes and sizes.</p>
-                <div class="links">
-                  <!-- <a href="/models/unet">Read More</a> -->
-                  <a href="/static/unet.pdf">Paper</a>
-                </div>
-              </div>
-              
-              <div class="image">
-                <img src="/static/unet.png" />
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
                 <h1>ResNet (2015)</h1>
                 <p><small>Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun</small></p>
                 <p>Residual Networks popularized skip connections in deep networks to alleviate vanishing gradient problems. The shortcut connections between blocks allows the gradients to flow directly from later layers to earlier layers, enabling depths of over a hundred layers.</p>
@@ -186,17 +169,17 @@
             
             <div class="item">
               <div class="content">
-                <h1>Inception (2014)</h1>
-                <p><small>Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich</small></p>
-                <p>Inception is a deep convolutional network developed by Google researchers. It introduced the concept of inception modules, which are composed of multiple parallel convolutional layers of different kernel sizes to capture different feature scales.</p>
+                <h1>U-Net (2015)</h1>
+                <p><small>Olaf Ronneberger, Philipp Fischer, Thomas Brox</small></p>
+                <p>U-Net is widely used in various segmentation and image-to-image translation tasks. The architecture consists of a contracting path that uses convolutional and pooling layers to capture context and a symmetric expanding path that uses deconvolutional and upsampling layers to achieve localization. The architecture's unique U-shape allows it to preserve fine-grained details during upsampling and is particularly well-suited for segmenting structures with varying shapes and sizes.</p>
                 <div class="links">
-                  <!-- <a href="/models/inception">Read More</a> -->
-                  <a href="/static/inception.pdf">Paper</a>
+                  <!-- <a href="/models/unet">Read More</a> -->
+                  <a href="/static/unet.pdf">Paper</a>
                 </div>
               </div>
               
               <div class="image">
-                <img src="/static/inception.png" />
+                <img src="/static/unet.png" />
               </div>
               
             </div>
@@ -231,6 +214,23 @@
               
               <div class="image">
                 <img src="/static/vgg.png" />
+              </div>
+              
+            </div>
+            
+            <div class="item">
+              <div class="content">
+                <h1>Inception (2014)</h1>
+                <p><small>Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich</small></p>
+                <p>Inception is a deep convolutional network developed by Google researchers. It introduced the concept of inception modules, which are composed of multiple parallel convolutional layers of different kernel sizes to capture different feature scales.</p>
+                <div class="links">
+                  <!-- <a href="/models/inception">Read More</a> -->
+                  <a href="/static/inception.pdf">Paper</a>
+                </div>
+              </div>
+              
+              <div class="image">
+                <img src="/static/inception.png" />
               </div>
               
             </div>

@@ -80,8 +80,7 @@ class Notebook:
             description = re.search(r'DESCRIPTION: (.*)\\n', text)
             authors = re.search(r'AUTHORS: (.*)\\n', text)
             source = re.search(r'SOURCE: (.*)\\n', text)
-            date = re.search(r'DATE: (.*)\\n', text)
-            hero = re.search(r'HERO: (.*)\"', text)
+            date = re.search(r'DATE: (.*)\"', text)
 
         return {
             'title': title.group(1),
@@ -90,7 +89,6 @@ class Notebook:
             'authors': authors.group(1) if authors else "",
             'source': source.group(1) if source else "",
             'date': date.group(1),
-            'hero': hero.group(1),
             'slug': os.path.join("/notebooks", self.filename.replace('.ipynb', '')),
             'content': self.get_content()
         }        
