@@ -159,9 +159,9 @@ for filename in os.listdir('notebooks'):
         notebooks.append(n)
 
 # Compile notebooks
-for n in notebooks:
-    n.compile()
-    n.data["related"] = get_related_notebooks(n, notebooks)
+# for n in notebooks:
+#     n.compile()
+#     n.data["related"] = get_related_notebooks(n, notebooks)
 
 # Sort notebooks by date
 notebooks.sort(key=lambda x: x.data['date'], reverse=True)
@@ -176,7 +176,7 @@ for filename in os.listdir('models'):
 
 # Compile models
 # for m in models:
-    # m.compile()
+#     m.compile()
 
 # Sort models by date
 models.sort(key=lambda x: x.data['year'], reverse=True)
