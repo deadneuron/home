@@ -55,7 +55,7 @@
               <nav class="mobile-categories"><h1>Recent Posts</h1></nav>
             </div>
             <div class="primary-col">
-              {% for post in context[:2] %}
+              {% for post in context[:3] %}
               <div class="post">
                 <small class="date">{{ post.data.date }}</small>
                 <small class="categories">{{ post.data.categories }}</small>
@@ -66,7 +66,7 @@
               {% endfor %}
             </div>
             <div class="secondary-col">
-              {% for post in context[2:5] %}
+              {% for post in context[3:7] %}
               <div class="post">
                 <small class="date">{{ post.data.date }}</small>
                 <small class="categories">{{ post.data.categories }}</small>
