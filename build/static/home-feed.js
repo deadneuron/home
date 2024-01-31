@@ -79,7 +79,7 @@ class NotebookFeed extends React.Component {
       e(
         "div",
         { className: "primary-col" },
-        this.state.filteredPosts.slice(0, 2).map((post) => {
+        this.state.filteredPosts.slice(0, 3).map((post) => {
           return e(
             "div",
             { className: "post", key: post.slug },
@@ -93,7 +93,7 @@ class NotebookFeed extends React.Component {
       e(
         "div",
         { className: "secondary-col" },
-        this.state.filteredPosts.slice(2, 5).map((post) => {
+        this.state.filteredPosts.slice(3, 7).map((post) => {
           return e(
             "div",
             { className: "post", key: post.slug },
