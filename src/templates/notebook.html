@@ -4,7 +4,7 @@
     <title>{{ context.data.title }} | Dead Neuron</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/static/skull.svg" />
+    <link rel="icon" href="/static/favicon.svg" />
     <link rel="stylesheet" href="/static/style.css" />
     <link rel="stylesheet" href="/static/notebook.css" />
     <link rel="stylesheet" href="/static/prism.css" />
@@ -51,22 +51,26 @@
               <h2>Meta</h2>
               <div class="meta">
                 <p>Date: {{ context.data.date }}</p>
-                <p>Source: <a href="{{ context.data.source }}">{{ context.data.source }}</a></p>
+                <p>
+                  Source:
+                  <a href="{{ context.data.source }}"
+                    >{{ context.data.source }}</a
+                  >
+                </p>
                 <p>Authors: {{ context.data.authors }}</p>
               </div>
               <h2>Related</h2>
               <div class="related-posts">
-                {% if context.data["related"] %}
-                  {% for post in context.data["related"][:5] %}
-                    <div class="post">
-                      <small class="date">{{ post.date }}</small>
-                      <h1 class="title">{{ post.title }}</h1>
-                      <p class="description">{{ post.description }}</p>
-                      <a href="{{ post.slug }}">Read More</a>
-                    </div>
-                  {% endfor %}
-                {% else %}
-                  <p>Nothing to see here.</p>
+                {% if context.data["related"] %} {% for post in
+                context.data["related"][:5] %}
+                <div class="post">
+                  <small class="date">{{ post.date }}</small>
+                  <h1 class="title">{{ post.title }}</h1>
+                  <p class="description">{{ post.description }}</p>
+                  <a href="{{ post.slug }}">Read More</a>
+                </div>
+                {% endfor %} {% else %}
+                <p>Nothing to see here.</p>
                 {% endif %}
               </div>
             </div>
