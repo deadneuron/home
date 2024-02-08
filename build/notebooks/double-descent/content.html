@@ -7481,7 +7481,12 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Double-Descent">Double Descent<a class="anchor-link" href="#Double-Descent">¶</a></h1>
+<h1 id="Double-Descent">Double Descent<a class="anchor-link" href="#Double-Descent">¶</a></h1><p>Double descent is a well known phenomena in deep learning that explains the curious effect that model and dataset size has on generalization performance. Classical statistical wisdom purports that small models underfit, large models overfit, and the ideal size is somewhere in the middle. However, modern machine learning methods have shown that as models become very large, the extreme overparameterization can actually lead to models that generalize better. It turns out that there is a critical region where increased model size actually results in worse performance before subsequently improving.</p>
+<p>This phenomena also appears with increasing dataset size and training length. The double descent phenomena exhibits a generalized relation to this notion of effective model complexity, which is the maximum number of samples on which a model can achieve a training error near zero. Consider a training procedure $\mathcal{T}$ that takes an input set $S = \{(x_1, y_1), ..., (x_n, y_n)\}$ of training samples. The effective model complexity with respect to a distribution $\mathcal{D}$ can be defined as:</p>
+<p>$$
+EMC_{\mathcal{D}, \epsilon}(\mathcal{T}) := max\{ n | \mathbb{E}_{S \sim \mathcal{D}^n} [Error_{S}(\mathcal{T}(S))] \leq \epsilon \}
+$$</p>
+<p>Model behavior becomes atypical in an interpolation region where the number of training samples is comparable to the effective model complexity.</p>
 </div>
 </div>
 </div>
