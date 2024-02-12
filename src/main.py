@@ -159,9 +159,9 @@ for filename in os.listdir('notebooks'):
         notebooks.append(n)
 
 # Compile notebooks
-for n in notebooks:
-    n.compile()
-    n.data["related"] = get_related_notebooks(n, notebooks)
+# for n in notebooks:
+    # n.compile()
+    # n.data["related"] = get_related_notebooks(n, notebooks)
 
 # Sort notebooks by date
 notebooks.sort(key=lambda x: x.data['date'], reverse=True)
@@ -202,6 +202,9 @@ render_template("templates/models.html",
 
 render_template("templates/publications.html",
                 "../build/publications/index.html")
+
+render_template("templates/shop.html",
+                "../build/shop/index.html")
 
 render_template("templates/notebooks.html",
                 "../build/notebooks/index.html",
