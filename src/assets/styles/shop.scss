@@ -8,19 +8,13 @@ html {
     .products {
       .wrapper {
         .grid {
-          display:flex;
-          flex-wrap:wrap;
+          display:grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap:2rem;
 
-          .item50 {
-            flex:0 0 48%;
-            margin:1rem;
+          .item {
             background: #ddd;
-          }
-          .item33 {
-            flex:0 0 30%;
-            margin:1rem;
-            padding:1rem;
-            background: #ddd;
+            padding:2rem;
           }
         }
       }
