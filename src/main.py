@@ -2,7 +2,7 @@ import datetime
 import os
 import re
 import json
-from jinja2 import Template
+from jinja2 import Template, Environment, FileSystemLoader
 
 
 class Model:
@@ -126,7 +126,8 @@ def build_json(items, build_location):
 
 def render_template(src_location, build_location, context=None):
     with open(src_location) as f:
-        template = Template(f.read())
+        template = Environment(loader=FileSystemLoader("templates/")).from_string(f.read())
+        # template = Template(f.read())
         rendered_template = template.render(context=context)
 
     with open(build_location, 'w+') as f:
