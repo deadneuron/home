@@ -143,6 +143,14 @@ html {
         }
         .categories {
           padding-bottom:2rem;
+
+          h2 {
+            display:inline-block;
+            font-size:1.2rem;
+            font-family:"Open Sans";
+            text-transform:uppercase;
+            margin-right:2rem;
+          }
           span {
             font-family:"Open Sans";
             font-size:1.2rem;

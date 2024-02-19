@@ -39,10 +39,10 @@ class NotebookFeed extends React.Component {
   render() {
     const filters = [
       "All",
-      "Architecture",
       "Compression",
       "Optimization",
       "Regularization",
+      "Reinforcement",
     ]
 
     return e(
@@ -54,6 +54,7 @@ class NotebookFeed extends React.Component {
         e(
           "nav",
           { className: "categories" },
+          e("h2", {}, "Recent Notebooks"),
           filters.map((filter) => {
             return e(
               "span",
