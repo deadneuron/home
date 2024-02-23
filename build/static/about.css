@@ -68,6 +68,16 @@ html body .philosophy {
   height: 70vh;
   filter: grayscale(1);
 }
+html body .philosophy .wrapper h1 {
+  color: black;
+  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+html body .philosophy .wrapper p {
+  color: black;
+}
+html body .philosophy .overlay {
+  background: white;
+}
 html body .professional {
   padding: 2rem 0 5rem 0;
   background: #eee;
@@ -181,7 +191,7 @@ html body .gallery .item:nth-child(7) {
 }
 html body .contact {
   padding: 8rem 0;
-  background: white;
+  background: #eeeeee;
 }
 @media screen and (max-width: 600px) {
   html body .contact {

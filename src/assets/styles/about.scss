@@ -72,6 +72,20 @@ html {
       position: relative;
       height: 70vh;
       filter:grayscale(1);
+
+      .wrapper {
+      h1 {
+        color:black;
+        text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+      }
+      p {
+        color:black;
+      }
+    }
+
+      .overlay {
+        background: white;
+      }
     }
 
     .professional {
@@ -194,7 +208,7 @@ html {
     }
     .contact {
       padding: 8rem 0;
-      background: white;
+      background: #eeeeee;
       
       @media screen and (max-width:600px) {
         padding:0rem;
