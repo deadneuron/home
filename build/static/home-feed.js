@@ -54,7 +54,7 @@ class NotebookFeed extends React.Component {
         e(
           "nav",
           { className: "categories" },
-          e("h2", {}, "Recent Notebooks"),
+          // e("h2", {}, "Recent Notebooks"),
           filters.map((filter) => {
             return e(
               "span",
