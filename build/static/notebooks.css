@@ -2,13 +2,29 @@ html body .hero {
   background-image: url(/static/cave-bg.png);
 }
 html body .feed {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2rem;
   padding: 2rem 1rem 5rem 1rem;
 }
 html body .feed .filters {
+  grid-row: 1;
+  grid-column: 1/span 2;
   border-bottom: 1px solid #ddd;
+}
+html body .feed .filters h1 {
+  padding: 1rem 0;
 }
 html body .feed .filters .categories {
   padding-bottom: 2rem;
+}
+html body .feed .filters .categories h2 {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  margin-right: 2rem;
 }
 html body .feed .filters .categories span {
   font-family: "Open Sans";
@@ -36,24 +52,109 @@ html body .feed .filters .mobile-categories {
     display: block;
   }
 }
-html body .feed .post {
-  background: white;
-  padding: 5rem 0;
+@media screen and (max-width: 600px) {
+  html body .feed .filters {
+    grid-column: auto;
+  }
 }
-html body .feed .post h1 {
+html body .feed .primary-col {
+  grid-row: 2;
+  border-right: 1px solid #ddd;
+}
+html body .feed .primary-col .post {
+  background: white;
+  padding: 2rem 0;
+  margin-right: 2rem;
+}
+html body .feed .primary-col .post .categories {
+  display: none;
+}
+html body .feed .primary-col .post .title {
   font-family: "Open Sans";
   font-size: 2.4rem;
 }
-html body .feed .post .read-more {
-  display: inline-block;
-  margin: 1rem 0;
-  color: black;
-  font-family: "Open Sans";
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.8rem;
+html body .feed .primary-col .post .description {
+  font-size: 1.6rem;
 }
-html body .feed .post:not(:last-child) {
-  border-bottom: 1px solid #f7f7f7;
+html body .feed .primary-col .post:not(:first-child) {
+  border-top: 1px solid #ddd;
+}
+@media screen and (max-width: 600px) {
+  html body .feed .primary-col {
+    grid-row: auto;
+    border-right: none;
+  }
+}
+html body .feed .secondary-col {
+  grid-row: 2;
+}
+html body .feed .secondary-col .minion {
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: #666;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+html body .feed .secondary-col .search {
+  padding: 2rem 0;
+}
+html body .feed .secondary-col .search .field-group {
+  position: relative;
+  width: 100%;
+}
+html body .feed .secondary-col .search .field-group .icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  color: rgba(0, 0, 0, 0.2666666667);
+}
+html body .feed .secondary-col .search .field-group input {
+  width: 100%;
+  background: white;
+  padding: 1.5rem;
+  color: rgba(0, 0, 0, 0.5333333333);
+  border: 1px solid #ddd;
+  padding-left: 3.5rem;
+}
+html body .feed .secondary-col .sort {
+  padding: 2rem 0;
+}
+html body .feed .secondary-col .sort .options {
+  display: flex;
+}
+html body .feed .secondary-col .sort .options .group {
+  flex: 0 0 50%;
+}
+html body .feed .secondary-col .sort .options .group span {
+  font-family: "Open Sans";
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 0.2rem;
+  color: #aaa;
+  display: block;
+}
+html body .feed .secondary-col .sort .options .group span.active, html body .feed .secondary-col .sort .options .group span:hover {
+  color: red;
+  cursor: pointer;
+}
+html body .feed .secondary-col .tags {
+  padding: 2rem 0;
+}
+@media screen and (max-width: 600px) {
+  html body .feed .secondary-col {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  html body .feed {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    grid-template-columns: 1fr;
+  }
 }

@@ -3,12 +3,30 @@ html {
     .hero {
       background-image: url(/static/cave-bg.png);
     }
-    .feed {
+        .feed {
+      display:grid;
+      grid-template-rows: auto auto;
+      grid-template-columns: 2fr 1fr;
+      grid-gap:2rem;
       padding:2rem 1rem 5rem 1rem;
+      
       .filters {
+        grid-row:1;
+        grid-column:1 / span 2;
         border-bottom: 1px solid #ddd;
+        h1 {
+          padding:1rem 0;
+        }
         .categories {
           padding-bottom:2rem;
+
+          h2 {
+            display:inline-block;
+            font-size:1.2rem;
+            font-family:"Open Sans";
+            text-transform:uppercase;
+            margin-right:2rem;
+          }
           span {
             font-family:"Open Sans";
             font-size:1.2rem;
@@ -34,30 +52,117 @@ html {
             display:block;
           } 
         }
+        @media screen and (max-width:600px) {
+          grid-column:auto;
+        }
       }
-      .post {
-        background: white;
-        padding: 5rem 0;
+      .primary-col {
+        grid-row:2;
+        border-right:1px solid #ddd;
+
+        .post {
+          background: white;
+          padding: 2rem 0;
+          margin-right:2rem;
+
+          .categories {
+            display: none;
+          }
+          .title {
+            font-family:"Open Sans";
+            font-size:2.4rem;
+          }
+          .description {
+            font-size:1.6rem;
+          }
+          &:not(:first-child) {
+            border-top: 1px solid #ddd;
+          }
+        }
+
+        @media screen and (max-width:600px) {
+          grid-row:auto;
+          border-right:none;
+        }
+      }
+      .secondary-col {
+        grid-row:2;
         
-        h1 {
-          font-family: "Open Sans";
-          font-size: 2.4rem;
+        .minion {
+          font-family:"Open Sans";
+          text-transform:uppercase;
+          font-size:1.4rem;
+          line-height:1.4rem;
+          color:#666;
+          padding-bottom:1rem;
+          margin-bottom:1rem;
+          border-bottom:1px solid #ddd;
         }
 
-        .read-more {
-          display: inline-block;
-          margin: 1rem 0;
-          color: black;
-          font-family: "Open Sans";
-          font-weight: bold;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-size: 0.8rem;
+        .search {
+          padding:2rem 0;
+        
+          .field-group {
+              position: relative;
+              width: 100%;
+
+            .icon {
+              position: absolute;
+              left: 1rem;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 1.5rem;
+              color: #0004;
+            }
+            input {
+              width: 100%;
+              background: white;
+              padding: 1.5rem;
+              color: #0008;
+              border: 1px solid #ddd;
+              padding-left: 3.5rem;
+            }
+          }
+        }        
+    
+        .sort {
+          padding:2rem 0;
+
+          .options{
+            display:flex;
+            .group {
+              flex:0 0 50%;
+              span {
+                font-family:"Open Sans";
+                font-size:1.2rem;
+                text-transform:uppercase;
+                text-decoration: none;
+                margin-bottom:0.2rem;
+                color:#aaa;
+                display:block;
+
+                &.active, &:hover {
+                  color: red;
+                  cursor:pointer;
+                }
+              }
+            }
+          }
         }
 
-        &:not(:last-child) {
-          border-bottom: 1px solid #f7f7f7;
+        .tags {
+          padding:2rem 0;
         }
+
+
+        @media screen and (max-width:600px) {
+          display:none;
+        }
+      }
+      @media screen and (max-width:600px) {
+        padding-left:1rem;
+        padding-right:1rem;
+        grid-template-columns: 1fr;
       }
     }
   }
