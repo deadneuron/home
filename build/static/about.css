@@ -58,6 +58,38 @@ html body .personal {
   height: 70vh;
   filter: grayscale(1);
 }
+html body .code {
+  background: black;
+  display: flex;
+  padding: 5rem 0;
+}
+html body .code .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3.2rem;
+  align-items: center;
+}
+html body .code .wrapper pre code {
+  font-size: 1.2rem;
+}
+html body .code .wrapper div {
+  color: white;
+}
+html body .code .wrapper div h1 {
+  font-family: "Open Sans";
+  font-size: 6.4rem;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.1rem;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 5px 5px 0px rgb(0, 0, 0);
+}
+@media screen and (max-width: 600px) {
+  html body .code .wrapper div h1 {
+    font-size: 3.8rem;
+  }
+}
 html body .philosophy {
   background-image: url(/static/anatomical-skull.jpg);
   background-position: center right;

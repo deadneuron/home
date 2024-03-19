@@ -7,6 +7,10 @@
     <link rel="icon" href="/static/favicon.svg" />
     <link rel="stylesheet" href="/static/style.css" />
     <link rel="stylesheet" href="/static/about.css" />
+    <link rel="stylesheet" href="/static/prism.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/rust.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -24,7 +28,6 @@
       <header>
         <div class="wrapper">
           <div class="container">
-            <!-- <a href="/" class="logo"><img src="/static/logo.svg" /></a> -->
             <div class="logo">
   <a class="glitch" href="/">
     
@@ -1021,9 +1024,7 @@
               Neural Networks
             </h1>
             <p>
-              Hi! My name is Tim Whitaker and Dead Neuron is a new project that
-              I am working on, where I am trying to share cutting edge research
-              insights about how to build better machine learning systems.
+              Dead Neuron is a new project that is trying to share cutting edge research insights about how to build better machine learning systems.
             </p>
           </div>
         </div>
@@ -1032,45 +1033,99 @@
             <div class="column-wrapper">
               <div class="column">
                 <div class="icon"><img src="/static/crypto-gpu.svg" /></div>
-                <h2>Model Optimization</h2>
+                <h2>Faster Models</h2>
                 <p>
-                  I'm passionate about optimizing learning algorithms and model
-                  architectures for superior performance.
+                  Optimizing and parallelizing model architecture to improve training and inference times. 
                 </p>
               </div>
               <div class="column">
                 <div class="icon">
                   <img src="/static/statistical-analysis.svg" />
                 </div>
-                <h2>Data Analysis</h2>
+                <h2>Smarter Models</h2>
                 <p>
-                  I love diving into complex datasets and uncovering meaningful
-                  insights that drive successful machine learning projects.
+                   Optimizing training and tuning algorithms to improve generalization and accuracy. 
                 </p>
               </div>
               <div class="column">
                 <div class="icon"><img src="/static/documents-ui.svg" /></div>
-                <h2>Software Engineering</h2>
+                <h2>Smaller Models</h2>
                 <p>
-                  I have over a decade of experience in designing, developing,
-                  and deploying robust and maintainable software.
+                   Pruning, quantizing, and distilling large models into smaller sizes for efficient inference.
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="code">
+          <div class="wrapper">
+            <div>
+              <h1>Building For Next Generation Deep Learning Frameworks</h1>
+              <p>I'm really excited about future tech stacks in machine learning. Burn is a promising new framework in Rust that offers an elegant type safe approach to high performance computing. We are excited to build for this community, so we are starting to work on a model zoo that includes important, impactful, and exotic neural network architectures through history.</p>
+              <p>I'm really excited about future tech stacks in machine learning. Burn is a promising new framework in Rust that offers an elegant type safe approach to high performance computing. We are excited to build for this community, so we are starting to work on a model zoo that includes important, impactful, and exotic neural network architectures through history.</p>
+            </div>
+
+            <div>
+              <pre><code class="language-rust">use burn::{
+    module::Module,
+    nn::{
+        conv::{Conv2d, Conv2dConfig},
+        pool::{AdaptiveAvgPool2d, AdaptiveAvgPool2dConfig},
+        Linear, LinearConfig, ReLU,
+    },
+    tensor::{backend::Backend, Tensor},
+};
+
+#[derive(Module)]
+pub struct Net&lt;B: Backend&gt; {
+    conv1: Conv2d&lt;B&gt;,
+    conv2: Conv2d&lt;B&gt;,
+    pool: AdaptiveAvgPool2d,
+    fc1: Linear&lt;B&gt;,
+    fc2: Linear&lt;B&gt;,
+    activation: ReLU,
+}
+
+impl&lt;B: Backend&gt; Net&lt;B&gt; {
+    pub fn new(num_outputs: usize, device: &amp;B::Device) -&gt; Self {
+        Self {
+            conv1: Conv2dConfig::new([3, 8], [3, 3]).init(device),
+            conv2: Conv2dConfig::new([8, 16], [3, 3]).init(device),
+            pool: AdaptiveAvgPool2dConfig::new([8, 8]).init(),
+            fc1: LinearConfig::new(16*8*8, 256).init(device),
+            fc2: LinearConfig::new(256, num_outputs).init(device),
+            activation: ReLU::new(),
+        }
+    }
+
+    pub fn forward(&amp;self, x: Tensor&lt;B, 4&gt;) -&gt; Tensor&lt;B, 2&gt; {
+        let x = self.conv1.forward(x);
+        let x = self.activation.forward(x);
+        let x = self.conv2.forward(x);
+        let x = self.activation.forward(x);
+        let x = self.pool.forward(x);
+        let x = x.reshape([0, -1]);
+        let x = self.fc1.forward(x);
+        let x = self.activation.forward(x);
+        self.fc2.forward(x)
+    }
+}</code></pre>
+            </div>
+          </div>
+        </div>
+
         <div class="personal hero">
           <div class="overlay"></div>
           <div class="wrapper">
             <h1>About Me</h1>
             <p>
               I’m a computer scientist, researcher, and engineer with over a
-              decade of experience building maintainable software and conducting
-              original academic research. I am deeply engaged in exploring the
+              decade of experience. I am deeply engaged in exploring the
               evolving paradigms of artificial intelligence and machine learning
               with a focus on neural network optimization, subnetwork ensembles,
               and neuroevolutionary algorithms. When I am not working on my
-              research, I am probably rock climbing, playing chess, or making
+              research, I am probably rock climbing, playing chess, or producing
               music.
             </p>
           </div>
@@ -1423,6 +1478,7 @@
           </div>
         </div>
       </footer>
+      <script>hljs.highlightAll();</script>
       <script>
         mapboxgl.accessToken =
           "pk.eyJ1IjoidG13aHRrciIsImEiOiJja2x2NzdpaW0wNXRnMndwOGszNTc3aWd5In0.LvJ2znCQ_1v9a86fxUhQ2A"
@@ -1432,23 +1488,6 @@
           center: [-105.08338969999998, 40.57471313740658],
           zoom: 11, // starting zoom
         })
-      </script>
-      <script>
-        var category = location.hash.substr(1)
-        var notebooks = document.getElementsByClassName(category)
-
-        for (var post in notebooks) {
-          post.backgroundColor = "red"
-        }
-
-        function filterCategory(category) {
-          var category = location.hash.substr(1)
-          var notebooks = document.getElementsByClass(category)
-
-          for (var post in notebooks) {
-            post.backgroundColor = "red"
-          }
-        }
       </script>
     </div>
   </body>
