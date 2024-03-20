@@ -146,6 +146,20 @@ html body .feed .secondary-col .sort .options .group span.active, html body .fee
 html body .feed .secondary-col .tags {
   padding: 2rem 0;
 }
+html body .feed .secondary-col .tags .tag {
+  font-family: "Open Sans";
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 0.2rem;
+  margin-right: 0.5rem;
+  color: #aaa;
+  display: inline;
+}
+html body .feed .secondary-col .tags .tag.active, html body .feed .secondary-col .tags .tag:hover {
+  color: red;
+  cursor: pointer;
+}
 @media screen and (max-width: 600px) {
   html body .feed .secondary-col {
     display: none;

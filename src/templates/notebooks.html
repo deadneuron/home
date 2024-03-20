@@ -112,6 +112,10 @@
             </div>
             <div class="tags">
               <h3 class="minion">Tags</h3>
+              {% set tags = ['ensemble', 'optimization', 'pruning', 'distillation', 'diffusion', 'generative', 'tuning', 'reinforcement', 'unsupervised', 'supervised', 'classification', 'regression', 'regularization', 'evolution', 'sparsity', 'latent', 'quantization', 'augmentation'] %}
+              {% for tag in tags|sort() %}
+                <span class="tag">{{ tag }}</span>
+              {% endfor %}
             </div>
           </div>
         </div>
