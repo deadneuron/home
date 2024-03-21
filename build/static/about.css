@@ -104,6 +104,11 @@ html body .code .wrapper div .button {
   text-transform: uppercase;
   font-size: 1.2rem;
 }
+@media screen and (max-width: 600px) {
+  html body .code .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 html body .philosophy {
   background-image: url(/static/anatomical-skull.jpg);
   background-position: center right;
