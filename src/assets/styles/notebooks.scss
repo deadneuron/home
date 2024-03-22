@@ -161,7 +161,7 @@ html {
                 margin-bottom: 0.2rem;
                 margin-right: 0.5rem;
                 color:#aaa;
-                display:inline;
+                display:inline-block;
 
                 &.active, &:hover {
                   color: red;

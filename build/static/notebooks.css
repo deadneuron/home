@@ -154,7 +154,7 @@ html body .feed .secondary-col .tags .tag {
   margin-bottom: 0.2rem;
   margin-right: 0.5rem;
   color: #aaa;
-  display: inline;
+  display: inline-block;
 }
 html body .feed .secondary-col .tags .tag.active, html body .feed .secondary-col .tags .tag:hover {
   color: red;
