@@ -77,6 +77,7 @@ class Notebook:
             text = f.read()
             title = re.search(r'TITLE: (.*)\\n', text)
             categories = re.search(r'CATEGORIES: (.*)\\n', text)
+            tags = re.search(r'TAGS: (.*)\\n', text)
             description = re.search(r'DESCRIPTION: (.*)\\n', text)
             authors = re.search(r'AUTHORS: (.*)\\n', text)
             source = re.search(r'SOURCE: (.*)\\n', text)
@@ -85,6 +86,7 @@ class Notebook:
         return {
             'title': title.group(1),
             'categories': categories.group(1),
+            'tags': tags.group(1),
             'description': description.group(1),
             'authors': authors.group(1) if authors else "",
             'source': source.group(1) if source else "",
