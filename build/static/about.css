@@ -262,14 +262,15 @@ html body .contact .wrapper {
     grid-row-gap: 3.2rem;
   }
 }
-html body .contact .wrapper h1 {
+html body .contact .wrapper .contact-message {
   grid-row: 1;
+  grid-column: 1/span 2;
+}
+html body .contact .wrapper .contact-message h1 {
   font-size: 3.2rem;
-  margin-bottom: 1.6rem;
-  font-family: "Open Sans";
 }
 @media screen and (max-width: 600px) {
-  html body .contact .wrapper h1 {
+  html body .contact .wrapper .contact-message {
     margin-bottom: -1.6rem;
   }
 }

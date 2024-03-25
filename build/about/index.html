@@ -1024,7 +1024,7 @@
               Neural Networks
             </h1>
             <p>
-              Dead Neuron is a new project that is trying to share cutting edge research insights about how to build better machine learning systems.
+              Welcome to Dead Neuron! This is a new project for machine learning enthusiasts to learn about key ideas and insights in neural network research.
             </p>
           </div>
         </div>
@@ -1032,7 +1032,7 @@
           <div class="wrapper">
             <div class="column-wrapper">
               <div class="column">
-                <div class="icon"><img src="/static/crypto-gpu.svg" /></div>
+                <div class="icon"><img src="/static/gpu.svg" /></div>
                 <h2>Faster Models</h2>
                 <p>
                   Optimizing and parallelizing model architecture to improve training and inference times. 
@@ -1040,7 +1040,7 @@
               </div>
               <div class="column">
                 <div class="icon">
-                  <img src="/static/statistical-analysis.svg" />
+                  <img src="/static/distribution.svg" />
                 </div>
                 <h2>Smarter Models</h2>
                 <p>
@@ -1048,7 +1048,7 @@
                 </p>
               </div>
               <div class="column">
-                <div class="icon"><img src="/static/documents-ui.svg" /></div>
+                <div class="icon"><img src="/static/code.svg" /></div>
                 <h2>Smaller Models</h2>
                 <p>
                    Pruning, quantizing, and distilling large models into smaller sizes for efficient inference.
@@ -1058,17 +1058,18 @@
           </div>
         </div>
 
+        <div class="personal hero">
+          <div class="overlay"></div>
+          <div class="wrapper">
+            <h1>Our Story</h1>
+            <p>
+              I am Dr. Tim Whitaker and I am a research scientist who is deeply engaged in exploring the evolving paradigms of artificial intelligence and machine learning. I recently completed my PhD in Computer Science at Colorado State University where I conducted novel research on a variety of topics related to neural network optimization. Deep learning has absolutely exploded over the last several years and I wanted to create a place to share interesting and important insights that I've found throughout my journey. I hope that Dead Neuron can serve as a valuable resource for aspiring machine learning practitioners to explore some of the lesser known implementation details that help to maximize performance.
+            </p>
+          </div>
+        </div>
+
         <div class="code">
           <div class="wrapper">
-            <div>
-              <h1>Coding For Next Generation Deep Learning Frameworks</h1>
-              <p>Burn is a promising new framework in Rust that offers an elegant type safe approach to high performance computing. Burn emphasizes performance, flexibility, and portability for both training and inference. This framework is a pleasure to develop in and I couldn't be more excited about the opportunities for it overcome some of the pain points of deploying models with established Python frameworks.</p>
-              <p>We are excited to build and contribute to this community so we are starting to work on a model zoo that includes important, impactful, and exotic neural network architectures through history. The goal is to create clean and extensible code that is easy to plug into your own projects. Check out our repo on github to get a feel for this new project.</p>
-              <p>
-                <a class="button" href="https://github.com/deadneuron/model-catalog">Model Zoo</a>
-              </p>
-            </div>
-
             <div>
               <pre><code class="language-rust">use burn::{
     module::Module,
@@ -1115,6 +1116,20 @@ impl&lt;B: Backend&gt; Net&lt;B&gt; {
     }
 }</code></pre>
             </div>
+
+            <div>
+              <h1>Creating For Next Generation Deep Learning Frameworks</h1>
+              <p>
+                I am a polyglot at heart who loves to explore new programming languages and paradigms. While Python has long dominated the machine learning space, there is a lot of potential for new frameworks to enable better and more interesting ways to build performant models. <a href="https://burn.dev">Burn</a> is one new promising framework in Rust that offers an elegant type safe approach that emphasizes performance, flexibility, and portability for high performance tensor computing.
+              </p>
+              <p>
+                This framework is a pleasure to develop in and I couldn't be more excited about the opportunities for it overcome some of the pain points of deploying models with established Python frameworks. I am excited to build and contribute to this community so I am starting to work on a model zoo that includes important, impactful, and exotic neural network architectures through history. The goal is to create clean and extensible code that is easy to plug into your own projects. Check out our repo on github to get a feel for this new project.
+              </p>
+              <p>
+                <a class="button" href="https://github.com/deadneuron/model-catalog">Model Zoo</a>
+              </p>
+            </div>
+
           </div>
         </div>
 
@@ -1126,15 +1141,6 @@ impl&lt;B: Backend&gt; Net&lt;B&gt; {
           </div>
         </div> -->
 
-        <div class="personal hero">
-          <div class="overlay"></div>
-          <div class="wrapper">
-            <h1>Lets Work Together</h1>
-            <p>
-              I’m a computer scientist, researcher, and engineer with over a decade of experience building maintainable software and conducting original academic research. I am deeply engaged in exploring the evolving paradigms of artificial intelligence and machine learning with a keen interest in exploring algorithms to improve the performance of deep neural networks. My expertise is grounded in the landscape of modern deep learning methodologies with a focus on neural network optimization, efficient ensemble learning methods, and model compression techniques.
-            </p>
-          </div>
-        </div>
 
         <!-- <div class="philosophy hero">
           <div class="overlay"></div>
@@ -1445,7 +1451,12 @@ impl&lt;B: Backend&gt; Net&lt;B&gt; {
         </div> -->
         <div class="contact" id="contact">
           <div class="wrapper">
-            <h1>Get In Touch</h1>
+            <div class="contact-message">
+              <h1>Get In Touch</h1>
+              <p>
+                Please feel free to reach out with any questions and/or comments. I'm always interested in hearing about fun and meaningful machine learning projects and I offer various consulting services for those who are looking to build out their own systems. Email me and we can talk more about working together.
+              </p>
+            </div>
             <div class="form-container">
               <form netlify="1">
                 <input placeholder="Name" name type="text" /><input

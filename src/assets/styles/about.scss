@@ -280,11 +280,14 @@ html {
           grid-row-gap: 3.2rem;
         }
 
-        h1 {
+
+        .contact-message { 
           grid-row: 1;
-          font-size: 3.2rem;
-          margin-bottom: 1.6rem;
-          font-family: "Open Sans";
+          grid-column: 1 / span 2;
+
+          h1 {
+            font-size: 3.2rem;
+          }
 
           @media screen and (max-width:600px) {
             margin-bottom: -1.6rem;
