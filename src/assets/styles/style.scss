@@ -281,19 +281,19 @@ html {
 .glitch:hover .glitch__img:nth-child(2) {
   transform: translate3d(10px, 0, 0);
   animation: glitch-anim-1 2s infinite linear alternate;
-  fill: white;
+  fill: none;
 }
 
 .glitch:hover > .glitch__img:nth-child(3) {
   transform: translate3d(calc(-1 * 10px), 0, 0);
   animation: glitch-anim-2 3s infinite linear alternate;
-  fill: white;
+  fill: none;
 }
 
 .glitch:hover > .glitch__img:nth-child(4) {
   transform: translate3d(0, calc(-1 * 5px), 0) scale3d(-1, -1, 1);
   animation: glitch-anim-3 2s infinite linear alternate;
-  fill: white;
+  fill: none;
 }
 
 /* Hover flash animation on last image */

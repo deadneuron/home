@@ -49,14 +49,13 @@ html body .intro .wrapper .column-wrapper .column .icon img {
   }
 }
 html body .personal {
-  background-image: url(/static/personal-hero-super-res.png);
+  background-image: url(/static/lean-crop.jpg);
   background-position: top center;
   background-size: cover;
   background-color: white;
   background-repeat: no-repeat;
   position: relative;
   height: 70vh;
-  filter: grayscale(1);
 }
 html body .code {
   background: black;
@@ -242,7 +241,7 @@ html body .gallery .item:nth-child(7) {
 }
 html body .contact {
   padding: 8rem 0;
-  background: #eeeeee;
+  background: white;
 }
 @media screen and (max-width: 600px) {
   html body .contact {
@@ -267,6 +266,7 @@ html body .contact .wrapper h1 {
   grid-row: 1;
   font-size: 3.2rem;
   margin-bottom: 1.6rem;
+  font-family: "Open Sans";
 }
 @media screen and (max-width: 600px) {
   html body .contact .wrapper h1 {
