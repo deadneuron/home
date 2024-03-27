@@ -52,7 +52,7 @@ html {
       }
     }
 
-    .personal {
+    .personal.hero {
       background-image: url(/static/lean-crop.jpg);
       background-position: top center;
       background-size: cover;
@@ -60,6 +60,15 @@ html {
       background-repeat: no-repeat;
       position: relative;
       height: 70vh;
+
+      .overlay {
+        opacity:0.5;
+      }
+
+      p {
+        max-width: 700px;
+        text-shadow:none;
+      }
     }
 
     .code {
