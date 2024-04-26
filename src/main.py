@@ -178,8 +178,8 @@ for filename in os.listdir('models'):
         models.append(m)
 
 # Compile models
-for m in models:
-    m.compile()
+# for m in models:
+#     m.compile()
 
 # Sort models by date
 models.sort(key=lambda x: x.data['year'], reverse=True)
@@ -198,6 +198,9 @@ render_template("templates/home.html",
 
 render_template("templates/about.html",
                 "../build/about/index.html")
+
+render_template("templates/gallery.html",
+                "../build/gallery/index.html")
 
 render_template("templates/models.html",
                 "../build/models/index.html",

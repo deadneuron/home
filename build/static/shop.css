@@ -1,25 +1,135 @@
 html body .hero {
   background-image: url(/static/mountain-bg.png);
 }
-html body .products .wrapper {
-  max-width: 100vw;
-  padding: 2rem;
+html body .products .wrapper .item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  align-items: center;
+  padding: 4rem 0;
+  border-bottom: 1px solid #ddd;
 }
-html body .products .wrapper .grid {
+html body .products .wrapper .item .content h1 {
+  font-family: "Open Sans";
+}
+html body .products .wrapper .item .content button {
+  background: black;
+  color: white;
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Open Sans";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 3px;
+  max-width: max-content;
+  display: block;
+  margin-top: 1.6rem;
+}
+html body .products .wrapper .item .gallery img {
+  width: 100%;
+}
+html body .products .wrapper .item:last-child {
+  border-bottom: none;
+}
+html body .shirts {
+  padding: 2rem 0;
+  padding-bottom: 5rem;
+}
+html body .shirts .wrapper h1 {
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  color: black;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  font-size: 2.4rem;
+}
+html body .shirts .wrapper .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 2rem;
 }
-html body .products .wrapper .grid .item .photo {
-  background: #ddd;
-  padding: 2rem;
+html body .shirts .wrapper .grid .item {
+  text-align: center;
 }
-html body .products .wrapper .grid .item h2 {
+html body .shirts .wrapper .grid .item h2 {
   font-family: "Open Sans";
   margin-top: 1rem;
   font-size: 1.8rem;
+  color: black;
 }
-html body .products .wrapper .grid .item p {
+html body .shirts .wrapper .grid .item p {
   margin: 0;
   line-height: 1;
+}
+html body .prints {
+  background: white;
+  padding: 2rem 0;
+}
+html body .prints h1 {
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  color: black;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  font-size: 2.4rem;
+}
+html body .prints .grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(9, 3.5vw);
+  grid-gap: 1rem;
+}
+html body .prints .grid .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+html body .prints .grid .item:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+html body .prints .grid .item:nth-child(2) {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 7;
+}
+html body .prints .grid .item:nth-child(3) {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 7;
+}
+html body .prints .grid .item:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 10;
+}
+html body .prints .grid .item:nth-child(5) {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 10;
+}
+html body .prints .grid .item:nth-child(6) {
+  grid-column-start: 5;
+  grid-column-end: 7;
+  grid-row-start: 7;
+  grid-row-end: 10;
+}
+html body .prints .grid .item:nth-child(7) {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row-start: 7;
+  grid-row-end: 10;
 }

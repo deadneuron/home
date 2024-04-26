@@ -53,6 +53,7 @@ html {
 
     .featured-paper {
       padding:16rem 0;
+      background-image: url(/static/brain-dark.svg);
       background-color:#0f0f0f;
       background-size: 45vw;
       background-repeat: no-repeat;
@@ -122,9 +123,42 @@ html {
         background-size:0;
       }
     }
-    
-    .subnetwork-ensembles {
-      background-image: url(/static/tree2.svg);
+
+    .showcase {
+      background:#0f0f0f;
+
+      .wrapper {
+        max-width:100vw;
+        display:grid;
+        grid-template-columns:repeat(5, 1fr);
+        grid-gap:1rem;
+
+        .item {
+          img {
+            width: 100%;
+            display:block;
+          }
+        }
+      }
+    }
+
+    .personal.hero {
+      background-image: url(/static/lean-crop.jpg);
+      background-position: top center;
+      background-size: cover;
+      background-color: white;
+      background-repeat: no-repeat;
+      position: relative;
+      height: 70vh;
+
+      .overlay {
+        opacity:0.5;
+      }
+
+      p {
+        max-width: 700px;
+        text-shadow:none;
+      }
     }
 
     .feed {
@@ -264,10 +298,16 @@ html {
           grid-row-gap: 3.2rem;
         }
 
-        h1 {
+
+        .contact-message { 
           grid-row: 1;
-          font-size: 3.2rem;
-          margin-bottom: 1.6rem;
+          grid-column: 1 / span 2;
+
+          h1 {
+            font-size: 3.2rem;
+            font-family: "Open Sans";
+          }
+
           @media screen and (max-width:600px) {
             margin-bottom: -1.6rem;
           }
@@ -298,9 +338,9 @@ html {
               background: white;
             }
             button {
-              background: #1976d2;
+              background: black;
               color: white;
-              padding: 0.8rem 1.6rem;
+              padding: 1rem 2rem;
               outline: none;
               border:none;
               cursor:pointer;
@@ -325,13 +365,6 @@ html {
             grid-row: 3;
           }
         }
-      }
-    }
-
-    footer {
-      background:white;
-      .wrapper .column h2, .wrapper .column a {        
-        color:black;
       }
     }
   }

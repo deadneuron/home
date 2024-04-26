@@ -1,0 +1,15 @@
+html body .hero {
+  background-image: url(/static/mountain-bg.png);
+  background-position: top center;
+}
+html body .showcase {
+  background: white;
+}
+html body .showcase .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+html body .showcase .wrapper .item img {
+  width: 100%;
+}
