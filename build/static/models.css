@@ -71,6 +71,9 @@ html body .catalog .item:not(:last-child) {
 html body .catalog .item .content {
   flex: 1 1 50%;
 }
+html body .catalog .item .content p.year {
+  margin-bottom: 0;
+}
 html body .catalog .item .content h1 {
   font-family: "Open Sans";
   font-size: 2.4rem;

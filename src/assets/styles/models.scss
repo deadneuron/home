@@ -73,6 +73,11 @@ html {
         
         .content{
           flex:1 1 50%;
+          
+          p.year {
+            margin-bottom:0;
+          }
+
           h1 {
             font-family: "Open Sans";
             font-size: 2.4rem;

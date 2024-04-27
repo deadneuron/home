@@ -7,7 +7,7 @@
     <link rel="icon" href="/static/favicon.svg" />
     <link rel="stylesheet" href="/static/style.css" />
     <link rel="stylesheet" href="/static/models.css" />
-<!--     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
@@ -56,9 +56,10 @@
             {% for model in context %}
             <div class="item">
               <div class="content">
-                <h1>{{ model.data.name }} ({{ model.data.year }})</h1>
-                <p><small>{{ model.data.authors }}</small></p>
-                <p>{{ model.data.description }}</p>
+                <p class="year"><small>{{ model.data.year }}</small></p>
+                <h1>{{ model.data.name }}</h1>
+                <p class="authors"><small>{{ model.data.authors }}</small></p>
+                <p class="description">{{ model.data.description }}</p>
                 <div class="links">
                   <!-- <a href="{{ model.data.slug }}">Read More</a> -->
                   <a href="{{ model.data.paper }}">Paper</a>
@@ -94,7 +95,9 @@
           <div class="column">
             <h2>Self</h2>
             <a href="https://github.com/tjwhitaker">Github</a
-            ><a href="https://scholar.google.com/citations?user=Rb-16TYAAAAJ&hl=en">Scholar</a
+            ><a
+              href="https://scholar.google.com/citations?user=Rb-16TYAAAAJ&hl=en"
+              >Scholar</a
             ><a href="https://orcid.org/0000-0003-3792-3901">Orcid</a>
           </div>
         </div>
