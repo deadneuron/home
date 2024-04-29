@@ -7481,7 +7481,8 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Snapshot-Ensembles">Snapshot Ensembles<a class="anchor-link" href="#Snapshot-Ensembles">¶</a></h1><p>Training multiple deep neural networks from scratch can be computationally expensive. Snapshot Ensembling is an efficient temporal method where ensembles are constructed by saving checkpoints of a single model's weights throughout its training trajectory.</p>
+<h1 id="Snapshot-Ensembles">Snapshot Ensembles<a class="anchor-link" href="#Snapshot-Ensembles">¶</a></h1><p><img alt="Snapshot" src="/static/figures/snapshot.png"/></p>
+<p>Training multiple deep neural networks from scratch can be computationally expensive. Snapshot Ensembling is an efficient temporal method where ensembles are constructed by saving checkpoints of a single model's weights throughout its training trajectory.</p>
 <p>Snapshot Ensembles leverage a cyclic learning rate schedule that alternates between large and small values. The large learning rates encourage movement in weight space while the small rates promote convergence to accurate local minima. Model weights at these local minima are saved and treated as independent ensemble members.</p>
 <p>The learning rate schedule is a shifted annealed cosine of the form:</p>
 <p>$$

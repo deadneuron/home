@@ -7481,7 +7481,8 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Stochastic-Weight-Averaging">Stochastic Weight Averaging<a class="anchor-link" href="#Stochastic-Weight-Averaging">¶</a></h1><p>Stochastic Weight Averaging is a training procedure that averages the weights of several networks proposed by SGD in the final phases of training by using a learning rate schedule that encourages exploration of the same basin of attraction.</p>
+<h1 id="Stochastic-Weight-Averaging">Stochastic Weight Averaging<a class="anchor-link" href="#Stochastic-Weight-Averaging">¶</a></h1><p><img alt="SWA" src="/static/figures/swa.png"/></p>
+<p>Stochastic Weight Averaging is a training procedure that averages the weights of several networks proposed by SGD in the final phases of training by using a learning rate schedule that encourages exploration of the same basin of attraction.</p>
 <!-- ![https://pytorch.org/assets/images/swa/Figure1.png](https://pytorch.org/assets/images/swa/Figure1.png) -->
 <p>SGD tends to converge to the edges of these wide and flat regions in the training loss landscape where test distributions rarely align.</p>
 <p>The learning rate schedule is a cyclical linear decay from $\alpha_1$ to $\alpha_2$ where the value at iteration $i$ is:</p>

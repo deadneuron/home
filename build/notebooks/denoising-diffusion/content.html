@@ -7481,7 +7481,8 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Denoising-Diffusion">Denoising Diffusion<a class="anchor-link" href="#Denoising-Diffusion">¶</a></h1><p>A diffusion probabilistic model is a parameterized Markov chain trained using variational inference to produce samples that match data after a finite time. Transitions of the chain are learned to reverse the diffusion process, where noise is gradually added in the opposite direction until the signal is destroyed.</p>
+<h1 id="Denoising-Diffusion">Denoising Diffusion<a class="anchor-link" href="#Denoising-Diffusion">¶</a></h1><p><img alt="Diffusion" src="/static/figures/diffusion.png"/></p>
+<p>A diffusion probabilistic model is a parameterized Markov chain trained using variational inference to produce samples that match data after a finite time. Transitions of the chain are learned to reverse the diffusion process, where noise is gradually added in the opposite direction until the signal is destroyed.</p>
 <p>These are latent variable models of the form $p_{\theta}(x_0) := \int p_{\theta}(x_{0:T}) \ dx_{1:T}$ where the latent space $x_1, ..., x_T$ has the same dimensionality as the data $x_0 \sim q(x_0)$. The joint distribution $p_{\theta}(x_{0:T})$ is called the reverse process and is defined with learned Gaussian transitions.</p>
 <p>\begin{align*}
 p_{\theta}(x_{0:T}) &amp;:= p(x_T) \prod_{t=1}^T p_{\theta}(x_{t-1} | x_t) \\

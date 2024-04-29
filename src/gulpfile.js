@@ -15,6 +15,7 @@ gulp.task("images", () => {
     .pipe(gulp.dest("../build/static"))
 })
 
+
 gulp.task("scripts", () => {
   return gulp
     .src("assets/scripts/**/*.+(js)")

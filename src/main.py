@@ -5,12 +5,12 @@ import json
 from jinja2 import Template, Environment, FileSystemLoader
 
 
-class Model:
+class Architecture:
     def __init__(self, src_location):
         # Filename including .ipynb
         self.filename = src_location.rsplit('/', 1)[-1]
         self.src_location = src_location
-        self.build_location = "../build/models/" + \
+        self.build_location = "../build/architectures/" + \
             self.filename.replace(".ipynb", "")
         self.data = self.build_metadata()
 
@@ -33,7 +33,7 @@ class Model:
             'description': description.group(1),
             'paper': paper.group(1),
             'image': image.group(1) if image else None,
-            'slug': os.path.join("/models", self.filename.replace('.ipynb', '')),
+            'slug': os.path.join("/architectures", self.filename.replace('.ipynb', '')),
             'content': self.get_content()
         }
 
@@ -162,31 +162,31 @@ for filename in os.listdir('notebooks'):
         notebooks.append(n)
 
 # Compile notebooks
-for n in notebooks:
-    n.compile()
-    n.data["related"] = get_related_notebooks(n, notebooks)
+# for n in notebooks:
+#     n.compile()
+#     n.data["related"] = get_related_notebooks(n, notebooks)
 
 # Sort notebooks by date
 notebooks.sort(key=lambda x: x.data['date'], reverse=True)
 
 # Loop through models and build them
-models = []
+architectures = []
 
-for filename in os.listdir('models'):
+for filename in os.listdir('architectures'):
     if filename.endswith('.ipynb'):
-        m = Model(os.path.join('models', filename))
-        models.append(m)
+        m = Architecture(os.path.join('architectures', filename))
+        architectures.append(m)
 
 # Compile models
-# for m in models:
-#     m.compile()
+# for a in architectures:
+#     a.compile()
 
 # Sort models by date
-models.sort(key=lambda x: x.data['year'], reverse=True)
+architectures.sort(key=lambda x: x.data['year'], reverse=True)
 
 # Build json api endpoint (For react in the future?)
 build_json(notebooks, "../build/notebooks/feed.json")
-build_json(models, "../build/models/feed.json")
+build_json(architectures, "../build/architectures/feed.json")
 
 # Compile static assets
 os.system("gulp")
@@ -202,9 +202,9 @@ render_template("templates/about.html",
 render_template("templates/gallery.html",
                 "../build/gallery/index.html")
 
-render_template("templates/models.html",
-                "../build/models/index.html",
-                context=models)
+render_template("templates/architectures.html",
+                "../build/architectures/index.html",
+                context=architectures)
 
 render_template("templates/publications.html",
                 "../build/publications/index.html")
@@ -221,7 +221,7 @@ for notebook in notebooks:
                     f"{notebook.build_location}/index.html",
                     context=notebook)
 
-for model in models:
-    render_template("templates/model.html",
-                    f"{model.build_location}/index.html",
-                    context=model)
+for a in architectures:
+    render_template("templates/architecture.html",
+                    f"{a.build_location}/index.html",
+                    context=a)
