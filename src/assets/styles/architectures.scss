@@ -73,9 +73,17 @@ html {
         
         .content{
           flex:1 1 50%;
+<<<<<<< HEAD:src/assets/styles/architectures.scss
           .year {
             margin-bottom:0;
           }
+=======
+          
+          p.year {
+            margin-bottom:0;
+          }
+
+>>>>>>> 7e3dc2ece8e0fed510d6ee5bdeaee3e8d7a7170d:src/assets/styles/models.scss
           h1 {
             font-family: "Open Sans";
             font-size: 2.4rem;

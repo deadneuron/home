@@ -56,10 +56,17 @@
             {% for architecture in context %}
             <div class="item">
               <div class="content">
+<<<<<<< HEAD:src/templates/architectures.html
                 <p class="year"><small>{{ architecture.data.year }}</small></p>
                 <h1>{{ architecture.data.name }}</h1>
                 <p><small>{{ architecture.data.authors }}</small></p>
                 <p>{{ architecture.data.description }}</p>
+=======
+                <p class="year"><small>{{ model.data.year }}</small></p>
+                <h1>{{ model.data.name }}</h1>
+                <p class="authors"><small>{{ model.data.authors }}</small></p>
+                <p class="description">{{ model.data.description }}</p>
+>>>>>>> 7e3dc2ece8e0fed510d6ee5bdeaee3e8d7a7170d:src/templates/models.html
                 <div class="links">
                   <!-- <a href="{{ architecture.data.slug }}">Read More</a> -->
                   <a href="{{ architecture.data.paper }}">Paper</a>
@@ -98,7 +105,9 @@
           <div class="column">
             <h2>Self</h2>
             <a href="https://github.com/tjwhitaker">Github</a
-            ><a href="https://scholar.google.com/citations?user=Rb-16TYAAAAJ&hl=en">Scholar</a
+            ><a
+              href="https://scholar.google.com/citations?user=Rb-16TYAAAAJ&hl=en"
+              >Scholar</a
             ><a href="https://orcid.org/0000-0003-3792-3901">Orcid</a>
           </div>
         </div>
