@@ -214,6 +214,24 @@ html {
         padding:2rem 0;
       }
     }
+
+    .showcase {
+      background:white;
+
+      .wrapper {
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-gap:1rem;
+
+        .item {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+
     .gallery {
       background: black;
       padding: 1rem;

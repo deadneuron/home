@@ -196,6 +196,17 @@ html body .professional .wrapper .education {
     padding: 2rem 0;
   }
 }
+html body .showcase {
+  background: white;
+}
+html body .showcase .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+html body .showcase .wrapper .item img {
+  width: 100%;
+}
 html body .gallery {
   background: black;
   padding: 1rem;
