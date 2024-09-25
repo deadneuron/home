@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Gradient Boosting | Dead Neuron</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/static/favicon.svg" />
-    <link rel="stylesheet" href="/static/style.css" />
-    <link rel="stylesheet" href="/static/notebook.css" />
-    <link rel="stylesheet" href="/static/prism.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css"
-    />
-    <!--     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+<head>
+  <title>Gradient Boosting | Dead Neuron</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/static/favicon.svg" />
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/static/notebook.css" />
+  <link rel="stylesheet" href="/static/prism.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css" />
+  <!--     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&amp;display=block"
     /> -->
-    <script src="/static/iframeresizer.min.js"></script>
-  </head>
-  <body>
-    <div class="home">
-      <header>
-        <div class="wrapper">
-          <div class="container">
-            <!-- <a href="/" class="logo"><img src="/static/logo.svg" /></a> -->
-            <div class="logo">
+  <script src="/static/iframeresizer.min.js"></script>
+</head>
+
+<body>
+  <div class="home">
+    <header>
+      <div class="wrapper">
+        <div class="container">
+          <!-- <a href="/" class="logo"><img src="/static/logo.svg" /></a> -->
+          <div class="logo">
   <a class="glitch" href="/">
     
     <svg
@@ -1003,74 +1002,65 @@
     
   </a>
 </div>
-            <nav>
-              <!-- <a href="/about">About</a> -->
-              <a href="/architectures">Architectures</a>
-              <a href="/notebooks">Notebooks</a>
-              <a href="/publications">Publications</a>
-              <a href="/shop">Shop</a>
-            </nav>
-          </div>
+          <nav>
+            <a href="/about">About</a>
+            <a href="/architectures">Architectures</a>
+            <a href="/notebooks">Notebooks</a>
+            <a href="/publications">Publications</a>
+          </nav>
         </div>
-      </header>
-      <main>
-        <div class="article">
-          <div class="wrapper">
-            <div class="content">
-              <iframe
-                id="myIframe"
-                src="/notebooks/gradient-boosting/content.html"
-              ></iframe>
-              <script>
-                iFrameResize({ log: true }, "#myIframe")
-              </script>
-            </div>
-            <div class="sidebar">
-              <h2>Meta</h2>
-              <div class="meta">
-                <p>Date: 2024-03-19</p>
-                <p>
-                  Source:
-                  <a href="https://www.stat.berkeley.edu/~breiman/arcing-the-edge.pdf"
-                    >https://www.stat.berkeley.edu/~breiman/arcing-the-edge.pdf</a
-                  >
-                </p>
-                <p>Authors: Leo Breiman</p>
-              </div>
-              <h2>Related</h2>
-              <div class="related-posts">
-                
-                <p>Nothing to see here.</p>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-      <footer>
+      </div>
+    </header>
+    <main>
+      <div class="article">
         <div class="wrapper">
-          <div class="column">
-            <h2>Site</h2>
-            <a href="/about">About</a><a href="/models">Models</a
-            ><a href="/notebooks">Notebooks</a><a href="/research">Research</a>
+          <div class="content">
+            <iframe id="myIframe" src="/notebooks/gradient-boosting/content.html"></iframe>
+            <script>
+              iFrameResize({ log: true }, "#myIframe")
+            </script>
           </div>
-          <div class="column">
-            <h2>Links</h2>
-            <a href="https://arxiv-sanity-lite.com">Arxiv Sanity</a
-            ><a href="https://paperswithcode.com">Papers With Code</a
-            ><a href="https://midjourney.com">Midjourney</a
-            ><a href="https://openai.com">OpenAI</a>
-          </div>
-          <div class="column">
-            <h2>Self</h2>
-            <a href="https://github.com/tjwhitaker">Github</a
-            ><a
-              href="https://scholar.google.com/citations?user=Rb-16TYAAAAJ&hl=en"
-              >Scholar</a
-            ><a href="https://orcid.org/0000-0003-3792-3901">Orcid</a>
+          <div class="sidebar">
+            <h2>Meta</h2>
+            <div class="meta">
+              <p>Date: 2024-03-19</p>
+              <p>
+                Source:
+                <a href="https://www.stat.berkeley.edu/~breiman/arcing-the-edge.pdf">https://www.stat.berkeley.edu/~breiman/arcing-the-edge.pdf</a>
+              </p>
+              <p>Authors: Leo Breiman</p>
+            </div>
+            <h2>Related</h2>
+            <div class="related-posts">
+              
+              <p>Nothing to see here.</p>
+              
+            </div>
           </div>
         </div>
-      </footer>
-    </div>
-  </body>
+      </div>
+    </main>
+    <footer>
+      <div class="wrapper">
+        <div class="column">
+          <h2>Site</h2>
+          <a href="/about">About</a><a href="/models">Models</a><a href="/notebooks">Notebooks</a><a
+            href="/research">Research</a>
+        </div>
+        <div class="column">
+          <h2>Links</h2>
+          <a href="https://arxiv-sanity-lite.com">Arxiv Sanity</a><a href="https://paperswithcode.com">Papers With
+            Code</a><a href="https://midjourney.com">Midjourney</a><a href="https://openai.com">OpenAI</a>
+        </div>
+        <div class="column">
+          <h2>Self</h2>
+          <a href="https://github.com/tjwhitaker">Github</a><a
+            href="https://scholar.google.com/citations?user=Rb-16TYAAAAJ&hl=en">Scholar</a><a
+            href="https://orcid.org/0000-0003-3792-3901">Orcid</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
 </html>

@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Notebooks | Dead Neuron</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/static/favicon.svg" />
-    <link rel="stylesheet" href="/static/style.css" />
-    <link rel="stylesheet" href="/static/notebooks.css" />
-<!--     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+<head>
+  <title>Notebooks | Dead Neuron</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/static/favicon.svg" />
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/static/notebooks.css" />
+  <!--     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&amp;display=block"
     /> -->
-    <link
-      rel="stylesheet"
-      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
-    />
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
-  </head>
-  <body>
-    <div class="home">
-      <header>
-        <div class="wrapper">
-          <div class="container">
-            <!-- <a href="/" class="logo"><img src="/static/logo.svg" /></a> -->
-            <div class="logo">
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+</head>
+
+<body>
+  <div class="home">
+    <header>
+      <div class="wrapper">
+        <div class="container">
+          <!-- <a href="/" class="logo"><img src="/static/logo.svg" /></a> -->
+          <div class="logo">
   <a class="glitch" href="/">
     
     <svg
@@ -1002,183 +1001,184 @@
     
   </a>
 </div>
-            <nav>
-              <!-- <a href="/about">About</a> -->
-              <a href="/architectures">Architectures</a>
-              <a href="/notebooks">Notebooks</a>
-              <a href="/publications">Publications</a>
-              <a href="/shop">Shop</a>
+          <nav>
+            <a href="/about">About</a>
+            <a href="/architectures">Architectures</a>
+            <a href="/notebooks">Notebooks</a>
+            <a href="/publications">Publications</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="hero">
+        <div class="overlay"></div>
+        <div class="wrapper">
+          <h2>Research Notebooks</h2>
+          <h1>Key Ideas From<br /> Important Papers</h1>
+          <p>
+            Sharing articles and tutorials on the finer details of training and tuning deep neural networks for maximum
+            performance.
+          </p>
+        </div>
+      </div>
+      <div id="react-feed">
+        <div class="feed wrapper">
+          <div class="filters">
+            <nav class="categories">
+              <!-- <h2>Recent Notebooks</h2> -->
+              <span
+                class="active">All</span><span>Compression</span><span>Optimization</span><span>Regularization</span><span>Reinforcement</span>
+            </nav>
+            <nav class="mobile-categories">
+              <h1>Recent Posts</h1>
             </nav>
           </div>
-        </div>
-      </header>
-      <main>
-        <div class="hero">
-          <div class="overlay"></div>
-          <div class="wrapper">
-            <h2>Research Notebooks</h2>
-            <h1>Key Ideas From<br/> Important Papers</h1>
-            <p>
-              Sharing articles and tutorials on the finer details of training and tuning deep neural networks for maximum performance.
-            </p>
-          </div>
-        </div>
-        <div id="react-feed">
-          <div class="feed wrapper">
-            <div class="filters">
-              <nav class="categories">
-                <!-- <h2>Recent Notebooks</h2> -->
-                <span class="active">All</span><span>Compression</span
-                ><span>Optimization</span><span>Regularization</span
-                ><span>Reinforcement</span>
-              </nav>
-              <nav class="mobile-categories"><h1>Recent Posts</h1></nav>
+          <div class="primary-col">
+            
+            <div class="post">
+              <small class="date">2024-04-10</small>
+              <small class="categories">optimization</small>
+              <h1 class="title">Contrastive Language-Image Pretraining</h1>
+              <p class="description">Connecting text and images.</p>
+              <a href="/notebooks/contrastive-language-image-pretraining">Read More</a>
             </div>
-            <div class="primary-col">
             
-              <div class="post">
-                <small class="date">2024-04-10</small>
-                <small class="categories">optimization</small>
-                <h1 class="title">Contrastive Language-Image Pretraining</h1>
-                <p class="description">Connecting text and images.</p>
-                <a href="/notebooks/contrastive-language-image-pretraining">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-04-06</small>
+              <small class="categories">optimization</small>
+              <h1 class="title">Mode Connectivity</h1>
+              <p class="description">Local minima in loss landscapes are connected by high accuracy pathways.</p>
+              <a href="/notebooks/mode-connectivity">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-04-06</small>
-                <small class="categories">optimization</small>
-                <h1 class="title">Mode Connectivity</h1>
-                <p class="description">Local minima in loss landscapes are connected by high accuracy pathways.</p>
-                <a href="/notebooks/mode-connectivity">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-03-24</small>
+              <small class="categories">regularization optimization</small>
+              <h1 class="title">AutoAugment</h1>
+              <p class="description">Learning optimal transformation pipelines for data augmentation.</p>
+              <a href="/notebooks/autoaugment">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-03-24</small>
-                <small class="categories">regularization optimization</small>
-                <h1 class="title">AutoAugment</h1>
-                <p class="description">Learning optimal transformation pipelines for data augmentation.</p>
-                <a href="/notebooks/autoaugment">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-03-19</small>
+              <small class="categories">optimization</small>
+              <h1 class="title">Gradient Boosting</h1>
+              <p class="description">Ensembles where new members are trained to correct previous mistakes.</p>
+              <a href="/notebooks/gradient-boosting">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-03-19</small>
-                <small class="categories">optimization</small>
-                <h1 class="title">Gradient Boosting</h1>
-                <p class="description">Ensembles where new members are trained to correct previous mistakes.</p>
-                <a href="/notebooks/gradient-boosting">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-03-08</small>
+              <small class="categories">compression</small>
+              <h1 class="title">Knowledge Distillation</h1>
+              <p class="description">Training a small model on the outputs of a larger and more accurate model.</p>
+              <a href="/notebooks/knowledge-distillation">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-03-08</small>
-                <small class="categories">compression</small>
-                <h1 class="title">Knowledge Distillation</h1>
-                <p class="description">Training a small model on the outputs of a larger and more accurate model.</p>
-                <a href="/notebooks/knowledge-distillation">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-02-26</small>
+              <small class="categories">optimization</small>
+              <h1 class="title">Double Descent</h1>
+              <p class="description">A phenomena where generalization gets worse then better with larger models and bigger datasets.</p>
+              <a href="/notebooks/double-descent">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-02-26</small>
-                <small class="categories">optimization</small>
-                <h1 class="title">Double Descent</h1>
-                <p class="description">A phenomena where generalization gets worse then better with larger models and bigger datasets.</p>
-                <a href="/notebooks/double-descent">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-02-15</small>
+              <small class="categories">optimization generation</small>
+              <h1 class="title">Denoising Diffusion</h1>
+              <p class="description">A class of generative latent variable models inspired by nonequilibrium thermodynamics.</p>
+              <a href="/notebooks/denoising-diffusion">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-02-15</small>
-                <small class="categories">optimization generation</small>
-                <h1 class="title">Denoising Diffusion</h1>
-                <p class="description">A class of generative latent variable models inspired by nonequilibrium thermodynamics.</p>
-                <a href="/notebooks/denoising-diffusion">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-01-29</small>
+              <small class="categories">compression</small>
+              <h1 class="title">Optimal Brain Damage</h1>
+              <p class="description">An early method for pruning networks according to parameter saliency.</p>
+              <a href="/notebooks/optimal-brain-damage">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-01-29</small>
-                <small class="categories">compression</small>
-                <h1 class="title">Optimal Brain Damage</h1>
-                <p class="description">An early method for pruning networks according to parameter saliency.</p>
-                <a href="/notebooks/optimal-brain-damage">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-01-22</small>
+              <small class="categories">optimization transfer</small>
+              <h1 class="title">Low-Rank Adaptation</h1>
+              <p class="description">Reducing the storage requirements for fine tuned task specific networks.</p>
+              <a href="/notebooks/low-rank-adaptation">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-01-22</small>
-                <small class="categories">optimization transfer</small>
-                <h1 class="title">Low-Rank Adaptation</h1>
-                <p class="description">Reducing the storage requirements for fine tuned task specific networks.</p>
-                <a href="/notebooks/low-rank-adaptation">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-01-21</small>
+              <small class="categories">optimization ensemble</small>
+              <h1 class="title">Snapshot Ensembles</h1>
+              <p class="description">A low-cost method that leverages checkpoints throughout the training trajectory.</p>
+              <a href="/notebooks/snapshot-ensembles">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-01-21</small>
-                <small class="categories">optimization ensemble</small>
-                <h1 class="title">Snapshot Ensembles</h1>
-                <p class="description">A low-cost method that leverages checkpoints throughout the training trajectory.</p>
-                <a href="/notebooks/snapshot-ensembles">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-01-20</small>
+              <small class="categories">optimization reinforcement</small>
+              <h1 class="title">Proximal Policy Optimization</h1>
+              <p class="description">A computationally efficient on-policy reinforcement learning algorithm.</p>
+              <a href="/notebooks/proximal-policy-optimization">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-01-20</small>
-                <small class="categories">optimization reinforcement</small>
-                <h1 class="title">Proximal Policy Optimization</h1>
-                <p class="description">A computationally efficient on-policy reinforcement learning algorithm.</p>
-                <a href="/notebooks/proximal-policy-optimization">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-01-19</small>
+              <small class="categories">optimization neuroevolution</small>
+              <h1 class="title">Natural Evolution Strategies</h1>
+              <p class="description">A family of algorithms for evolving the parameters of search distributions.</p>
+              <a href="/notebooks/natural-evolution-strategies">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-01-19</small>
-                <small class="categories">optimization neuroevolution</small>
-                <h1 class="title">Natural Evolution Strategies</h1>
-                <p class="description">A family of algorithms for evolving the parameters of search distributions.</p>
-                <a href="/notebooks/natural-evolution-strategies">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-01-18</small>
+              <small class="categories">regularization</small>
+              <h1 class="title">Dropout</h1>
+              <p class="description">Masking random neurons on each forward pass during training.</p>
+              <a href="/notebooks/dropout">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-01-18</small>
-                <small class="categories">regularization</small>
-                <h1 class="title">Dropout</h1>
-                <p class="description">Masking random neurons on each forward pass during training.</p>
-                <a href="/notebooks/dropout">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-01-17</small>
+              <small class="categories">optimization reinforcement</small>
+              <h1 class="title">World Models</h1>
+              <p class="description">Dreaming with generative models of reinforcement learning environments.</p>
+              <a href="/notebooks/world-models">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-01-17</small>
-                <small class="categories">optimization reinforcement</small>
-                <h1 class="title">World Models</h1>
-                <p class="description">Dreaming with generative models of reinforcement learning environments.</p>
-                <a href="/notebooks/world-models">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-01-16</small>
+              <small class="categories">optimization reinforcement</small>
+              <h1 class="title">Deep Q-Learning</h1>
+              <p class="description">A foundational off-policy algorithm that kickstarted deep reinforcement learning.</p>
+              <a href="/notebooks/deep-q-learning">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-01-16</small>
-                <small class="categories">optimization reinforcement</small>
-                <h1 class="title">Deep Q-Learning</h1>
-                <p class="description">A foundational off-policy algorithm that kickstarted deep reinforcement learning.</p>
-                <a href="/notebooks/deep-q-learning">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-01-14</small>
+              <small class="categories">optimization</small>
+              <h1 class="title">Stochastic Weight Averaging</h1>
+              <p class="description">An optimization trick for the final phases of training with SGD.</p>
+              <a href="/notebooks/stochastic-weight-averaging">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-01-14</small>
-                <small class="categories">optimization</small>
-                <h1 class="title">Stochastic Weight Averaging</h1>
-                <p class="description">An optimization trick for the final phases of training with SGD.</p>
-                <a href="/notebooks/stochastic-weight-averaging">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-01-13</small>
+              <small class="categories">compression</small>
+              <h1 class="title">Lottery Ticket Hypothesis</h1>
+              <p class="description">Finding sparse subnetworks that train as well as dense networks from scratch.</p>
+              <a href="/notebooks/lottery-ticket-hypothesis">Read More</a>
+            </div>
             
-              <div class="post">
-                <small class="date">2024-01-13</small>
-                <small class="categories">optimization reinforcement</small>
-                <h1 class="title">Trust Region Policy Optimization</h1>
-                <p class="description">The monotonic on-policy reinforcement learning algorithm.</p>
-                <a href="/notebooks/trust-region-policy-optimization">Read More</a>
-              </div>
-            
-              <div class="post">
-                <small class="date">2024-01-13</small>
-                <small class="categories">compression</small>
-                <h1 class="title">Lottery Ticket Hypothesis</h1>
-                <p class="description">Finding sparse subnetworks that train as well as dense networks from scratch.</p>
-                <a href="/notebooks/lottery-ticket-hypothesis">Read More</a>
-              </div>
+            <div class="post">
+              <small class="date">2024-01-13</small>
+              <small class="categories">optimization reinforcement</small>
+              <h1 class="title">Trust Region Policy Optimization</h1>
+              <p class="description">The monotonic on-policy reinforcement learning algorithm.</p>
+              <a href="/notebooks/trust-region-policy-optimization">Read More</a>
+            </div>
             
           </div>
           <div class="secondary-col">
@@ -1186,25 +1186,14 @@
               <h3 class="minion">Search</h3>
               <div class="field-group">
                 <div class="icon">
-                  <svg
-                    aria-hidden="true"
-                    data-prefix="fas"
-                    data-icon="search"
-                    className="svg-inline--fa fa-search fa-w-16"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
-                    />
+                  <svg aria-hidden="true" data-prefix="fas" data-icon="search"
+                    className="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512">
+                    <path fill="currentColor"
+                      d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
                   </svg>
                 </div>
-                <input
-                  type="text"
-                  placeholder="Articles, Datasets, Research and more..."
-                />
+                <input type="text" placeholder="Articles, Datasets, Research and more..." />
               </div>
             </div>
             <div class="sort">
@@ -1228,93 +1217,92 @@
               <h3 class="minion">Tags</h3>
               
               
-                <span class="tag">all</span>
+              <span class="tag">all</span>
               
-                <span class="tag">attention</span>
+              <span class="tag">attention</span>
               
-                <span class="tag">augmentation</span>
+              <span class="tag">augmentation</span>
               
-                <span class="tag">bayesian</span>
+              <span class="tag">bayesian</span>
               
-                <span class="tag">classification</span>
+              <span class="tag">classification</span>
               
-                <span class="tag">clustering</span>
+              <span class="tag">clustering</span>
               
-                <span class="tag">diffusion</span>
+              <span class="tag">diffusion</span>
               
-                <span class="tag">distillation</span>
+              <span class="tag">distillation</span>
               
-                <span class="tag">efficient</span>
+              <span class="tag">efficient</span>
               
-                <span class="tag">embedding</span>
+              <span class="tag">embedding</span>
               
-                <span class="tag">ensemble</span>
+              <span class="tag">ensemble</span>
               
-                <span class="tag">evolution</span>
+              <span class="tag">evolution</span>
               
-                <span class="tag">federated</span>
+              <span class="tag">federated</span>
               
-                <span class="tag">generative</span>
+              <span class="tag">generative</span>
               
-                <span class="tag">interpretability</span>
+              <span class="tag">interpretability</span>
               
-                <span class="tag">latent</span>
+              <span class="tag">latent</span>
               
-                <span class="tag">optimization</span>
+              <span class="tag">optimization</span>
               
-                <span class="tag">pruning</span>
+              <span class="tag">pruning</span>
               
-                <span class="tag">quantization</span>
+              <span class="tag">quantization</span>
               
-                <span class="tag">regression</span>
+              <span class="tag">regression</span>
               
-                <span class="tag">regularization</span>
+              <span class="tag">regularization</span>
               
-                <span class="tag">reinforcement</span>
+              <span class="tag">reinforcement</span>
               
-                <span class="tag">segmentation</span>
+              <span class="tag">segmentation</span>
               
-                <span class="tag">sparsity</span>
+              <span class="tag">sparsity</span>
               
-                <span class="tag">supervised</span>
+              <span class="tag">supervised</span>
               
-                <span class="tag">theory</span>
+              <span class="tag">theory</span>
               
-                <span class="tag">transfer</span>
+              <span class="tag">transfer</span>
               
-                <span class="tag">tuning</span>
+              <span class="tag">tuning</span>
               
-                <span class="tag">unsupervised</span>
+              <span class="tag">unsupervised</span>
               
             </div>
           </div>
         </div>
-      </main>
-      <footer>
-        <div class="wrapper">
-          <div class="column">
-            <h2>Site</h2>
-            <a href="/about">About</a><a href="/models">Models</a
-            ><a href="/notebooks">Notebooks</a><a href="/research">Research</a>
-          </div>
-          <div class="column">
-            <h2>Links</h2>
-            <a href="https://arxiv-sanity-lite.com">Arxiv Sanity</a
-            ><a href="https://paperswithcode.com">Papers With Code</a
-            ><a href="https://midjourney.com">Midjourney</a
-            ><a href="https://openai.com">OpenAI</a>
-          </div>
-          <div class="column">
-            <h2>Self</h2>
-            <a href="https://github.com/tjwhitaker">Github</a
-            ><a href="https://scholar.google.com/citations?user=Rb-16TYAAAAJ&hl=en">Scholar</a
-            ><a href="https://orcid.org/0000-0003-3792-3901">Orcid</a>
-          </div>
+    </main>
+    <footer>
+      <div class="wrapper">
+        <div class="column">
+          <h2>Site</h2>
+          <a href="/about">About</a><a href="/models">Models</a><a href="/notebooks">Notebooks</a><a
+            href="/research">Research</a>
         </div>
-      </footer>
-      <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-      <script src="/static/notebooks-feed.js"></script>
-    </div>
-  </body>
+        <div class="column">
+          <h2>Links</h2>
+          <a href="https://arxiv-sanity-lite.com">Arxiv Sanity</a><a href="https://paperswithcode.com">Papers With
+            Code</a><a href="https://midjourney.com">Midjourney</a><a href="https://openai.com">OpenAI</a>
+        </div>
+        <div class="column">
+          <h2>Self</h2>
+          <a href="https://github.com/tjwhitaker">Github</a><a
+            href="https://scholar.google.com/citations?user=Rb-16TYAAAAJ&hl=en">Scholar</a><a
+            href="https://orcid.org/0000-0003-3792-3901">Orcid</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="/static/notebooks-feed.js"></script>
+  </div>
+</body>
+
 </html>

@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Architectures | Dead Neuron</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/static/favicon.svg" />
-    <link rel="stylesheet" href="/static/style.css" />
-    <link rel="stylesheet" href="/static/architectures.css" />
-    <!--     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+<head>
+  <title>Architectures | Dead Neuron</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/static/favicon.svg" />
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/static/architectures.css" />
+  <!--     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&amp;display=block"
     /> -->
-  </head>
-  <body>
-    <div class="home">
-      <header>
-        <div class="wrapper">
-          <div class="container">
-            <!-- <a href="/" class="logo"><img src="/static/logo.svg" /></a> -->
-            <div class="logo">
+</head>
+
+<body>
+  <div class="home">
+    <header>
+      <div class="wrapper">
+        <div class="container">
+          <!-- <a href="/" class="logo"><img src="/static/logo.svg" /></a> -->
+          <div class="logo">
   <a class="glitch" href="/">
     
     <svg
@@ -997,412 +999,408 @@
     
   </a>
 </div>
-            <nav>
-              <!-- <a href="/about">About</a> -->
-              <a href="/architectures">Architectures</a>
-              <a href="/notebooks">Notebooks</a>
-              <a href="/publications">Publications</a>
-              <a href="/shop">Shop</a>
-            </nav>
-          </div>
-        </div>
-      </header>
-      <main>
-        <div class="hero">
-          <div class="overlay"></div>
-          <div class="wrapper">
-            <h2>Model Zoo</h2>
-            <h1>The Neural Network<br />Architecture Catalog</h1>
-            <p>
-              Highlighting some of the most interesting and impactful neural
-              network architectures through history.
-            </p>
-          </div>
-        </div>
-        <div id="react-feed">
-          <div class="catalog wrapper">
-            <div class="filters">
-              <nav class="categories">
-                <span class="active">All</span><span>Attention</span
-                ><span>Convolutional</span><span>Energy</span
-                ><span>Fully Connected</span><span>Recurrent</span>
-              </nav>
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2021</small></p>
-                <h1>CoAtNet</h1>
-                <p><small>Zihang Dai, Hanxiao Liu, Quoc V. Le, Mingxing Tan</small></p>
-                <p>CoAtNets feature the unification of depthwise convolutions and self attention via relative attention in this hybrid network structure. Convolution layers and attention layers are vertically stacked in a principled way that proves to be effective for improving generalization, capacity, and efficiency.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/coatnet">Read More</a> -->
-                  <a href="https://arxiv.org/abs/2106.04803">Paper</a>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2021</small></p>
-                <h1>MLP Mixer</h1>
-                <p><small>Ilya Tolstikhin, Neil Houlsby, Alexander Kolesnikov, Lucas Beyer, Xiaohua Zhai, Thomas Unterthiner, Jessica Yung, Andreas Steiner, Daniel Keysers, Jakob Uszkoreit, Mario Lucic, Alexey Dosovitskiy</small></p>
-                <p>A new take on vision architectures that eschew convolution and attention for only fully connected layers. MLP mixer applies spatial embeddings to the input image and then applies permutation-invariant operations through channel and token mixing layers.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/mlpmixer">Read More</a> -->
-                  <a href="https://arxiv.org/abs/2105.01601">Paper</a>
-                </div>
-              </div>
-              
-              <div class="image">
-                <img src="/static/mlp-mixer.png" />
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2017</small></p>
-                <h1>ShuffleNet</h1>
-                <p><small>Xiangyu Zhang, Xinyu Zhou, Mengxiao Lin, Jian Sun</small></p>
-                <p>ShuffleNet is a mobile optimized network that uses a combination of depthwise separable convolutions, channel shuffle operations, and pointwise convolutions to greatly reduce computational cost while maintaining accuracy.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/shufflenet">Read More</a> -->
-                  <a href="https://arxiv.org/abs/1707.01083">Paper</a>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2017</small></p>
-                <h1>Capsule Network</h1>
-                <p><small>Sara Sabour, Nicholas Frosst, Geoffrey E Hinton</small></p>
-                <p>Capsule networks were introduced to solve some of the limitations that convolutional networks have in understanding hierarchies between objects in images. These capsules use small groups of neurons that specialize in identifying various parts of an object and their spatial relationships.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/capsule">Read More</a> -->
-                  <a href="https://arxiv.org/abs/1710.09829">Paper</a>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2017</small></p>
-                <h1>Transformer</h1>
-                <p><small>Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Lion Jones, Aidan Gomez, Lukasz Kaiser, Illia Polosukhin</small></p>
-                <p>These models replace the traditional recurrent and convolutional networks with a self attention mechanism that allows the model to attend to different parts of the input sequence to generate contextual representations. The transformer consists of an encoder and decoder architecture that perform input/output mapping.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/transformer">Read More</a> -->
-                  <a href="/static/transformer.pdf">Paper</a>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2016</small></p>
-                <h1>DenseNet</h1>
-                <p><small>Gao Huang, Zhuang Liu, Laurens van der Maaten, Kilian Weinberger</small></p>
-                <p>DenseNet builds on top of the ideas introduced in residual networks by implementing skip connections between a given layer and every other successive layer following it. Each layer receives a concatenation of all the feature maps of all the layers preceding it. This allows for learning at different levels of abstraction throughout the network.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/densenet">Read More</a> -->
-                  <a href="https://arxiv.org/abs/1608.06993">Paper</a>
-                </div>
-              </div>
-              
-              <div class="image">
-                <img src="/static/densenet.png" />
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2016</small></p>
-                <h1>SqueezeNet</h1>
-                <p><small>Forrest Iandola, Song Han, Matthew Moskewicz, Khalid Ashraf, William Dally, Kurt Keutzer</small></p>
-                <p>SqueezeNet is notable for achieving comparable accuracy to larger neural network architectures while using significantly fewer parameters. SqueezeNet utilizes fire modules that consist of a 1x1 convolutional squeeze layer followed by a 3x3 convolutional expand layer.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/squeezenet">Read More</a> -->
-                  <a href="https://arxiv.org/abs/1602.07360">Paper</a>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2015</small></p>
-                <h1>U-Net</h1>
-                <p><small>Olaf Ronneberger, Philipp Fischer, Thomas Brox</small></p>
-                <p>U-Net is widely used in various segmentation and image-to-image translation tasks. The architecture consists of a contracting path that uses convolutional and pooling layers to capture context and a symmetric expanding path that uses deconvolutional and upsampling layers to achieve localization. The architecture's unique U-shape allows it to preserve fine-grained details during upsampling and is particularly well-suited for segmenting structures with varying shapes and sizes.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/unet">Read More</a> -->
-                  <a href="https://arxiv.org/abs/1505.04597">Paper</a>
-                </div>
-              </div>
-              
-              <div class="image">
-                <img src="/static/unet.png" />
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2015</small></p>
-                <h1>ResNet</h1>
-                <p><small>Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun</small></p>
-                <p>Residual Networks popularized skip connections in deep networks to alleviate vanishing gradient problems. The shortcut connections between blocks allows the gradients to flow directly from later layers to earlier layers, enabling depths of over a hundred layers.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/resnet">Read More</a> -->
-                  <a href="https://arxiv.org/abs/1512.03385">Paper</a>
-                </div>
-              </div>
-              
-              <div class="image">
-                <img src="/static/resnet.png" />
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2014</small></p>
-                <h1>Inception</h1>
-                <p><small>Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich</small></p>
-                <p>Inception is a deep convolutional network developed by Google researchers. It introduced the concept of inception modules, which are composed of multiple parallel convolutional layers of different kernel sizes to capture different feature scales.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/inception">Read More</a> -->
-                  <a href="https://arxiv.org/abs/1409.4842">Paper</a>
-                </div>
-              </div>
-              
-              <div class="image">
-                <img src="/static/inception.png" />
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2014</small></p>
-                <h1>Gated Recurrent Unit</h1>
-                <p><small>Kyunghyun Cho, Bart van Merrienboer, Caglar Gulcehre, Dzmitry Bahdanau, Fethi Bougares, Holger Schwenk, Yoshua Bengio</small></p>
-                <p>The GRU is a streamlined variant of the LSTM recurrent network. It contains memory cells that combine the input and forget gates into a single update gate which merges hidden states. This gate reduction results in fewer parameters, faster training times and reduced computational complexity.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/gru">Read More</a> -->
-                  <a href="https://arxiv.org/abs/1406.1078">Paper</a>
-                </div>
-              </div>
-              
-              <div class="image">
-                <img src="/static/gru.png" />
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2014</small></p>
-                <h1>VGG</h1>
-                <p><small>Karen Simonyan, Andrew Zisserman</small></p>
-                <p>The Visual Geometry Group developed this network architecture that is characterized by its simplicity and uniformity. This model popularized the 3x3 convolutional filter size and its design has influenced the development of modern convolutional architectures.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/vgg">Read More</a> -->
-                  <a href="https://arxiv.org/abs/1409.1556">Paper</a>
-                </div>
-              </div>
-              
-              <div class="image">
-                <img src="/static/vgg.png" />
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2013</small></p>
-                <h1>Variational Autoencoder</h1>
-                <p><small>Diederik P Kingma, Max Welling</small></p>
-                <p>A probabilistic generative model consisting of an encoder that maps input data to a latent space that corresponds to the parameters of a variational distribution and a decoder that maps the latent representations back to the input space.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/variational-autoencoder">Read More</a> -->
-                  <a href="https://arxiv.org/abs/1312.6114">Paper</a>
-                </div>
-              </div>
-              
-              <div class="image">
-                <img src="/static/variational-autoencoder.png" />
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2012</small></p>
-                <h1>AlexNet</h1>
-                <p><small>Alex Krishevsky, Ilya Sutskever, Geoffrey Hinton</small></p>
-                <p>The model that kickstarted the deep learning revolution. Consisting of eight layers, including five convolutional layers and three fully connected layers. AlexNet was one of the first deep convolutional neural networks to achieve state-of-the-art results on ImageNet. The original implementation split the network over two independent gpus to alleviate challenges with memory at the time.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/alexnet">Read More</a> -->
-                  <a href="https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html">Paper</a>
-                </div>
-              </div>
-              
-              <div class="image">
-                <img src="/static/alexnet.png" />
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>2002</small></p>
-                <h1>Echo State Network</h1>
-                <p><small>Herbert Jaeger</small></p>
-                <p>The echo state network is a type of recurrent architecture that utilizes a reservoir of fixed and randomly weighted connections that remain frozen during training. Only layers outside of the reservoir are optimized. The dynamic behavior of the reservoir generates complex temporal patterns which create an echo of the input signal.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/echostate">Read More</a> -->
-                  <a href="https://www.ai.rug.nl/minds/uploads/EchoStatesTechRep.pdf">Paper</a>
-                </div>
-              </div>
-              
-              <div class="image">
-                <img src="/static/echostate.png" />
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>1991</small></p>
-                <h1>Long Short-Term Memory</h1>
-                <p><small>Sepp Hochreiter, Jürgen Schmidhuber</small></p>
-                <p>The LSTM is a recurrent network that contains a memory cell and three gating units (input, output, and forget) that regulate the flow of information into and out of the cell. The memory cell can selectively remember or forget information over long periods of time.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/lstm">Read More</a> -->
-                  <a href="https://deeplearning.cs.cmu.edu/S23/document/readings/LSTM.pdf">Paper</a>
-                </div>
-              </div>
-              
-              <div class="image">
-                <img src="/static/lstm.png" />
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>1985</small></p>
-                <h1>Boltzmann Machine</h1>
-                <p><small>David Ackley, Geoffrey Hinton, Terrence Sejnowski</small></p>
-                <p>The Boltzmann Machine is a type of probabilistic graph model that consists of binary stochastic units and weights learned through an energy based minimization algorithm called contrastive divergence. The name comes from using the Boltzmann distribution to model the joint probability distribution of the input data.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/boltzmann">Read More</a> -->
-                  <a href="https://www.cs.toronto.edu/~hinton/absps/cogscibm.pdf">Paper</a>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>1985</small></p>
-                <h1>LeNet</h1>
-                <p><small>Yann LeCun, Bernhard Boser, John Denker, Donnie Henderson, Richard Howard, Wayne Hubbard, Lawrence Jackel</small></p>
-                <p>LeNet is the earliest introduction of the modern convolutional architecture. It contains three alternating convolutional and pooling layers followed by two fully connected layers. This model was introduced alongside the back propagation algorithm which produced incredible results at the time for image classification.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/lenet">Read More</a> -->
-                  <a href="http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf">Paper</a>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>1982</small></p>
-                <h1>Hopfield Network</h1>
-                <p><small>John Hopfield</small></p>
-                <p>The Hopfield network is a type of recurrent network based on bidirectional connections between neurons. Hopfield networks are a type of Ising model (also known as spin glass) that use Hebbian learning to train associative memory systems.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/hopfield">Read More</a> -->
-                  <a href="https://www.pnas.org/doi/10.1073/pnas.79.8.2554">Paper</a>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>1979</small></p>
-                <h1>Neocognitron</h1>
-                <p><small>Kunihiko Fukushima</small></p>
-                <p>A lesser known piece of history. The earliest inspiration for convolutional neural networks comes from Japan in the midst of the AI winter. A breakthrough development for computer vision, the neocognitron utilizes alternating layers of locally connected feature extraction and positional shift cells.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/neocognitron">Read More</a> -->
-                  <a href="https://www.rctn.org/bruno/public/papers/Fukushima1980.pdf">Paper</a>
-                </div>
-              </div>
-              
-            </div>
-            
-            <div class="item">
-              <div class="content">
-                <p class="year"><small>1958</small></p>
-                <h1>Perceptron</h1>
-                <p><small>Frank Rosenblatt</small></p>
-                <p>Neural network research begins with the first implementation of an artificial neuron called the perceptron. The theory for the perceptron was introduced in 1943 by McCulloch and Pitts as a binary threshold classifier. The first implementation was actually intended to be a machine rather than a program. Photocells were interconnected with potentiometers that were updated during learning with electric motors.</p>
-                <div class="links">
-                  <!-- <a href="/architectures/perceptron">Read More</a> -->
-                  <a href="https://psycnet.apa.org/record/1959-09865-001">Paper</a>
-                </div>
-              </div>
-              
-            </div>
-            
-          </div>
-        </div>
-      </main>
-      <script src="/static/prism.js"></script>
-      <script src="/static/prism-python.min.js"></script>
-      <script src="/static/prism-julia.min.js"></script>
-      <footer>
-        <div class="wrapper">
-          <div class="column">
-            <h2>Site</h2>
+          <nav>
+            <a href="/about">About</a>
             <a href="/architectures">Architectures</a>
-            <a href="/gallery">Gallery</a>
             <a href="/notebooks">Notebooks</a>
             <a href="/publications">Publications</a>
-            <a href="/shop">Shop</a>
-          </div>
-          <div class="column">
-            <h2>Links</h2>
-            <a href="https://arxiv-sanity-lite.com">Arxiv Sanity</a
-            ><a href="https://paperswithcode.com">Papers With Code</a
-            ><a href="https://midjourney.com">Midjourney</a
-            ><a href="https://openai.com">OpenAI</a>
-          </div>
-          <div class="column">
-            <h2>Self</h2>
-            <a href="https://github.com/tjwhitaker">Github</a
-            ><a
-              href="https://scholar.google.com/citations?user=Rb-16TYAAAAJ&hl=en"
-              >Scholar</a
-            ><a href="https://orcid.org/0000-0003-3792-3901">Orcid</a>
-          </div>
+          </nav>
         </div>
-      </footer>
-      <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-      <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-      <script src="/static/architectures-feed.js"></script>
-    </div>
-  </body>
+      </div>
+    </header>
+    <main>
+      <div class="hero">
+        <div class="overlay"></div>
+        <div class="wrapper">
+          <h2>Model Zoo</h2>
+          <h1>The Neural Network<br />Architecture Catalog</h1>
+          <p>
+            Highlighting some of the most interesting and impactful neural
+            network architectures through history.
+          </p>
+        </div>
+      </div>
+      <div id="react-feed">
+        <div class="catalog wrapper">
+          <div class="filters">
+            <nav class="categories">
+              <span
+                class="active">All</span><span>Attention</span><span>Convolutional</span><span>Energy</span><span>Fully
+                Connected</span><span>Recurrent</span>
+            </nav>
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2021</small></p>
+              <h1>MLP Mixer</h1>
+              <p><small>Ilya Tolstikhin, Neil Houlsby, Alexander Kolesnikov, Lucas Beyer, Xiaohua Zhai, Thomas Unterthiner, Jessica Yung, Andreas Steiner, Daniel Keysers, Jakob Uszkoreit, Mario Lucic, Alexey Dosovitskiy</small></p>
+              <p>A new take on vision architectures that eschew convolution and attention for only fully connected layers. MLP mixer applies spatial embeddings to the input image and then applies permutation-invariant operations through channel and token mixing layers.</p>
+              <div class="links">
+                <!-- <a href="/architectures/mlpmixer">Read More</a> -->
+                <a href="https://arxiv.org/abs/2105.01601">Paper</a>
+              </div>
+            </div>
+            
+            <div class="image">
+              <img src="/static/mlp-mixer.png" />
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2021</small></p>
+              <h1>CoAtNet</h1>
+              <p><small>Zihang Dai, Hanxiao Liu, Quoc V. Le, Mingxing Tan</small></p>
+              <p>CoAtNets feature the unification of depthwise convolutions and self attention via relative attention in this hybrid network structure. Convolution layers and attention layers are vertically stacked in a principled way that proves to be effective for improving generalization, capacity, and efficiency.</p>
+              <div class="links">
+                <!-- <a href="/architectures/coatnet">Read More</a> -->
+                <a href="https://arxiv.org/abs/2106.04803">Paper</a>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2017</small></p>
+              <h1>ShuffleNet</h1>
+              <p><small>Xiangyu Zhang, Xinyu Zhou, Mengxiao Lin, Jian Sun</small></p>
+              <p>ShuffleNet is a mobile optimized network that uses a combination of depthwise separable convolutions, channel shuffle operations, and pointwise convolutions to greatly reduce computational cost while maintaining accuracy.</p>
+              <div class="links">
+                <!-- <a href="/architectures/shufflenet">Read More</a> -->
+                <a href="https://arxiv.org/abs/1707.01083">Paper</a>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2017</small></p>
+              <h1>Transformer</h1>
+              <p><small>Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Lion Jones, Aidan Gomez, Lukasz Kaiser, Illia Polosukhin</small></p>
+              <p>These models replace the traditional recurrent and convolutional networks with a self attention mechanism that allows the model to attend to different parts of the input sequence to generate contextual representations. The transformer consists of an encoder and decoder architecture that perform input/output mapping.</p>
+              <div class="links">
+                <!-- <a href="/architectures/transformer">Read More</a> -->
+                <a href="/static/transformer.pdf">Paper</a>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2017</small></p>
+              <h1>Capsule Network</h1>
+              <p><small>Sara Sabour, Nicholas Frosst, Geoffrey E Hinton</small></p>
+              <p>Capsule networks were introduced to solve some of the limitations that convolutional networks have in understanding hierarchies between objects in images. These capsules use small groups of neurons that specialize in identifying various parts of an object and their spatial relationships.</p>
+              <div class="links">
+                <!-- <a href="/architectures/capsule">Read More</a> -->
+                <a href="https://arxiv.org/abs/1710.09829">Paper</a>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2016</small></p>
+              <h1>SqueezeNet</h1>
+              <p><small>Forrest Iandola, Song Han, Matthew Moskewicz, Khalid Ashraf, William Dally, Kurt Keutzer</small></p>
+              <p>SqueezeNet is notable for achieving comparable accuracy to larger neural network architectures while using significantly fewer parameters. SqueezeNet utilizes fire modules that consist of a 1x1 convolutional squeeze layer followed by a 3x3 convolutional expand layer.</p>
+              <div class="links">
+                <!-- <a href="/architectures/squeezenet">Read More</a> -->
+                <a href="https://arxiv.org/abs/1602.07360">Paper</a>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2016</small></p>
+              <h1>DenseNet</h1>
+              <p><small>Gao Huang, Zhuang Liu, Laurens van der Maaten, Kilian Weinberger</small></p>
+              <p>DenseNet builds on top of the ideas introduced in residual networks by implementing skip connections between a given layer and every other successive layer following it. Each layer receives a concatenation of all the feature maps of all the layers preceding it. This allows for learning at different levels of abstraction throughout the network.</p>
+              <div class="links">
+                <!-- <a href="/architectures/densenet">Read More</a> -->
+                <a href="https://arxiv.org/abs/1608.06993">Paper</a>
+              </div>
+            </div>
+            
+            <div class="image">
+              <img src="/static/densenet.png" />
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2015</small></p>
+              <h1>ResNet</h1>
+              <p><small>Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun</small></p>
+              <p>Residual Networks popularized skip connections in deep networks to alleviate vanishing gradient problems. The shortcut connections between blocks allows the gradients to flow directly from later layers to earlier layers, enabling depths of over a hundred layers.</p>
+              <div class="links">
+                <!-- <a href="/architectures/resnet">Read More</a> -->
+                <a href="https://arxiv.org/abs/1512.03385">Paper</a>
+              </div>
+            </div>
+            
+            <div class="image">
+              <img src="/static/resnet.png" />
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2015</small></p>
+              <h1>U-Net</h1>
+              <p><small>Olaf Ronneberger, Philipp Fischer, Thomas Brox</small></p>
+              <p>U-Net is widely used in various segmentation and image-to-image translation tasks. The architecture consists of a contracting path that uses convolutional and pooling layers to capture context and a symmetric expanding path that uses deconvolutional and upsampling layers to achieve localization. The architecture's unique U-shape allows it to preserve fine-grained details during upsampling and is particularly well-suited for segmenting structures with varying shapes and sizes.</p>
+              <div class="links">
+                <!-- <a href="/architectures/unet">Read More</a> -->
+                <a href="https://arxiv.org/abs/1505.04597">Paper</a>
+              </div>
+            </div>
+            
+            <div class="image">
+              <img src="/static/unet.png" />
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2014</small></p>
+              <h1>Gated Recurrent Unit</h1>
+              <p><small>Kyunghyun Cho, Bart van Merrienboer, Caglar Gulcehre, Dzmitry Bahdanau, Fethi Bougares, Holger Schwenk, Yoshua Bengio</small></p>
+              <p>The GRU is a streamlined variant of the LSTM recurrent network. It contains memory cells that combine the input and forget gates into a single update gate which merges hidden states. This gate reduction results in fewer parameters, faster training times and reduced computational complexity.</p>
+              <div class="links">
+                <!-- <a href="/architectures/gru">Read More</a> -->
+                <a href="https://arxiv.org/abs/1406.1078">Paper</a>
+              </div>
+            </div>
+            
+            <div class="image">
+              <img src="/static/gru.png" />
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2014</small></p>
+              <h1>VGG</h1>
+              <p><small>Karen Simonyan, Andrew Zisserman</small></p>
+              <p>The Visual Geometry Group developed this network architecture that is characterized by its simplicity and uniformity. This model popularized the 3x3 convolutional filter size and its design has influenced the development of modern convolutional architectures.</p>
+              <div class="links">
+                <!-- <a href="/architectures/vgg">Read More</a> -->
+                <a href="https://arxiv.org/abs/1409.1556">Paper</a>
+              </div>
+            </div>
+            
+            <div class="image">
+              <img src="/static/vgg.png" />
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2014</small></p>
+              <h1>Inception</h1>
+              <p><small>Christian Szegedy, Wei Liu, Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru Erhan, Vincent Vanhoucke, Andrew Rabinovich</small></p>
+              <p>Inception is a deep convolutional network developed by Google researchers. It introduced the concept of inception modules, which are composed of multiple parallel convolutional layers of different kernel sizes to capture different feature scales.</p>
+              <div class="links">
+                <!-- <a href="/architectures/inception">Read More</a> -->
+                <a href="https://arxiv.org/abs/1409.4842">Paper</a>
+              </div>
+            </div>
+            
+            <div class="image">
+              <img src="/static/inception.png" />
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2013</small></p>
+              <h1>Variational Autoencoder</h1>
+              <p><small>Diederik P Kingma, Max Welling</small></p>
+              <p>A probabilistic generative model consisting of an encoder that maps input data to a latent space that corresponds to the parameters of a variational distribution and a decoder that maps the latent representations back to the input space.</p>
+              <div class="links">
+                <!-- <a href="/architectures/variational-autoencoder">Read More</a> -->
+                <a href="https://arxiv.org/abs/1312.6114">Paper</a>
+              </div>
+            </div>
+            
+            <div class="image">
+              <img src="/static/variational-autoencoder.png" />
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2012</small></p>
+              <h1>AlexNet</h1>
+              <p><small>Alex Krishevsky, Ilya Sutskever, Geoffrey Hinton</small></p>
+              <p>The model that kickstarted the deep learning revolution. Consisting of eight layers, including five convolutional layers and three fully connected layers. AlexNet was one of the first deep convolutional neural networks to achieve state-of-the-art results on ImageNet. The original implementation split the network over two independent gpus to alleviate challenges with memory at the time.</p>
+              <div class="links">
+                <!-- <a href="/architectures/alexnet">Read More</a> -->
+                <a href="https://papers.nips.cc/paper_files/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html">Paper</a>
+              </div>
+            </div>
+            
+            <div class="image">
+              <img src="/static/alexnet.png" />
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>2002</small></p>
+              <h1>Echo State Network</h1>
+              <p><small>Herbert Jaeger</small></p>
+              <p>The echo state network is a type of recurrent architecture that utilizes a reservoir of fixed and randomly weighted connections that remain frozen during training. Only layers outside of the reservoir are optimized. The dynamic behavior of the reservoir generates complex temporal patterns which create an echo of the input signal.</p>
+              <div class="links">
+                <!-- <a href="/architectures/echostate">Read More</a> -->
+                <a href="https://www.ai.rug.nl/minds/uploads/EchoStatesTechRep.pdf">Paper</a>
+              </div>
+            </div>
+            
+            <div class="image">
+              <img src="/static/echostate.png" />
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>1991</small></p>
+              <h1>Long Short-Term Memory</h1>
+              <p><small>Sepp Hochreiter, Jürgen Schmidhuber</small></p>
+              <p>The LSTM is a recurrent network that contains a memory cell and three gating units (input, output, and forget) that regulate the flow of information into and out of the cell. The memory cell can selectively remember or forget information over long periods of time.</p>
+              <div class="links">
+                <!-- <a href="/architectures/lstm">Read More</a> -->
+                <a href="https://deeplearning.cs.cmu.edu/S23/document/readings/LSTM.pdf">Paper</a>
+              </div>
+            </div>
+            
+            <div class="image">
+              <img src="/static/lstm.png" />
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>1985</small></p>
+              <h1>Boltzmann Machine</h1>
+              <p><small>David Ackley, Geoffrey Hinton, Terrence Sejnowski</small></p>
+              <p>The Boltzmann Machine is a type of probabilistic graph model that consists of binary stochastic units and weights learned through an energy based minimization algorithm called contrastive divergence. The name comes from using the Boltzmann distribution to model the joint probability distribution of the input data.</p>
+              <div class="links">
+                <!-- <a href="/architectures/boltzmann">Read More</a> -->
+                <a href="https://www.cs.toronto.edu/~hinton/absps/cogscibm.pdf">Paper</a>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>1985</small></p>
+              <h1>LeNet</h1>
+              <p><small>Yann LeCun, Bernhard Boser, John Denker, Donnie Henderson, Richard Howard, Wayne Hubbard, Lawrence Jackel</small></p>
+              <p>LeNet is the earliest introduction of the modern convolutional architecture. It contains three alternating convolutional and pooling layers followed by two fully connected layers. This model was introduced alongside the back propagation algorithm which produced incredible results at the time for image classification.</p>
+              <div class="links">
+                <!-- <a href="/architectures/lenet">Read More</a> -->
+                <a href="http://vision.stanford.edu/cs598_spring07/papers/Lecun98.pdf">Paper</a>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>1982</small></p>
+              <h1>Hopfield Network</h1>
+              <p><small>John Hopfield</small></p>
+              <p>The Hopfield network is a type of recurrent network based on bidirectional connections between neurons. Hopfield networks are a type of Ising model (also known as spin glass) that use Hebbian learning to train associative memory systems.</p>
+              <div class="links">
+                <!-- <a href="/architectures/hopfield">Read More</a> -->
+                <a href="https://www.pnas.org/doi/10.1073/pnas.79.8.2554">Paper</a>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>1979</small></p>
+              <h1>Neocognitron</h1>
+              <p><small>Kunihiko Fukushima</small></p>
+              <p>A lesser known piece of history. The earliest inspiration for convolutional neural networks comes from Japan in the midst of the AI winter. A breakthrough development for computer vision, the neocognitron utilizes alternating layers of locally connected feature extraction and positional shift cells.</p>
+              <div class="links">
+                <!-- <a href="/architectures/neocognitron">Read More</a> -->
+                <a href="https://www.rctn.org/bruno/public/papers/Fukushima1980.pdf">Paper</a>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="item">
+            <div class="content">
+              <p class="year"><small>1958</small></p>
+              <h1>Perceptron</h1>
+              <p><small>Frank Rosenblatt</small></p>
+              <p>Neural network research begins with the first implementation of an artificial neuron called the perceptron. The theory for the perceptron was introduced in 1943 by McCulloch and Pitts as a binary threshold classifier. The first implementation was actually intended to be a machine rather than a program. Photocells were interconnected with potentiometers that were updated during learning with electric motors.</p>
+              <div class="links">
+                <!-- <a href="/architectures/perceptron">Read More</a> -->
+                <a href="https://psycnet.apa.org/record/1959-09865-001">Paper</a>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    <script src="/static/prism.js"></script>
+    <script src="/static/prism-python.min.js"></script>
+    <script src="/static/prism-julia.min.js"></script>
+    <footer>
+      <div class="wrapper">
+        <div class="column">
+          <h2>Site</h2>
+          <a href="/architectures">Architectures</a>
+          <a href="/gallery">Gallery</a>
+          <a href="/notebooks">Notebooks</a>
+          <a href="/publications">Publications</a>
+          <a href="/shop">Shop</a>
+        </div>
+        <div class="column">
+          <h2>Links</h2>
+          <a href="https://arxiv-sanity-lite.com">Arxiv Sanity</a><a href="https://paperswithcode.com">Papers With
+            Code</a><a href="https://midjourney.com">Midjourney</a><a href="https://openai.com">OpenAI</a>
+        </div>
+        <div class="column">
+          <h2>Self</h2>
+          <a href="https://github.com/tjwhitaker">Github</a><a
+            href="https://scholar.google.com/citations?user=Rb-16TYAAAAJ&hl=en">Scholar</a><a
+            href="https://orcid.org/0000-0003-3792-3901">Orcid</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="/static/architectures-feed.js"></script>
+  </div>
+</body>
+
 </html>
